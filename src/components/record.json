@@ -1,0 +1,2247 @@
+﻿[
+  {
+    "StartNode": "1.1 软件的本质",
+    "Relationship": "Belong_SB",
+    "EndNode": "第1章 软件与软件工程"
+  },
+  {
+    "StartNode": "1.2 定义软件工程学科",
+    "Relationship": "Belong_SB",
+    "EndNode": "第1章 软件与软件工程"
+  },
+  {
+    "StartNode": "1.3 软件过程?",
+    "Relationship": "Belong_SB",
+    "EndNode": "第1章 软件与软件工程"
+  },
+  {
+    "StartNode": "1.4 软件工程实践",
+    "Relationship": "Belong_SB",
+    "EndNode": "第1章 软件与软件工程"
+  },
+  {
+    "StartNode": "1.5 这一切是如何开始的",
+    "Relationship": "Belong_SB",
+    "EndNode": "第1章 软件与软件工程"
+  },
+  {
+    "StartNode": "1.6 小结",
+    "Relationship": "Belong_SB",
+    "EndNode": "第1章 软件与软件工程"
+  },
+  {
+    "StartNode": "第1章 软件与软件工程",
+    "Relationship": "NextSB_is",
+    "EndNode": "第2章 过程模型"
+  },
+  {
+    "StartNode": "2.1 通用过程模型",
+    "Relationship": "Belong_SB",
+    "EndNode": "第2章 过程模型"
+  },
+  {
+    "StartNode": "2.2 定义框架活动",
+    "Relationship": "Belong_SB",
+    "EndNode": "第2章 过程模型"
+  },
+  {
+    "StartNode": "2.3 明确任务集",
+    "Relationship": "Belong_SB",
+    "EndNode": "第2章 过程模型"
+  },
+  {
+    "StartNode": "2.4 过程评估与改进",
+    "Relationship": "Belong_SB",
+    "EndNode": "第2章 过程模型"
+  },
+  {
+    "StartNode": "2.5 惯用过程模型",
+    "Relationship": "Belong_SB",
+    "EndNode": "第2章 过程模型"
+  },
+  {
+    "StartNode": "2.6 产品和过程",
+    "Relationship": "Belong_SB",
+    "EndNode": "第2章 过程模型"
+  },
+  {
+    "StartNode": "2.7 小结?",
+    "Relationship": "Belong_SB",
+    "EndNode": "第2章 过程模型"
+  },
+  {
+    "StartNode": "第2章 过程模型",
+    "Relationship": "NextSB_is",
+    "EndNode": "第3章 敏捷和敏捷过程"
+  },
+  {
+    "StartNode": "3.1 什么是敏捷",
+    "Relationship": "Belong_SB",
+    "EndNode": "第3章 敏捷和敏捷过程"
+  },
+  {
+    "StartNode": "3.2 敏捷及变更成本",
+    "Relationship": "Belong_SB",
+    "EndNode": "第3章 敏捷和敏捷过程"
+  },
+  {
+    "StartNode": "3.3 什么是敏捷过程",
+    "Relationship": "Belong_SB",
+    "EndNode": "第3章 敏捷和敏捷过程"
+  },
+  {
+    "StartNode": "3.4 Scrum",
+    "Relationship": "Belong_SB",
+    "EndNode": "第3章 敏捷和敏捷过程"
+  },
+  {
+    "StartNode": "3.5 其他敏捷框架",
+    "Relationship": "Belong_SB",
+    "EndNode": "第3章 敏捷和敏捷过程"
+  },
+  {
+    "StartNode": "3.6 小结",
+    "Relationship": "Belong_SB",
+    "EndNode": "第3章 敏捷和敏捷过程"
+  },
+  {
+    "StartNode": "第3章 敏捷和敏捷过程",
+    "Relationship": "NextSB_is",
+    "EndNode": "第4章 推荐的过程模型?"
+  },
+  {
+    "StartNode": "4.1 需求定义",
+    "Relationship": "Belong_SB",
+    "EndNode": "第4章 推荐的过程模型?"
+  },
+  {
+    "StartNode": "4.2 初步体系结构设计",
+    "Relationship": "Belong_SB",
+    "EndNode": "第4章 推荐的过程模型?"
+  },
+  {
+    "StartNode": "4.3 资源估算",
+    "Relationship": "Belong_SB",
+    "EndNode": "第4章 推荐的过程模型?"
+  },
+  {
+    "StartNode": "4.4 首次原型构建",
+    "Relationship": "Belong_SB",
+    "EndNode": "第4章 推荐的过程模型?"
+  },
+  {
+    "StartNode": "4.5 原型评价",
+    "Relationship": "Belong_SB",
+    "EndNode": "第4章 推荐的过程模型?"
+  },
+  {
+    "StartNode": "4.6 继续与否的决策",
+    "Relationship": "Belong_SB",
+    "EndNode": "第4章 推荐的过程模型?"
+  },
+  {
+    "StartNode": "4.7 原型演化",
+    "Relationship": "Belong_SB",
+    "EndNode": "第4章 推荐的过程模型?"
+  },
+  {
+    "StartNode": "4.8 原型发布",
+    "Relationship": "Belong_SB",
+    "EndNode": "第4章 推荐的过程模型?"
+  },
+  {
+    "StartNode": "4.9 维护发布软件",
+    "Relationship": "Belong_SB",
+    "EndNode": "第4章 推荐的过程模型?"
+  },
+  {
+    "StartNode": "4.10 小结",
+    "Relationship": "Belong_SB",
+    "EndNode": "第4章 推荐的过程模型?"
+  },
+  {
+    "StartNode": "第4章 推荐的过程模型?",
+    "Relationship": "NextSB_is",
+    "EndNode": "第5章 软件工程的人员方面"
+  },
+  {
+    "StartNode": "5.1 软件工程师的特质 ",
+    "Relationship": "Belong_SB",
+    "EndNode": "第5章 软件工程的人员方面"
+  },
+  {
+    "StartNode": "5.2 软件工程心理学 ",
+    "Relationship": "Belong_SB",
+    "EndNode": "第5章 软件工程的人员方面"
+  },
+  {
+    "StartNode": "5.3 软件团队",
+    "Relationship": "Belong_SB",
+    "EndNode": "第5章 软件工程的人员方面"
+  },
+  {
+    "StartNode": "5.4 团队结构 ",
+    "Relationship": "Belong_SB",
+    "EndNode": "第5章 软件工程的人员方面"
+  },
+  {
+    "StartNode": "5.5 社交媒体的影响 ",
+    "Relationship": "Belong_SB",
+    "EndNode": "第5章 软件工程的人员方面"
+  },
+  {
+    "StartNode": "5.6 全球化团队 ",
+    "Relationship": "Belong_SB",
+    "EndNode": "第5章 软件工程的人员方面"
+  },
+  {
+    "StartNode": "5.7 小结 ",
+    "Relationship": "Belong_SB",
+    "EndNode": "第5章 软件工程的人员方面"
+  },
+  {
+    "StartNode": "第5章 软件工程的人员方面",
+    "Relationship": "NextSB_is",
+    "EndNode": "第6章 指导实践的原则"
+  },
+  {
+    "StartNode": "6.1 核心原则",
+    "Relationship": "Belong_SB",
+    "EndNode": "第6章 指导实践的原则"
+  },
+  {
+    "StartNode": "6.2 指导每个框架活动的原则",
+    "Relationship": "Belong_SB",
+    "EndNode": "第6章 指导实践的原则"
+  },
+  {
+    "StartNode": "6.3 小结",
+    "Relationship": "Belong_SB",
+    "EndNode": "第6章 指导实践的原则"
+  },
+  {
+    "StartNode": "第6章 指导实践的原则",
+    "Relationship": "NextSB_is",
+    "EndNode": "第7章 理解需求"
+  },
+  {
+    "StartNode": "7.1 需求工程",
+    "Relationship": "Belong_SB",
+    "EndNode": "第7章 理解需求"
+  },
+  {
+    "StartNode": "7.2 建立根基",
+    "Relationship": "Belong_SB",
+    "EndNode": "第7章 理解需求"
+  },
+  {
+    "StartNode": "7.3 获取需求",
+    "Relationship": "Belong_SB",
+    "EndNode": "第7章 理解需求"
+  },
+  {
+    "StartNode": "7.4 开发用例",
+    "Relationship": "Belong_SB",
+    "EndNode": "第7章 理解需求"
+  },
+  {
+    "StartNode": "7.5 构建分析模型",
+    "Relationship": "Belong_SB",
+    "EndNode": "第7章 理解需求"
+  },
+  {
+    "StartNode": "7.6 协商需求",
+    "Relationship": "Belong_SB",
+    "EndNode": "第7章 理解需求"
+  },
+  {
+    "StartNode": "7.7 需求监控",
+    "Relationship": "Belong_SB",
+    "EndNode": "第7章 理解需求"
+  },
+  {
+    "StartNode": "7.8 确认需求",
+    "Relationship": "Belong_SB",
+    "EndNode": "第7章 理解需求"
+  },
+  {
+    "StartNode": "7.9 小结",
+    "Relationship": "Belong_SB",
+    "EndNode": "第7章 理解需求"
+  },
+  {
+    "StartNode": "第7章 理解需求",
+    "Relationship": "NextSB_is",
+    "EndNode": "第8章 需求建模——一种推荐的方法"
+  },
+  {
+    "StartNode": "8.1 需求分析",
+    "Relationship": "Belong_SB",
+    "EndNode": "第8章 需求建模——一种推荐的方法"
+  },
+  {
+    "StartNode": "8.2 基于场景建模",
+    "Relationship": "Belong_SB",
+    "EndNode": "第8章 需求建模——一种推荐的方法"
+  },
+  {
+    "StartNode": "8.3 基于类建模",
+    "Relationship": "Belong_SB",
+    "EndNode": "第8章 需求建模——一种推荐的方法"
+  },
+  {
+    "StartNode": "8.4 功能建模",
+    "Relationship": "Belong_SB",
+    "EndNode": "第8章 需求建模——一种推荐的方法"
+  },
+  {
+    "StartNode": "8.5 行为建模",
+    "Relationship": "Belong_SB",
+    "EndNode": "第8章 需求建模——一种推荐的方法"
+  },
+  {
+    "StartNode": "8.6 小结?",
+    "Relationship": "Belong_SB",
+    "EndNode": "第8章 需求建模——一种推荐的方法"
+  },
+  {
+    "StartNode": "第8章 需求建模——一种推荐的方法",
+    "Relationship": "NextSB_is",
+    "EndNode": "第9章 设计概念"
+  },
+  {
+    "StartNode": "9.1 软件工程中的设计 ",
+    "Relationship": "Belong_SB",
+    "EndNode": "第9章 设计概念"
+  },
+  {
+    "StartNode": "9.2 设计过程?",
+    "Relationship": "Belong_SB",
+    "EndNode": "第9章 设计概念"
+  },
+  {
+    "StartNode": "9.3 设计概念?",
+    "Relationship": "Belong_SB",
+    "EndNode": "第9章 设计概念"
+  },
+  {
+    "StartNode": "9.4 设计模型?",
+    "Relationship": "Belong_SB",
+    "EndNode": "第9章 设计概念"
+  },
+  {
+    "StartNode": "9.5 小结?",
+    "Relationship": "Belong_SB",
+    "EndNode": "第9章 设计概念"
+  },
+  {
+    "StartNode": "第9章 设计概念",
+    "Relationship": "NextSB_is",
+    "EndNode": "第10章 体系结构设计——一种推荐的方法"
+  },
+  {
+    "StartNode": "10.1 软件体系结构",
+    "Relationship": "Belong_SB",
+    "EndNode": "第10章 体系结构设计——一种推荐的方法"
+  },
+  {
+    "StartNode": "10.2 敏捷性和体系结构 ",
+    "Relationship": "Belong_SB",
+    "EndNode": "第10章 体系结构设计——一种推荐的方法"
+  },
+  {
+    "StartNode": "10.3 体系结构风格?",
+    "Relationship": "Belong_SB",
+    "EndNode": "第10章 体系结构设计——一种推荐的方法"
+  },
+  {
+    "StartNode": "10.4 体系结构考虑要素 ",
+    "Relationship": "Belong_SB",
+    "EndNode": "第10章 体系结构设计——一种推荐的方法"
+  },
+  {
+    "StartNode": "10.5 体系结构决策 ",
+    "Relationship": "Belong_SB",
+    "EndNode": "第10章 体系结构设计——一种推荐的方法"
+  },
+  {
+    "StartNode": "10.6 体系结构设计",
+    "Relationship": "Belong_SB",
+    "EndNode": "第10章 体系结构设计——一种推荐的方法"
+  },
+  {
+    "StartNode": "10.7 评估候选的体系结构设计",
+    "Relationship": "Belong_SB",
+    "EndNode": "第10章 体系结构设计——一种推荐的方法"
+  },
+  {
+    "StartNode": "10.8 小结",
+    "Relationship": "Belong_SB",
+    "EndNode": "第10章 体系结构设计——一种推荐的方法"
+  },
+  {
+    "StartNode": "第10章 体系结构设计——一种推荐的方法",
+    "Relationship": "NextSB_is",
+    "EndNode": "第11章 构件级设计"
+  },
+  {
+    "StartNode": "11.1 什么是构件",
+    "Relationship": "Belong_SB",
+    "EndNode": "第11章 构件级设计"
+  },
+  {
+    "StartNode": "11.2 设计基于类的构件",
+    "Relationship": "Belong_SB",
+    "EndNode": "第11章 构件级设计"
+  },
+  {
+    "StartNode": "11.3 实施构件级设计",
+    "Relationship": "Belong_SB",
+    "EndNode": "第11章 构件级设计"
+  },
+  {
+    "StartNode": "11.4 专用的构件级设计",
+    "Relationship": "Belong_SB",
+    "EndNode": "第11章 构件级设计"
+  },
+  {
+    "StartNode": "11.5 构件重构 ",
+    "Relationship": "Belong_SB",
+    "EndNode": "第11章 构件级设计"
+  },
+  {
+    "StartNode": "11.6 小结",
+    "Relationship": "Belong_SB",
+    "EndNode": "第11章 构件级设计"
+  },
+  {
+    "StartNode": "第11章 构件级设计",
+    "Relationship": "NextSB_is",
+    "EndNode": "第12章 用户体验设计"
+  },
+  {
+    "StartNode": "12.1 用户体验设计元素",
+    "Relationship": "Belong_SB",
+    "EndNode": "第12章 用户体验设计"
+  },
+  {
+    "StartNode": "12.2 黄金规则?",
+    "Relationship": "Belong_SB",
+    "EndNode": "第12章 用户体验设计"
+  },
+  {
+    "StartNode": "12.3 用户界面的分析和设计 ",
+    "Relationship": "Belong_SB",
+    "EndNode": "第12章 用户体验设计"
+  },
+  {
+    "StartNode": "12.4 用户体验分析 ",
+    "Relationship": "Belong_SB",
+    "EndNode": "第12章 用户体验设计"
+  },
+  {
+    "StartNode": "12.5 用户体验设计 ",
+    "Relationship": "Belong_SB",
+    "EndNode": "第12章 用户体验设计"
+  },
+  {
+    "StartNode": "12.6 用户界面设计",
+    "Relationship": "Belong_SB",
+    "EndNode": "第12章 用户体验设计"
+  },
+  {
+    "StartNode": "12.7 设计评估?",
+    "Relationship": "Belong_SB",
+    "EndNode": "第12章 用户体验设计"
+  },
+  {
+    "StartNode": "12.8 可用性和可访问性",
+    "Relationship": "Belong_SB",
+    "EndNode": "第12章 用户体验设计"
+  },
+  {
+    "StartNode": "12.9 传统软件UX和移动性",
+    "Relationship": "Belong_SB",
+    "EndNode": "第12章 用户体验设计"
+  },
+  {
+    "StartNode": "12.10 小结",
+    "Relationship": "Belong_SB",
+    "EndNode": "第12章 用户体验设计"
+  },
+  {
+    "StartNode": "第12章 用户体验设计",
+    "Relationship": "NextSB_is",
+    "EndNode": "第13章 移动设计"
+  },
+  {
+    "StartNode": "13.1 挑战",
+    "Relationship": "Belong_SB",
+    "EndNode": "第13章 移动设计"
+  },
+  {
+    "StartNode": "13.2 移动开发生命周期",
+    "Relationship": "Belong_SB",
+    "EndNode": "第13章 移动设计"
+  },
+  {
+    "StartNode": "13.3 移动体系结构",
+    "Relationship": "Belong_SB",
+    "EndNode": "第13章 移动设计"
+  },
+  {
+    "StartNode": "13.4 环境感知App",
+    "Relationship": "Belong_SB",
+    "EndNode": "第13章 移动设计"
+  },
+  {
+    "StartNode": "13.5 Web设计金字塔",
+    "Relationship": "Belong_SB",
+    "EndNode": "第13章 移动设计"
+  },
+  {
+    "StartNode": "13.6 构件级设计 ",
+    "Relationship": "Belong_SB",
+    "EndNode": "第13章 移动设计"
+  },
+  {
+    "StartNode": "13.7 移动性与设计质量 ",
+    "Relationship": "Belong_SB",
+    "EndNode": "第13章 移动设计"
+  },
+  {
+    "StartNode": "13.8 移动设计的最佳实践 ",
+    "Relationship": "Belong_SB",
+    "EndNode": "第13章 移动设计"
+  },
+  {
+    "StartNode": "13.9 小结?",
+    "Relationship": "Belong_SB",
+    "EndNode": "第13章 移动设计"
+  },
+  {
+    "StartNode": "第13章 移动设计",
+    "Relationship": "NextSB_is",
+    "EndNode": "第14章 基于模式的设计"
+  },
+  {
+    "StartNode": "14.1 设计模式",
+    "Relationship": "Belong_SB",
+    "EndNode": "第14章 基于模式的设计"
+  },
+  {
+    "StartNode": "14.2 基于模式的软件设计",
+    "Relationship": "Belong_SB",
+    "EndNode": "第14章 基于模式的设计"
+  },
+  {
+    "StartNode": "14.3 体系结构模",
+    "Relationship": "Belong_SB",
+    "EndNode": "第14章 基于模式的设计"
+  },
+  {
+    "StartNode": "14.4 构件级设计模式 ",
+    "Relationship": "Belong_SB",
+    "EndNode": "第14章 基于模式的设计"
+  },
+  {
+    "StartNode": "14.5 反模式 ",
+    "Relationship": "Belong_SB",
+    "EndNode": "第14章 基于模式的设计"
+  },
+  {
+    "StartNode": "14.6 用户界面设计模式 ",
+    "Relationship": "Belong_SB",
+    "EndNode": "第14章 基于模式的设计"
+  },
+  {
+    "StartNode": "14.7 移动设计模式 ",
+    "Relationship": "Belong_SB",
+    "EndNode": "第14章 基于模式的设计"
+  },
+  {
+    "StartNode": "14.8 小结",
+    "Relationship": "Belong_SB",
+    "EndNode": "第14章 基于模式的设计"
+  },
+  {
+    "StartNode": "1.1.1 定义软件 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "1.1 软件的本质"
+  },
+  {
+    "StartNode": "1.1.2 软件应用领域 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "1.1 软件的本质"
+  },
+  {
+    "StartNode": "1.1.3 遗留软件?",
+    "Relationship": "Belong_TP",
+    "EndNode": "1.1 软件的本质"
+  },
+  {
+    "StartNode": "1.1 软件的本质",
+    "Relationship": "NextTP_is",
+    "EndNode": "1.2 定义软件工程学科"
+  },
+  {
+    "StartNode": "1.2 定义软件工程学科",
+    "Relationship": "NextTP_is",
+    "EndNode": "1.3 软件过程?"
+  },
+  {
+    "StartNode": "1.3.1 过程框架 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "1.3 软件过程?"
+  },
+  {
+    "StartNode": "1.3.2 普适性活动 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "1.3 软件过程?"
+  },
+  {
+    "StartNode": "1.3.3 过程的适应性调整 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "1.3 软件过程?"
+  },
+  {
+    "StartNode": "1.3 软件过程?",
+    "Relationship": "NextTP_is",
+    "EndNode": "1.4 软件工程实践"
+  },
+  {
+    "StartNode": "1.4.1 实践的精髓 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "1.4 软件工程实践"
+  },
+  {
+    "StartNode": "1.4.2 通用原则 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "1.4 软件工程实践"
+  },
+  {
+    "StartNode": "1.4 软件工程实践",
+    "Relationship": "NextTP_is",
+    "EndNode": "1.5 这一切是如何开始的"
+  },
+  {
+    "StartNode": "1.5 这一切是如何开始的",
+    "Relationship": "NextTP_is",
+    "EndNode": "1.6 小结"
+  },
+  {
+    "StartNode": "2.1 通用过程模型",
+    "Relationship": "NextTP_is",
+    "EndNode": "2.2 定义框架活动"
+  },
+  {
+    "StartNode": "2.2 定义框架活动",
+    "Relationship": "NextTP_is",
+    "EndNode": "2.3 明确任务集"
+  },
+  {
+    "StartNode": "2.3 明确任务集",
+    "Relationship": "NextTP_is",
+    "EndNode": "2.4 过程评估与改进"
+  },
+  {
+    "StartNode": "2.4 过程评估与改进",
+    "Relationship": "NextTP_is",
+    "EndNode": "2.5 惯用过程模型"
+  },
+  {
+    "StartNode": "2.5.1 瀑布模型 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "2.5 惯用过程模型"
+  },
+  {
+    "StartNode": "2.5.2 原型开发过程模型 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "2.5 惯用过程模型"
+  },
+  {
+    "StartNode": "2.5.3 演化过程模型 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "2.5 惯用过程模型"
+  },
+  {
+    "StartNode": "2.5.4 统一过程模型",
+    "Relationship": "Belong_TP",
+    "EndNode": "2.5 惯用过程模型"
+  },
+  {
+    "StartNode": "2.5 惯用过程模型",
+    "Relationship": "NextTP_is",
+    "EndNode": "2.6 产品和过程"
+  },
+  {
+    "StartNode": "2.6 产品和过程",
+    "Relationship": "NextTP_is",
+    "EndNode": "2.7 小结?"
+  },
+  {
+    "StartNode": "3.1 什么是敏捷",
+    "Relationship": "NextTP_is",
+    "EndNode": "3.2 敏捷及变更成本"
+  },
+  {
+    "StartNode": "3.2 敏捷及变更成本",
+    "Relationship": "NextTP_is",
+    "EndNode": "3.3 什么是敏捷过程"
+  },
+  {
+    "StartNode": "3.3.1 敏捷原则 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "3.3 什么是敏捷过程"
+  },
+  {
+    "StartNode": "3.3.2 敏捷开发战略",
+    "Relationship": "Belong_TP",
+    "EndNode": "3.3 什么是敏捷过程"
+  },
+  {
+    "StartNode": "3.3 什么是敏捷过程",
+    "Relationship": "NextTP_is",
+    "EndNode": "3.4 Scrum"
+  },
+  {
+    "StartNode": "3.4.1 Scrum团队和制品 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "3.4 Scrum"
+  },
+  {
+    "StartNode": "3.4.2 冲刺规划会议 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "3.4 Scrum"
+  },
+  {
+    "StartNode": "3.4.3 每日Scrum会议 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "3.4 Scrum"
+  },
+  {
+    "StartNode": "3.4.4 冲刺评审会议 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "3.4 Scrum"
+  },
+  {
+    "StartNode": "3.4.5 冲刺回顾 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "3.4 Scrum"
+  },
+  {
+    "StartNode": "3.4 Scrum",
+    "Relationship": "NextTP_is",
+    "EndNode": "3.5 其他敏捷框架"
+  },
+  {
+    "StartNode": "3.5.1 XP框架 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "3.5 其他敏捷框架"
+  },
+  {
+    "StartNode": "3.5.2 看板法 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "3.5 其他敏捷框架"
+  },
+  {
+    "StartNode": "3.5.3 DevOps ",
+    "Relationship": "Belong_TP",
+    "EndNode": "3.5 其他敏捷框架"
+  },
+  {
+    "StartNode": "3.5 其他敏捷框架",
+    "Relationship": "NextTP_is",
+    "EndNode": "3.6 小结"
+  },
+  {
+    "StartNode": "4.1 需求定义",
+    "Relationship": "NextTP_is",
+    "EndNode": "4.2 初步体系结构设计"
+  },
+  {
+    "StartNode": "4.2 初步体系结构设计",
+    "Relationship": "NextTP_is",
+    "EndNode": "4.3 资源估算"
+  },
+  {
+    "StartNode": "4.3 资源估算",
+    "Relationship": "NextTP_is",
+    "EndNode": "4.4 首次原型构建"
+  },
+  {
+    "StartNode": "4.4 首次原型构建",
+    "Relationship": "NextTP_is",
+    "EndNode": "4.5 原型评价"
+  },
+  {
+    "StartNode": "4.5 原型评价",
+    "Relationship": "NextTP_is",
+    "EndNode": "4.6 继续与否的决策"
+  },
+  {
+    "StartNode": "4.6 继续与否的决策",
+    "Relationship": "NextTP_is",
+    "EndNode": "4.7 原型演化"
+  },
+  {
+    "StartNode": "4.7.1 新原型范围 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "4.7 原型演化"
+  },
+  {
+    "StartNode": "4.7.2 构建新原型 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "4.7 原型演化"
+  },
+  {
+    "StartNode": "4.7.3 测试新原型",
+    "Relationship": "Belong_TP",
+    "EndNode": "4.7 原型演化"
+  },
+  {
+    "StartNode": "4.7 原型演化",
+    "Relationship": "NextTP_is",
+    "EndNode": "4.8 原型发布"
+  },
+  {
+    "StartNode": "4.8 原型发布",
+    "Relationship": "NextTP_is",
+    "EndNode": "4.9 维护发布软件"
+  },
+  {
+    "StartNode": "4.9 维护发布软件",
+    "Relationship": "NextTP_is",
+    "EndNode": "4.10 小结"
+  },
+  {
+    "StartNode": "5.1 软件工程师的特质 ",
+    "Relationship": "NextTP_is",
+    "EndNode": "5.2 软件工程心理学 "
+  },
+  {
+    "StartNode": "5.2 软件工程心理学 ",
+    "Relationship": "NextTP_is",
+    "EndNode": "5.3 软件团队"
+  },
+  {
+    "StartNode": "5.3 软件团队",
+    "Relationship": "NextTP_is",
+    "EndNode": "5.4 团队结构 "
+  },
+  {
+    "StartNode": "5.4 团队结构 ",
+    "Relationship": "NextTP_is",
+    "EndNode": "5.5 社交媒体的影响 "
+  },
+  {
+    "StartNode": "5.5 社交媒体的影响 ",
+    "Relationship": "NextTP_is",
+    "EndNode": "5.6 全球化团队 "
+  },
+  {
+    "StartNode": "5.6 全球化团队 ",
+    "Relationship": "NextTP_is",
+    "EndNode": "5.7 小结 "
+  },
+  {
+    "StartNode": "6.1.1 指导过程的原则 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "6.1 核心原则"
+  },
+  {
+    "StartNode": "6.1.2 指导实践的原则",
+    "Relationship": "Belong_TP",
+    "EndNode": "6.1 核心原则"
+  },
+  {
+    "StartNode": "6.1 核心原则",
+    "Relationship": "NextTP_is",
+    "EndNode": "6.2 指导每个框架活动的原则"
+  },
+  {
+    "StartNode": "6.2.1 沟通原则 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "6.2 指导每个框架活动的原则"
+  },
+  {
+    "StartNode": "6.2.2 策划原则 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "6.2 指导每个框架活动的原则"
+  },
+  {
+    "StartNode": "6.2.3 建模原则 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "6.2 指导每个框架活动的原则"
+  },
+  {
+    "StartNode": "6.2.4 构建原则 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "6.2 指导每个框架活动的原则"
+  },
+  {
+    "StartNode": "6.2.5 部署原则",
+    "Relationship": "Belong_TP",
+    "EndNode": "6.2 指导每个框架活动的原则"
+  },
+  {
+    "StartNode": "6.2 指导每个框架活动的原则",
+    "Relationship": "NextTP_is",
+    "EndNode": "6.3 小结"
+  },
+  {
+    "StartNode": "7.1.1 起始 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "7.1 需求工程"
+  },
+  {
+    "StartNode": "7.1.2 获取 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "7.1 需求工程"
+  },
+  {
+    "StartNode": "7.1.3 细化 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "7.1 需求工程"
+  },
+  {
+    "StartNode": "7.1.4 协商 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "7.1 需求工程"
+  },
+  {
+    "StartNode": "7.1.5 规格说明 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "7.1 需求工程"
+  },
+  {
+    "StartNode": "7.1.6 确认 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "7.1 需求工程"
+  },
+  {
+    "StartNode": "7.1.7 需求管理?",
+    "Relationship": "Belong_TP",
+    "EndNode": "7.1 需求工程"
+  },
+  {
+    "StartNode": "7.1 需求工程",
+    "Relationship": "NextTP_is",
+    "EndNode": "7.2 建立根基"
+  },
+  {
+    "StartNode": "7.2.1 确认利益相关者 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "7.2 建立根基"
+  },
+  {
+    "StartNode": "7.2.2 识别多重观点 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "7.2 建立根基"
+  },
+  {
+    "StartNode": "7.2.3 协作 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "7.2 建立根基"
+  },
+  {
+    "StartNode": "7.2.4 首次提问 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "7.2 建立根基"
+  },
+  {
+    "StartNode": "7.2.5 非功能需求 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "7.2 建立根基"
+  },
+  {
+    "StartNode": "7.2.6 可追溯性",
+    "Relationship": "Belong_TP",
+    "EndNode": "7.2 建立根基"
+  },
+  {
+    "StartNode": "7.2 建立根基",
+    "Relationship": "NextTP_is",
+    "EndNode": "7.3 获取需求"
+  },
+  {
+    "StartNode": "7.3.1 协作收集需求 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "7.3 获取需求"
+  },
+  {
+    "StartNode": "7.3.2 使用场景 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "7.3 获取需求"
+  },
+  {
+    "StartNode": "7.3.3 获取工作产品",
+    "Relationship": "Belong_TP",
+    "EndNode": "7.3 获取需求"
+  },
+  {
+    "StartNode": "7.3 获取需求",
+    "Relationship": "NextTP_is",
+    "EndNode": "7.4 开发用例"
+  },
+  {
+    "StartNode": "7.4 开发用例",
+    "Relationship": "NextTP_is",
+    "EndNode": "7.5 构建分析模型"
+  },
+  {
+    "StartNode": "7.5.1 分析模型的元素 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "7.5 构建分析模型"
+  },
+  {
+    "StartNode": "7.5.2 分析模式?",
+    "Relationship": "Belong_TP",
+    "EndNode": "7.5 构建分析模型"
+  },
+  {
+    "StartNode": "7.5 构建分析模型",
+    "Relationship": "NextTP_is",
+    "EndNode": "7.6 协商需求"
+  },
+  {
+    "StartNode": "7.6 协商需求",
+    "Relationship": "NextTP_is",
+    "EndNode": "7.7 需求监控"
+  },
+  {
+    "StartNode": "7.7 需求监控",
+    "Relationship": "NextTP_is",
+    "EndNode": "7.8 确认需求"
+  },
+  {
+    "StartNode": "7.8 确认需求",
+    "Relationship": "NextTP_is",
+    "EndNode": "7.9 小结"
+  },
+  {
+    "StartNode": "8.1.1 总体目标和原理 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "8.1 需求分析"
+  },
+  {
+    "StartNode": "8.1.2 分析的经验原则 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "8.1 需求分析"
+  },
+  {
+    "StartNode": "8.1.3 需求建模原则",
+    "Relationship": "Belong_TP",
+    "EndNode": "8.1 需求分析"
+  },
+  {
+    "StartNode": "8.1 需求分析",
+    "Relationship": "NextTP_is",
+    "EndNode": "8.2 基于场景建模"
+  },
+  {
+    "StartNode": "8.2.1 参与者和用户概要文件 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "8.2 基于场景建模"
+  },
+  {
+    "StartNode": "8.2.2 创建用例 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "8.2 基于场景建模"
+  },
+  {
+    "StartNode": "8.2.3 编写用例",
+    "Relationship": "Belong_TP",
+    "EndNode": "8.2 基于场景建模"
+  },
+  {
+    "StartNode": "8.2 基于场景建模",
+    "Relationship": "NextTP_is",
+    "EndNode": "8.3 基于类建模"
+  },
+  {
+    "StartNode": "8.3.1 识别分析类 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "8.3 基于类建模"
+  },
+  {
+    "StartNode": "8.3.2 定义属性和操作",
+    "Relationship": "Belong_TP",
+    "EndNode": "8.3 基于类建模"
+  },
+  {
+    "StartNode": "8.3.3 UML类模型 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "8.3 基于类建模"
+  },
+  {
+    "StartNode": "8.3.4 类–职责–协作者建模",
+    "Relationship": "Belong_TP",
+    "EndNode": "8.3 基于类建模"
+  },
+  {
+    "StartNode": "8.3 基于类建模",
+    "Relationship": "NextTP_is",
+    "EndNode": "8.4 功能建模"
+  },
+  {
+    "StartNode": "8.4.1 过程视图 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "8.4 功能建模"
+  },
+  {
+    "StartNode": "8.4.2 UML顺序图",
+    "Relationship": "Belong_TP",
+    "EndNode": "8.4 功能建模"
+  },
+  {
+    "StartNode": "8.4 功能建模",
+    "Relationship": "NextTP_is",
+    "EndNode": "8.5 行为建模"
+  },
+  {
+    "StartNode": "8.5.1 识别用例事件 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "8.5 行为建模"
+  },
+  {
+    "StartNode": "8.5.2 UML状态图 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "8.5 行为建模"
+  },
+  {
+    "StartNode": "8.5.3 UML活动图?",
+    "Relationship": "Belong_TP",
+    "EndNode": "8.5 行为建模"
+  },
+  {
+    "StartNode": "8.5 行为建模",
+    "Relationship": "NextTP_is",
+    "EndNode": "8.6 小结?"
+  },
+  {
+    "StartNode": "9.1 软件工程中的设计 ",
+    "Relationship": "NextTP_is",
+    "EndNode": "9.2 设计过程?"
+  },
+  {
+    "StartNode": "9.2.1 软件质量指导原则和属性",
+    "Relationship": "Belong_TP",
+    "EndNode": "9.2 设计过程?"
+  },
+  {
+    "StartNode": "9.2.2 软件设计的演化",
+    "Relationship": "Belong_TP",
+    "EndNode": "9.2 设计过程?"
+  },
+  {
+    "StartNode": "9.2 设计过程?",
+    "Relationship": "NextTP_is",
+    "EndNode": "9.3 设计概念?"
+  },
+  {
+    "StartNode": "9.3.1 抽象 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "9.3 设计概念?"
+  },
+  {
+    "StartNode": "9.3.2 体系结构 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "9.3 设计概念?"
+  },
+  {
+    "StartNode": "9.3.3 模式 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "9.3 设计概念?"
+  },
+  {
+    "StartNode": "9.3.4 关注点分离 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "9.3 设计概念?"
+  },
+  {
+    "StartNode": "9.3.5 模块化 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "9.3 设计概念?"
+  },
+  {
+    "StartNode": "9.3.6 信息隐蔽 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "9.3 设计概念?"
+  },
+  {
+    "StartNode": "9.3.7 功能独立 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "9.3 设计概念?"
+  },
+  {
+    "StartNode": "9.3.8 逐步求精 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "9.3 设计概念?"
+  },
+  {
+    "StartNode": "9.3.9 重构 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "9.3 设计概念?"
+  },
+  {
+    "StartNode": "9.3.10 设计类",
+    "Relationship": "Belong_TP",
+    "EndNode": "9.3 设计概念?"
+  },
+  {
+    "StartNode": "9.3 设计概念?",
+    "Relationship": "NextTP_is",
+    "EndNode": "9.4 设计模型?"
+  },
+  {
+    "StartNode": "9.4.1 设计建模原则 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "9.4 设计模型?"
+  },
+  {
+    "StartNode": "9.4.2 数据设计元素 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "9.4 设计模型?"
+  },
+  {
+    "StartNode": "9.4.3 体系结构设计元素 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "9.4 设计模型?"
+  },
+  {
+    "StartNode": "9.4.4 接口设计元素 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "9.4 设计模型?"
+  },
+  {
+    "StartNode": "9.4.5 构件级设计元素 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "9.4 设计模型?"
+  },
+  {
+    "StartNode": "9.4.6 部署级设计元素",
+    "Relationship": "Belong_TP",
+    "EndNode": "9.4 设计模型?"
+  },
+  {
+    "StartNode": "9.4 设计模型?",
+    "Relationship": "NextTP_is",
+    "EndNode": "9.5 小结?"
+  },
+  {
+    "StartNode": "10.1.1 什么是体系结构 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "10.1 软件体系结构"
+  },
+  {
+    "StartNode": "10.1.2 体系结构的重要性 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "10.1 软件体系结构"
+  },
+  {
+    "StartNode": "10.1.3 体系结构描述 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "10.1 软件体系结构"
+  },
+  {
+    "StartNode": "10.1.4 体系结构决策",
+    "Relationship": "Belong_TP",
+    "EndNode": "10.1 软件体系结构"
+  },
+  {
+    "StartNode": "10.1 软件体系结构",
+    "Relationship": "NextTP_is",
+    "EndNode": "10.2 敏捷性和体系结构 "
+  },
+  {
+    "StartNode": "10.2 敏捷性和体系结构 ",
+    "Relationship": "NextTP_is",
+    "EndNode": "10.3 体系结构风格?"
+  },
+  {
+    "StartNode": "10.3.1 体系结构风格的简单分类",
+    "Relationship": "Belong_TP",
+    "EndNode": "10.3 体系结构风格?"
+  },
+  {
+    "StartNode": "10.3.2 体系结构模式 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "10.3 体系结构风格?"
+  },
+  {
+    "StartNode": "10.3.3 组织和求精",
+    "Relationship": "Belong_TP",
+    "EndNode": "10.3 体系结构风格?"
+  },
+  {
+    "StartNode": "10.3 体系结构风格?",
+    "Relationship": "NextTP_is",
+    "EndNode": "10.4 体系结构考虑要素 "
+  },
+  {
+    "StartNode": "10.4 体系结构考虑要素 ",
+    "Relationship": "NextTP_is",
+    "EndNode": "10.5 体系结构决策 "
+  },
+  {
+    "StartNode": "10.5 体系结构决策 ",
+    "Relationship": "NextTP_is",
+    "EndNode": "10.6 体系结构设计"
+  },
+  {
+    "StartNode": "10.6.1 系统在上下文中的表示 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "10.6 体系结构设计"
+  },
+  {
+    "StartNode": "10.6.2 定义体系结构原型 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "10.6 体系结构设计"
+  },
+  {
+    "StartNode": "10.6.3 将体系结构细化为构件 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "10.6 体系结构设计"
+  },
+  {
+    "StartNode": "10.6.4 描述系统实例",
+    "Relationship": "Belong_TP",
+    "EndNode": "10.6 体系结构设计"
+  },
+  {
+    "StartNode": "10.6 体系结构设计",
+    "Relationship": "NextTP_is",
+    "EndNode": "10.7 评估候选的体系结构设计"
+  },
+  {
+    "StartNode": "10.7.1 体系结构评审 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "10.7 评估候选的体系结构设计"
+  },
+  {
+    "StartNode": "10.7.2 基于模式的体系结构评审 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "10.7 评估候选的体系结构设计"
+  },
+  {
+    "StartNode": "10.7.3 体系结构的一致性检查",
+    "Relationship": "Belong_TP",
+    "EndNode": "10.7 评估候选的体系结构设计"
+  },
+  {
+    "StartNode": "10.7 评估候选的体系结构设计",
+    "Relationship": "NextTP_is",
+    "EndNode": "10.8 小结"
+  },
+  {
+    "StartNode": "11.1.1 面向对象的观点 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "11.1 什么是构件"
+  },
+  {
+    "StartNode": "11.1.2 传统的观点 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "11.1 什么是构件"
+  },
+  {
+    "StartNode": "11.1.3 过程相关的观点",
+    "Relationship": "Belong_TP",
+    "EndNode": "11.1 什么是构件"
+  },
+  {
+    "StartNode": "11.1 什么是构件",
+    "Relationship": "NextTP_is",
+    "EndNode": "11.2 设计基于类的构件"
+  },
+  {
+    "StartNode": "11.2.1 基本设计原则 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "11.2 设计基于类的构件"
+  },
+  {
+    "StartNode": "11.2.2 构件级设计指导方针 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "11.2 设计基于类的构件"
+  },
+  {
+    "StartNode": "11.2.3 内聚性 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "11.2 设计基于类的构件"
+  },
+  {
+    "StartNode": "11.2.4 耦合?",
+    "Relationship": "Belong_TP",
+    "EndNode": "11.2 设计基于类的构件"
+  },
+  {
+    "StartNode": "11.2 设计基于类的构件",
+    "Relationship": "NextTP_is",
+    "EndNode": "11.3 实施构件级设计"
+  },
+  {
+    "StartNode": "11.3 实施构件级设计",
+    "Relationship": "NextTP_is",
+    "EndNode": "11.4 专用的构件级设计"
+  },
+  {
+    "StartNode": "11.4.1 WebApp的构件级设计 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "11.4 专用的构件级设计"
+  },
+  {
+    "StartNode": "11.4.2 移动App的构件级设计 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "11.4 专用的构件级设计"
+  },
+  {
+    "StartNode": "11.4.3 设计传统构件 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "11.4 专用的构件级设计"
+  },
+  {
+    "StartNode": "11.4.4 基于构件的开发",
+    "Relationship": "Belong_TP",
+    "EndNode": "11.4 专用的构件级设计"
+  },
+  {
+    "StartNode": "11.4 专用的构件级设计",
+    "Relationship": "NextTP_is",
+    "EndNode": "11.5 构件重构 "
+  },
+  {
+    "StartNode": "11.5 构件重构 ",
+    "Relationship": "NextTP_is",
+    "EndNode": "11.6 小结"
+  },
+  {
+    "StartNode": "12.1.1 信息体系结构 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "12.1 用户体验设计元素"
+  },
+  {
+    "StartNode": "12.1.2 用户交互设计 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "12.1 用户体验设计元素"
+  },
+  {
+    "StartNode": "12.1.3 可用性工程 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "12.1 用户体验设计元素"
+  },
+  {
+    "StartNode": "12.1.4 可视化设计",
+    "Relationship": "Belong_TP",
+    "EndNode": "12.1 用户体验设计元素"
+  },
+  {
+    "StartNode": "12.1 用户体验设计元素",
+    "Relationship": "NextTP_is",
+    "EndNode": "12.2 黄金规则?"
+  },
+  {
+    "StartNode": "12.2.1 把控制权交给用户 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "12.2 黄金规则?"
+  },
+  {
+    "StartNode": "12.2.2 减轻用户的记忆负担 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "12.2 黄金规则?"
+  },
+  {
+    "StartNode": "12.2.3 保持界面一致",
+    "Relationship": "Belong_TP",
+    "EndNode": "12.2 黄金规则?"
+  },
+  {
+    "StartNode": "12.2 黄金规则?",
+    "Relationship": "NextTP_is",
+    "EndNode": "12.3 用户界面的分析和设计 "
+  },
+  {
+    "StartNode": "12.3.1 用户界面分析和设计模型 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "12.3 用户界面的分析和设计 "
+  },
+  {
+    "StartNode": "12.3.2 过程",
+    "Relationship": "Belong_TP",
+    "EndNode": "12.3 用户界面的分析和设计 "
+  },
+  {
+    "StartNode": "12.3 用户界面的分析和设计 ",
+    "Relationship": "NextTP_is",
+    "EndNode": "12.4 用户体验分析 "
+  },
+  {
+    "StartNode": "12.4.1 用户研究 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "12.4 用户体验分析 "
+  },
+  {
+    "StartNode": "12.4.2 用户建模 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "12.4 用户体验分析 "
+  },
+  {
+    "StartNode": "12.4.3 任务分析 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "12.4 用户体验分析 "
+  },
+  {
+    "StartNode": "12.4.4 工作环境分析",
+    "Relationship": "Belong_TP",
+    "EndNode": "12.4 用户体验分析 "
+  },
+  {
+    "StartNode": "12.4 用户体验分析 ",
+    "Relationship": "NextTP_is",
+    "EndNode": "12.5 用户体验设计 "
+  },
+  {
+    "StartNode": "12.5 用户体验设计 ",
+    "Relationship": "NextTP_is",
+    "EndNode": "12.6 用户界面设计"
+  },
+  {
+    "StartNode": "12.6.1 应用界面设计步骤 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "12.6 用户界面设计"
+  },
+  {
+    "StartNode": "12.6.2 用户界面设计模式",
+    "Relationship": "Belong_TP",
+    "EndNode": "12.6 用户界面设计"
+  },
+  {
+    "StartNode": "12.6 用户界面设计",
+    "Relationship": "NextTP_is",
+    "EndNode": "12.7 设计评估?"
+  },
+  {
+    "StartNode": "12.7.1 原型审查 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "12.7 设计评估?"
+  },
+  {
+    "StartNode": "12.7.2 用户测试?",
+    "Relationship": "Belong_TP",
+    "EndNode": "12.7 设计评估?"
+  },
+  {
+    "StartNode": "12.7 设计评估?",
+    "Relationship": "NextTP_is",
+    "EndNode": "12.8 可用性和可访问性"
+  },
+  {
+    "StartNode": "12.8.1 可用性准则 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "12.8 可用性和可访问性"
+  },
+  {
+    "StartNode": "12.8.2 可访问性准则",
+    "Relationship": "Belong_TP",
+    "EndNode": "12.8 可用性和可访问性"
+  },
+  {
+    "StartNode": "12.8 可用性和可访问性",
+    "Relationship": "NextTP_is",
+    "EndNode": "12.9 传统软件UX和移动性"
+  },
+  {
+    "StartNode": "12.9 传统软件UX和移动性",
+    "Relationship": "NextTP_is",
+    "EndNode": "12.10 小结"
+  },
+  {
+    "StartNode": "13.1.1 开发因素 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "13.1 挑战"
+  },
+  {
+    "StartNode": "13.1.2 技术因素",
+    "Relationship": "Belong_TP",
+    "EndNode": "13.1 挑战"
+  },
+  {
+    "StartNode": "13.1 挑战",
+    "Relationship": "NextTP_is",
+    "EndNode": "13.2 移动开发生命周期"
+  },
+  {
+    "StartNode": "13.2.1 用户界面设计 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "13.2 移动开发生命周期"
+  },
+  {
+    "StartNode": "13.2.2 经验教训",
+    "Relationship": "Belong_TP",
+    "EndNode": "13.2 移动开发生命周期"
+  },
+  {
+    "StartNode": "13.2 移动开发生命周期",
+    "Relationship": "NextTP_is",
+    "EndNode": "13.3 移动体系结构"
+  },
+  {
+    "StartNode": "13.3 移动体系结构",
+    "Relationship": "NextTP_is",
+    "EndNode": "13.4 环境感知App"
+  },
+  {
+    "StartNode": "13.4 环境感知App",
+    "Relationship": "NextTP_is",
+    "EndNode": "13.5 Web设计金字塔"
+  },
+  {
+    "StartNode": "13.5.1 WebApp界面设计 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "13.5 Web设计金字塔"
+  },
+  {
+    "StartNode": "13.5.2 美学设计 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "13.5 Web设计金字塔"
+  },
+  {
+    "StartNode": "13.5.3 内容设计 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "13.5 Web设计金字塔"
+  },
+  {
+    "StartNode": "13.5.4 体系结构设计 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "13.5 Web设计金字塔"
+  },
+  {
+    "StartNode": "13.5.5 导航设计",
+    "Relationship": "Belong_TP",
+    "EndNode": "13.5 Web设计金字塔"
+  },
+  {
+    "StartNode": "13.5 Web设计金字塔",
+    "Relationship": "NextTP_is",
+    "EndNode": "13.6 构件级设计 "
+  },
+  {
+    "StartNode": "13.6 构件级设计 ",
+    "Relationship": "NextTP_is",
+    "EndNode": "13.7 移动性与设计质量 "
+  },
+  {
+    "StartNode": "13.7 移动性与设计质量 ",
+    "Relationship": "NextTP_is",
+    "EndNode": "13.8 移动设计的最佳实践 "
+  },
+  {
+    "StartNode": "13.8 移动设计的最佳实践 ",
+    "Relationship": "NextTP_is",
+    "EndNode": "13.9 小结?"
+  },
+  {
+    "StartNode": "14.1.1 模式的种类 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "14.1 设计模式"
+  },
+  {
+    "StartNode": "14.1.2 框架 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "14.1 设计模式"
+  },
+  {
+    "StartNode": "14.1.3 描述模式 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "14.1 设计模式"
+  },
+  {
+    "StartNode": "14.1.4 机器学习和模式发现",
+    "Relationship": "Belong_TP",
+    "EndNode": "14.1 设计模式"
+  },
+  {
+    "StartNode": "14.1 设计模式",
+    "Relationship": "NextTP_is",
+    "EndNode": "14.2 基于模式的软件设计"
+  },
+  {
+    "StartNode": "14.2.1 不同环境下基于模式的设计 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "14.2 基于模式的软件设计"
+  },
+  {
+    "StartNode": "14.2.2 用模式思考 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "14.2 基于模式的软件设计"
+  },
+  {
+    "StartNode": "14.2.3 设计任务 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "14.2 基于模式的软件设计"
+  },
+  {
+    "StartNode": "14.2.4 建立模式组织表 ",
+    "Relationship": "Belong_TP",
+    "EndNode": "14.2 基于模式的软件设计"
+  },
+  {
+    "StartNode": "14.2.5 常见设计错误",
+    "Relationship": "Belong_TP",
+    "EndNode": "14.2 基于模式的软件设计"
+  },
+  {
+    "StartNode": "14.2 基于模式的软件设计",
+    "Relationship": "NextTP_is",
+    "EndNode": "14.3 体系结构模"
+  },
+  {
+    "StartNode": "14.3 体系结构模",
+    "Relationship": "NextTP_is",
+    "EndNode": "14.4 构件级设计模式 "
+  },
+  {
+    "StartNode": "14.4 构件级设计模式 ",
+    "Relationship": "NextTP_is",
+    "EndNode": "14.5 反模式 "
+  },
+  {
+    "StartNode": "14.5 反模式 ",
+    "Relationship": "NextTP_is",
+    "EndNode": "14.6 用户界面设计模式 "
+  },
+  {
+    "StartNode": "14.6 用户界面设计模式 ",
+    "Relationship": "NextTP_is",
+    "EndNode": "14.7 移动设计模式 "
+  },
+  {
+    "StartNode": "14.7 移动设计模式 ",
+    "Relationship": "NextTP_is",
+    "EndNode": "14.8 小结"
+  },
+  {
+    "StartNode": "1.1.1 定义软件 ",
+    "Relationship": "NextST_is",
+    "EndNode": "1.1.2 软件应用领域 "
+  },
+  {
+    "StartNode": "1.1.2 软件应用领域 ",
+    "Relationship": "NextST_is",
+    "EndNode": "1.1.3 遗留软件?"
+  },
+  {
+    "StartNode": "1.3.1 过程框架 ",
+    "Relationship": "NextST_is",
+    "EndNode": "1.3.2 普适性活动 "
+  },
+  {
+    "StartNode": "1.3.2 普适性活动 ",
+    "Relationship": "NextST_is",
+    "EndNode": "1.3.3 过程的适应性调整 "
+  },
+  {
+    "StartNode": "1.4.1 实践的精髓 ",
+    "Relationship": "NextST_is",
+    "EndNode": "1.4.2 通用原则 "
+  },
+  {
+    "StartNode": "2.5.1 瀑布模型 ",
+    "Relationship": "NextST_is",
+    "EndNode": "2.5.2 原型开发过程模型 "
+  },
+  {
+    "StartNode": "2.5.2 原型开发过程模型 ",
+    "Relationship": "NextST_is",
+    "EndNode": "2.5.3 演化过程模型 "
+  },
+  {
+    "StartNode": "2.5.3 演化过程模型 ",
+    "Relationship": "NextST_is",
+    "EndNode": "2.5.4 统一过程模型"
+  },
+  {
+    "StartNode": "3.3.1 敏捷原则 ",
+    "Relationship": "NextST_is",
+    "EndNode": "3.3.2 敏捷开发战略"
+  },
+  {
+    "StartNode": "3.4.1 Scrum团队和制品 ",
+    "Relationship": "NextST_is",
+    "EndNode": "3.4.2 冲刺规划会议 "
+  },
+  {
+    "StartNode": "3.4.2 冲刺规划会议 ",
+    "Relationship": "NextST_is",
+    "EndNode": "3.4.3 每日Scrum会议 "
+  },
+  {
+    "StartNode": "3.4.3 每日Scrum会议 ",
+    "Relationship": "NextST_is",
+    "EndNode": "3.4.4 冲刺评审会议 "
+  },
+  {
+    "StartNode": "3.4.4 冲刺评审会议 ",
+    "Relationship": "NextST_is",
+    "EndNode": "3.4.5 冲刺回顾 "
+  },
+  {
+    "StartNode": "3.5.1 XP框架 ",
+    "Relationship": "NextST_is",
+    "EndNode": "3.5.2 看板法 "
+  },
+  {
+    "StartNode": "3.5.2 看板法 ",
+    "Relationship": "NextST_is",
+    "EndNode": "3.5.3 DevOps "
+  },
+  {
+    "StartNode": "4.7.1 新原型范围 ",
+    "Relationship": "NextST_is",
+    "EndNode": "4.7.2 构建新原型 "
+  },
+  {
+    "StartNode": "4.7.2 构建新原型 ",
+    "Relationship": "NextST_is",
+    "EndNode": "4.7.3 测试新原型"
+  },
+  {
+    "StartNode": "6.1.1 指导过程的原则 ",
+    "Relationship": "NextST_is",
+    "EndNode": "6.1.2 指导实践的原则"
+  },
+  {
+    "StartNode": "6.2.1 沟通原则 ",
+    "Relationship": "NextST_is",
+    "EndNode": "6.2.2 策划原则 "
+  },
+  {
+    "StartNode": "6.2.2 策划原则 ",
+    "Relationship": "NextST_is",
+    "EndNode": "6.2.3 建模原则 "
+  },
+  {
+    "StartNode": "6.2.3 建模原则 ",
+    "Relationship": "NextST_is",
+    "EndNode": "6.2.4 构建原则 "
+  },
+  {
+    "StartNode": "6.2.4 构建原则 ",
+    "Relationship": "NextST_is",
+    "EndNode": "6.2.5 部署原则"
+  },
+  {
+    "StartNode": "7.1.1 起始 ",
+    "Relationship": "NextST_is",
+    "EndNode": "7.1.2 获取 "
+  },
+  {
+    "StartNode": "7.1.2 获取 ",
+    "Relationship": "NextST_is",
+    "EndNode": "7.1.3 细化 "
+  },
+  {
+    "StartNode": "7.1.3 细化 ",
+    "Relationship": "NextST_is",
+    "EndNode": "7.1.4 协商 "
+  },
+  {
+    "StartNode": "7.1.4 协商 ",
+    "Relationship": "NextST_is",
+    "EndNode": "7.1.5 规格说明 "
+  },
+  {
+    "StartNode": "7.1.5 规格说明 ",
+    "Relationship": "NextST_is",
+    "EndNode": "7.1.6 确认 "
+  },
+  {
+    "StartNode": "7.1.6 确认 ",
+    "Relationship": "NextST_is",
+    "EndNode": "7.1.7 需求管理?"
+  },
+  {
+    "StartNode": "7.2.1 确认利益相关者 ",
+    "Relationship": "NextST_is",
+    "EndNode": "7.2.2 识别多重观点 "
+  },
+  {
+    "StartNode": "7.2.2 识别多重观点 ",
+    "Relationship": "NextST_is",
+    "EndNode": "7.2.3 协作 "
+  },
+  {
+    "StartNode": "7.2.3 协作 ",
+    "Relationship": "NextST_is",
+    "EndNode": "7.2.4 首次提问 "
+  },
+  {
+    "StartNode": "7.2.4 首次提问 ",
+    "Relationship": "NextST_is",
+    "EndNode": "7.2.5 非功能需求 "
+  },
+  {
+    "StartNode": "7.2.5 非功能需求 ",
+    "Relationship": "NextST_is",
+    "EndNode": "7.2.6 可追溯性"
+  },
+  {
+    "StartNode": "7.3.1 协作收集需求 ",
+    "Relationship": "NextST_is",
+    "EndNode": "7.3.2 使用场景 "
+  },
+  {
+    "StartNode": "7.3.2 使用场景 ",
+    "Relationship": "NextST_is",
+    "EndNode": "7.3.3 获取工作产品"
+  },
+  {
+    "StartNode": "7.5.1 分析模型的元素 ",
+    "Relationship": "NextST_is",
+    "EndNode": "7.5.2 分析模式?"
+  },
+  {
+    "StartNode": "8.1.1 总体目标和原理 ",
+    "Relationship": "NextST_is",
+    "EndNode": "8.1.2 分析的经验原则 "
+  },
+  {
+    "StartNode": "8.1.2 分析的经验原则 ",
+    "Relationship": "NextST_is",
+    "EndNode": "8.1.3 需求建模原则"
+  },
+  {
+    "StartNode": "8.2.1 参与者和用户概要文件 ",
+    "Relationship": "NextST_is",
+    "EndNode": "8.2.2 创建用例 "
+  },
+  {
+    "StartNode": "8.2.2 创建用例 ",
+    "Relationship": "NextST_is",
+    "EndNode": "8.2.3 编写用例"
+  },
+  {
+    "StartNode": "8.3.1 识别分析类 ",
+    "Relationship": "NextST_is",
+    "EndNode": "8.3.2 定义属性和操作"
+  },
+  {
+    "StartNode": "8.3.2 定义属性和操作",
+    "Relationship": "NextST_is",
+    "EndNode": "8.3.3 UML类模型 "
+  },
+  {
+    "StartNode": "8.3.3 UML类模型 ",
+    "Relationship": "NextST_is",
+    "EndNode": "8.3.4 类–职责–协作者建模"
+  },
+  {
+    "StartNode": "8.4.1 过程视图 ",
+    "Relationship": "NextST_is",
+    "EndNode": "8.4.2 UML顺序图"
+  },
+  {
+    "StartNode": "8.5.1 识别用例事件 ",
+    "Relationship": "NextST_is",
+    "EndNode": "8.5.2 UML状态图 "
+  },
+  {
+    "StartNode": "8.5.2 UML状态图 ",
+    "Relationship": "NextST_is",
+    "EndNode": "8.5.3 UML活动图?"
+  },
+  {
+    "StartNode": "9.2.1 软件质量指导原则和属性",
+    "Relationship": "NextST_is",
+    "EndNode": "9.2.2 软件设计的演化"
+  },
+  {
+    "StartNode": "9.3.1 抽象 ",
+    "Relationship": "NextST_is",
+    "EndNode": "9.3.2 体系结构 "
+  },
+  {
+    "StartNode": "9.3.2 体系结构 ",
+    "Relationship": "NextST_is",
+    "EndNode": "9.3.3 模式 "
+  },
+  {
+    "StartNode": "9.3.3 模式 ",
+    "Relationship": "NextST_is",
+    "EndNode": "9.3.4 关注点分离 "
+  },
+  {
+    "StartNode": "9.3.4 关注点分离 ",
+    "Relationship": "NextST_is",
+    "EndNode": "9.3.5 模块化 "
+  },
+  {
+    "StartNode": "9.3.5 模块化 ",
+    "Relationship": "NextST_is",
+    "EndNode": "9.3.6 信息隐蔽 "
+  },
+  {
+    "StartNode": "9.3.6 信息隐蔽 ",
+    "Relationship": "NextST_is",
+    "EndNode": "9.3.7 功能独立 "
+  },
+  {
+    "StartNode": "9.3.7 功能独立 ",
+    "Relationship": "NextST_is",
+    "EndNode": "9.3.8 逐步求精 "
+  },
+  {
+    "StartNode": "9.3.8 逐步求精 ",
+    "Relationship": "NextST_is",
+    "EndNode": "9.3.9 重构 "
+  },
+  {
+    "StartNode": "9.3.9 重构 ",
+    "Relationship": "NextST_is",
+    "EndNode": "9.3.10 设计类"
+  },
+  {
+    "StartNode": "9.4.1 设计建模原则 ",
+    "Relationship": "NextST_is",
+    "EndNode": "9.4.2 数据设计元素 "
+  },
+  {
+    "StartNode": "9.4.2 数据设计元素 ",
+    "Relationship": "NextST_is",
+    "EndNode": "9.4.3 体系结构设计元素 "
+  },
+  {
+    "StartNode": "9.4.3 体系结构设计元素 ",
+    "Relationship": "NextST_is",
+    "EndNode": "9.4.4 接口设计元素 "
+  },
+  {
+    "StartNode": "9.4.4 接口设计元素 ",
+    "Relationship": "NextST_is",
+    "EndNode": "9.4.5 构件级设计元素 "
+  },
+  {
+    "StartNode": "9.4.5 构件级设计元素 ",
+    "Relationship": "NextST_is",
+    "EndNode": "9.4.6 部署级设计元素"
+  },
+  {
+    "StartNode": "10.1.1 什么是体系结构 ",
+    "Relationship": "NextST_is",
+    "EndNode": "10.1.2 体系结构的重要性 "
+  },
+  {
+    "StartNode": "10.1.2 体系结构的重要性 ",
+    "Relationship": "NextST_is",
+    "EndNode": "10.1.3 体系结构描述 "
+  },
+  {
+    "StartNode": "10.1.3 体系结构描述 ",
+    "Relationship": "NextST_is",
+    "EndNode": "10.1.4 体系结构决策"
+  },
+  {
+    "StartNode": "10.3.1 体系结构风格的简单分类",
+    "Relationship": "NextST_is",
+    "EndNode": "10.3.2 体系结构模式 "
+  },
+  {
+    "StartNode": "10.3.2 体系结构模式 ",
+    "Relationship": "NextST_is",
+    "EndNode": "10.3.3 组织和求精"
+  },
+  {
+    "StartNode": "10.6.1 系统在上下文中的表示 ",
+    "Relationship": "NextST_is",
+    "EndNode": "10.6.2 定义体系结构原型 "
+  },
+  {
+    "StartNode": "10.6.2 定义体系结构原型 ",
+    "Relationship": "NextST_is",
+    "EndNode": "10.6.3 将体系结构细化为构件 "
+  },
+  {
+    "StartNode": "10.6.3 将体系结构细化为构件 ",
+    "Relationship": "NextST_is",
+    "EndNode": "10.6.4 描述系统实例"
+  },
+  {
+    "StartNode": "10.7.1 体系结构评审 ",
+    "Relationship": "NextST_is",
+    "EndNode": "10.7.2 基于模式的体系结构评审 "
+  },
+  {
+    "StartNode": "10.7.2 基于模式的体系结构评审 ",
+    "Relationship": "NextST_is",
+    "EndNode": "10.7.3 体系结构的一致性检查"
+  },
+  {
+    "StartNode": "11.1.1 面向对象的观点 ",
+    "Relationship": "NextST_is",
+    "EndNode": "11.1.2 传统的观点 "
+  },
+  {
+    "StartNode": "11.1.2 传统的观点 ",
+    "Relationship": "NextST_is",
+    "EndNode": "11.1.3 过程相关的观点"
+  },
+  {
+    "StartNode": "11.2.1 基本设计原则 ",
+    "Relationship": "NextST_is",
+    "EndNode": "11.2.2 构件级设计指导方针 "
+  },
+  {
+    "StartNode": "11.2.2 构件级设计指导方针 ",
+    "Relationship": "NextST_is",
+    "EndNode": "11.2.3 内聚性 "
+  },
+  {
+    "StartNode": "11.2.3 内聚性 ",
+    "Relationship": "NextST_is",
+    "EndNode": "11.2.4 耦合?"
+  },
+  {
+    "StartNode": "11.4.1 WebApp的构件级设计 ",
+    "Relationship": "NextST_is",
+    "EndNode": "11.4.2 移动App的构件级设计 "
+  },
+  {
+    "StartNode": "11.4.2 移动App的构件级设计 ",
+    "Relationship": "NextST_is",
+    "EndNode": "11.4.3 设计传统构件 "
+  },
+  {
+    "StartNode": "11.4.3 设计传统构件 ",
+    "Relationship": "NextST_is",
+    "EndNode": "11.4.4 基于构件的开发"
+  },
+  {
+    "StartNode": "12.1.1 信息体系结构 ",
+    "Relationship": "NextST_is",
+    "EndNode": "12.1.2 用户交互设计 "
+  },
+  {
+    "StartNode": "12.1.2 用户交互设计 ",
+    "Relationship": "NextST_is",
+    "EndNode": "12.1.3 可用性工程 "
+  },
+  {
+    "StartNode": "12.1.3 可用性工程 ",
+    "Relationship": "NextST_is",
+    "EndNode": "12.1.4 可视化设计"
+  },
+  {
+    "StartNode": "12.2.1 把控制权交给用户 ",
+    "Relationship": "NextST_is",
+    "EndNode": "12.2.2 减轻用户的记忆负担 "
+  },
+  {
+    "StartNode": "12.2.2 减轻用户的记忆负担 ",
+    "Relationship": "NextST_is",
+    "EndNode": "12.2.3 保持界面一致"
+  },
+  {
+    "StartNode": "12.3.1 用户界面分析和设计模型 ",
+    "Relationship": "NextST_is",
+    "EndNode": "12.3.2 过程"
+  },
+  {
+    "StartNode": "12.4.1 用户研究 ",
+    "Relationship": "NextST_is",
+    "EndNode": "12.4.2 用户建模 "
+  },
+  {
+    "StartNode": "12.4.2 用户建模 ",
+    "Relationship": "NextST_is",
+    "EndNode": "12.4.3 任务分析 "
+  },
+  {
+    "StartNode": "12.4.3 任务分析 ",
+    "Relationship": "NextST_is",
+    "EndNode": "12.4.4 工作环境分析"
+  },
+  {
+    "StartNode": "12.6.1 应用界面设计步骤 ",
+    "Relationship": "NextST_is",
+    "EndNode": "12.6.2 用户界面设计模式"
+  },
+  {
+    "StartNode": "12.7.1 原型审查 ",
+    "Relationship": "NextST_is",
+    "EndNode": "12.7.2 用户测试?"
+  },
+  {
+    "StartNode": "12.8.1 可用性准则 ",
+    "Relationship": "NextST_is",
+    "EndNode": "12.8.2 可访问性准则"
+  },
+  {
+    "StartNode": "13.1.1 开发因素 ",
+    "Relationship": "NextST_is",
+    "EndNode": "13.1.2 技术因素"
+  },
+  {
+    "StartNode": "13.2.1 用户界面设计 ",
+    "Relationship": "NextST_is",
+    "EndNode": "13.2.2 经验教训"
+  },
+  {
+    "StartNode": "13.5.1 WebApp界面设计 ",
+    "Relationship": "NextST_is",
+    "EndNode": "13.5.2 美学设计 "
+  },
+  {
+    "StartNode": "13.5.2 美学设计 ",
+    "Relationship": "NextST_is",
+    "EndNode": "13.5.3 内容设计 "
+  },
+  {
+    "StartNode": "13.5.3 内容设计 ",
+    "Relationship": "NextST_is",
+    "EndNode": "13.5.4 体系结构设计 "
+  },
+  {
+    "StartNode": "13.5.4 体系结构设计 ",
+    "Relationship": "NextST_is",
+    "EndNode": "13.5.5 导航设计"
+  },
+  {
+    "StartNode": "14.1.1 模式的种类 ",
+    "Relationship": "NextST_is",
+    "EndNode": "14.1.2 框架 "
+  },
+  {
+    "StartNode": "14.1.2 框架 ",
+    "Relationship": "NextST_is",
+    "EndNode": "14.1.3 描述模式 "
+  },
+  {
+    "StartNode": "14.1.3 描述模式 ",
+    "Relationship": "NextST_is",
+    "EndNode": "14.1.4 机器学习和模式发现"
+  },
+  {
+    "StartNode": "14.2.1 不同环境下基于模式的设计 ",
+    "Relationship": "NextST_is",
+    "EndNode": "14.2.2 用模式思考 "
+  },
+  {
+    "StartNode": "14.2.2 用模式思考 ",
+    "Relationship": "NextST_is",
+    "EndNode": "14.2.3 设计任务 "
+  },
+  {
+    "StartNode": "14.2.3 设计任务 ",
+    "Relationship": "NextST_is",
+    "EndNode": "14.2.4 建立模式组织表 "
+  },
+  {
+    "StartNode": "14.2.4 建立模式组织表 ",
+    "Relationship": "NextST_is",
+    "EndNode": "14.2.5 常见设计错误"
+  },
+  {
+    "StartNode": "第14章 基于模式的设计",
+    "Relationship": "NextSB_is",
+    "EndNode": "第15章 质量概念"
+  }
+]
