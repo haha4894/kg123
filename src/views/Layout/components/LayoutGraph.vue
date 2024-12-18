@@ -4984,13 +4984,21 @@ showNode(node) {
       .attr('transform', d => `translate(${d.x},${d.y})`)
       .attr('visibility', d => d.visible ? 'visible' : 'hidden');
   },
-  handleAction(action) {
+handleAction(action) {
       if (action === 'action1') {
         this.Stayroot();
       }
+      else if(action === 'action2'){
+        this.Staylevel1();
+      }
+      else if(action === 'action3'){
+        this.Staylevel2();
+      }
+      else if(action === 'action4'){
+        this.Staylevel3();
+      }
     },
     Stayroot() {
-      // 获取以当前节点为终点的所有边
     const edgesToHide = this.edges.filter(edge => edge.target.id === 'root');
 
     // 隐藏这些边
@@ -5005,6 +5013,58 @@ showNode(node) {
     this.hideNodeRecursive(sourceNode);
     });
       console.log('Action 1 triggered!');
+    },
+    Staylevel1() {
+      const edgesToShow = this.edges.filter(edge => edge.target.id === 'root' && !edge.visible);
+    // 显示这些边
+    edgesToShow.forEach(edge => {
+      edge.visible = true; // 更新边的 visible 属性
+      this.showEdge(edge);
+    });
+    // 显示这些边的起点节点
+    edgesToShow.forEach(edge => {
+      const sourceNode = edge.source;
+      sourceNode.visible = true; // 更新节点的 visible 属性
+      this.showNode(sourceNode);
+    });
+    },
+    Staylevel2() {
+      const nodesWithIdStartingWithDi = this.nodes.filter(node => node.id.startsWith('C'));
+      nodesWithIdStartingWithDi.forEach(node => {
+    // 获取以当前节点为起点的所有边，并且这些边当前是隐藏的
+    const edgesToShow = this.edges.filter(edge => edge.target.id === node.id && !edge.visible);
+
+    // 显示这些边
+    edgesToShow.forEach(edge => {
+      edge.visible = true; // 更新边的 visible 属性
+      this.showEdge(edge);
+    });
+    // 显示这些边的起点节点
+    edgesToShow.forEach(edge => {
+      const sourceNode = edge.source;
+      sourceNode.visible = true; // 更新节点的 visible 属性
+      this.showNode(sourceNode);
+    });
+  });
+    },
+    Staylevel3() {
+        const nodesWithIdStartingWithDi = this.nodes.filter(node => node.id.startsWith('T'));
+      nodesWithIdStartingWithDi.forEach(node => {
+    // 获取以当前节点为起点的所有边，并且这些边当前是隐藏的
+    const edgesToShow = this.edges.filter(edge => edge.target.id === node.id && !edge.visible);
+
+    // 显示这些边
+    edgesToShow.forEach(edge => {
+      edge.visible = true; // 更新边的 visible 属性
+      this.showEdge(edge);
+    });
+    // 显示这些边的起点节点
+    edgesToShow.forEach(edge => {
+      const sourceNode = edge.source;
+      sourceNode.visible = true; // 更新节点的 visible 属性
+      this.showNode(sourceNode);
+    });
+  });
     }
   },
 };
