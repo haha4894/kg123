@@ -19,7 +19,8 @@
 
 <script>
 import * as d3 from 'd3';
-import axios from 'axios';
+import emitter from './eventBus.js';
+// import axios from 'axios';
 
 // const response = await axios.get('http://127.0.0.1:8000/chapters/relations/');
 
@@ -59,6 +60,7 @@ export default {
   mounted() {
     this.initData();
     this.initGraph();
+    emitter.on('custom-event', this.handleAction);
   },
   methods: {
     initData() {
@@ -408,4116 +410,4145 @@ export default {
     { id: 'SS1.4.2.1', name: '1.4.2.1 David Hooker的7个关注软件工程整体实践原则', weight: 2 },
     { id: 'S1.5.1', name: '1.5.1 软工项目来自业务需求', weight: 3 }
 ];
-  this.tempEdges = [{
-            id: 0,
-            source: 'CH1',
-            target: 'root',
-            relation: 'Next_SB',
-            value: 1
-        },
-        {
-            id: 1,
-            source: 'CH3',
-            target: 'root',
-            relation: 'Next_SB',
-            value: 1
-        },
-        {
-            id: 2,
-            source: 'T1.1',
-            target: 'T1.2',
-            relation: 'Next_TP',
-            value: 1
-        },
-        {
-            id: 3,
-            source: 'S1.1.1',
-            target: 'S1.1.2',
-            relation: 'Next_ST',
-            value: 1
-        },
-        {
-            id: 4,
-            source: 'SS1.1.1.1',
-            target: 'SS1.1.1.2',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 5,
-            source: 'SS1.1.1.2',
-            target: 'SS1.1.1.3',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 6,
-            source: 'P1.1.1.3.1',
-            target: 'P1.1.1.3.2',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 7,
-            source: 'P1.1.1.3.2',
-            target: 'P1.1.1.3.3',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 8,
-            source: 'S1.1.2',
-            target: 'S1.1.3',
-            relation: 'Next_ST',
-            value: 1
-        },
-        {
-            id: 9,
-            source: 'P1.1.2.1.1',
-            target: 'P1.1.2.1.2',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 10,
-            source: 'P1.1.2.1.2',
-            target: 'P1.1.2.1.3',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 11,
-            source: 'P1.1.2.1.3',
-            target: 'P1.1.2.1.4',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 12,
-            source: 'P1.1.2.1.4',
-            target: 'P1.1.2.1.5',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 13,
-            source: 'P1.1.2.1.5',
-            target: 'P1.1.2.1.6',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 14,
-            source: 'P1.1.2.1.6',
-            target: 'P1.1.2.1.7',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 15,
-            source: 'SS1.1.3.1',
-            target: 'SS1.1.3.2',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 16,
-            source: 'SS1.1.3.2',
-            target: 'SS1.1.3.3',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 17,
-            source: 'T1.2',
-            target: 'T1.3',
-            relation: 'Next_TP',
-            value: 1
-        },
-        {
-            id: 18,
-            source: 'S1.2.1',
-            target: 'S1.2.2',
-            relation: 'Next_ST',
-            value: 1
-        },
-        {
-            id: 19,
-            source: 'P1.2.2.1.1',
-            target: 'P1.2.2.1.2',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 20,
-            source: 'P1.2.2.1.2',
-            target: 'P1.2.2.1.3',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 21,
-            source: 'T1.3',
-            target: 'T1.4',
-            relation: 'Next_TP',
-            value: 1
-        },
-        {
-            id: 22,
-            source: 'S1.3.1',
-            target: 'S1.3.2',
-            relation: 'Next_ST',
-            value: 1
-        },
-        {
-            id: 23,
-            source: 'P1.3.1.1.1',
-            target: 'P1.3.1.1.2',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 24,
-            source: 'P1.3.1.1.2',
-            target: 'P1.3.1.1.3',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 25,
-            source: 'P1.3.1.1.3',
-            target: 'P1.3.1.1.4',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 26,
-            source: 'P1.3.1.1.4',
-            target: 'P1.3.1.1.5',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 27,
-            source: 'S1.3.2',
-            target: 'S1.3.3',
-            relation: 'Next_ST',
-            value: 1
-        },
-        {
-            id: 28,
-            source: 'P1.3.2.1.1',
-            target: 'P1.3.2.1.2',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 29,
-            source: 'P1.3.2.1.2',
-            target: 'P1.3.2.1.3',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 30,
-            source: 'P1.3.2.1.3',
-            target: 'P1.3.2.1.4',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 31,
-            source: 'P1.3.2.1.4',
-            target: 'P1.3.2.1.5',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 32,
-            source: 'P1.3.2.1.5',
-            target: 'P1.3.2.1.6',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 33,
-            source: 'P1.3.2.1.6',
-            target: 'P1.3.2.1.7',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 34,
-            source: 'P1.3.2.1.7',
-            target: 'P1.3.2.1.8',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 35,
-            source: 'T1.4',
-            target: 'T1.5',
-            relation: 'Next_TP',
-            value: 1
-        },
-        {
-            id: 36,
-            source: 'S1.4.1',
-            target: 'S1.4.2',
-            relation: 'Next_ST',
-            value: 1
-        },
-        {
-            id: 37,
-            source: 'SS1.4.1.1',
-            target: 'SS1.4.1.2',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 38,
-            source: 'SS1.4.1.2',
-            target: 'SS1.4.1.3',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 39,
-            source: 'SS1.4.1.3',
-            target: 'SS1.4.1.4',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 40,
-            source: 'P1.4.2.1.1',
-            target: 'P1.4.2.1.2',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 41,
-            source: 'P1.4.2.1.2',
-            target: 'P1.4.2.1.3',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 42,
-            source: 'P1.4.2.1.3',
-            target: 'P1.4.2.1.4',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 43,
-            source: 'P1.4.2.1.4',
-            target: 'P1.4.2.1.5',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 44,
-            source: 'P1.4.2.1.5',
-            target: 'P1.4.2.1.6',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 45,
-            source: 'P1.4.2.1.6',
-            target: 'P1.4.2.1.7',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 46,
-            source: 'T1.5',
-            target: 'T1.6',
-            relation: 'Next_TP',
-            value: 1
-        },
-        {
-            id: 48,
-            source: 'T3.1',
-            target: 'T3.2',
-            relation: 'Next_TP',
-            value: 1
-        },
-        {
-            id: 49,
-            source: 'S3.1.1',
-            target: 'S3.1.2',
-            relation: 'Next_ST',
-            value: 1
-        },
-        {
-            id: 50,
-            source: 'S3.1.2',
-            target: 'S3.1.3',
-            relation: 'Next_ST',
-            value: 1
-        },
-        {
-            id: 51,
-            source: 'S3.1.2.1',
-            target: 'S3.1.2.2',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 52,
-            source: 'S3.1.2.2',
-            target: 'S3.1.2.3',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 53,
-            source: 'S3.1.2.3',
-            target: 'S3.1.2.4',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 54,
-            source: 'S3.1.2.4',
-            target: 'S3.1.2.5',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 55,
-            source: 'S3.1.3',
-            target: 'S3.1.4',
-            relation: 'Next_ST',
-            value: 1
-        },
-        {
-            id: 56,
-            source: 'SS3.1.4.1',
-            target: 'SS3.1.4.2',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 57,
-            source: 'T3.2',
-            target: 'T3.3',
-            relation: 'Next_TP',
-            value: 1
-        },
-        {
-            id: 58,
-            source: 'S3.2.1',
-            target: 'S3.2.2',
-            relation: 'Next_ST',
-            value: 1
-        },
-        {
-            id: 59,
-            source: 'T3.3',
-            target: 'T3.4',
-            relation: 'Next_TP',
-            value: 1
-        },
-        {
-            id: 60,
-            source: 'S3.3.1',
-            target: 'S3.3.2',
-            relation: 'Next_ST',
-            value: 1
-        },
-        {
-            id: 61,
-            source: 'S3.3.2',
-            target: 'S3.3.3',
-            relation: 'Next_ST',
-            value: 1
-        },
-        {
-            id: 62,
-            source: 'SS3.3.2.1',
-            target: 'SS3.3.2.2',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 63,
-            source: 'SS3.3.3.1',
-            target: 'SS3.3.3.2',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 64,
-            source: 'P3.3.3.2.1',
-            target: 'P3.3.3.2.2',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 65,
-            source: 'P3.3.3.2.2',
-            target: 'P3.3.3.2.3',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 66,
-            source: 'P3.3.3.2.3',
-            target: 'P3.3.3.2.4',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 67,
-            source: 'P3.3.3.2.4',
-            target: 'P3.3.3.2.5',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 68,
-            source: 'P3.3.3.2.5',
-            target: 'P3.3.3.2.6',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 69,
-            source: 'P3.3.3.2.6',
-            target: 'P3.3.3.2.7',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 70,
-            source: 'T3.4',
-            target: 'T3.5',
-            relation: 'Next_TP',
-            value: 1
-        },
-        {
-            id: 71,
-            source: 'S3.4.1',
-            target: 'S3.4.2',
-            relation: 'Next_ST',
-            value: 1
-        },
-        {
-            id: 72,
-            source: 'S3.4.2',
-            target: 'S3.4.3',
-            relation: 'Next_ST',
-            value: 1
-        },
-        {
-            id: 73,
-            source: 'S3.4.3',
-            target: 'S3.4.4',
-            relation: 'Next_ST',
-            value: 1
-        },
-        {
-            id: 74,
-            source: 'S3.4.4',
-            target: 'S3.4.5',
-            relation: 'Next_ST',
-            value: 1
-        },
-        {
-            id: 75,
-            source: 'T3.5',
-            target: 'T3.6',
-            relation: 'Next_TP',
-            value: 1
-        },
-        {
-            id: 76,
-            source: 'S3.5.1',
-            target: 'S3.5.2',
-            relation: 'Next_ST',
-            value: 1
-        },
-        {
-            id: 77,
-            source: 'SS3.5.1.1',
-            target: 'SS3.5.1.2',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 78,
-            source: 'P3.5.1.2.1',
-            target: 'P3.5.1.2.2',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 79,
-            source: 'P3.5.1.2.2',
-            target: 'P3.5.1.2.3',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 80,
-            source: 'P3.5.1.2.3',
-            target: 'P3.5.1.2.4',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 81,
-            source: 'S3.5.2',
-            target: 'S3.5.3',
-            relation: 'Next_ST',
-            value: 1
-        },
-        {
-            id: 82,
-            source: 'SS3.5.2.1',
-            target: 'SS3.5.2.2',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 83,
-            source: 'SS3.5.2.2',
-            target: 'SS3.5.2.3',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 84,
-            source: 'P3.5.2.2.1',
-            target: 'P3.5.2.2.2',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 85,
-            source: 'P3.5.2.2.2',
-            target: 'P3.5.2.2.3',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 86,
-            source: 'P3.5.2.2.3',
-            target: 'P3.5.2.2.4',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 87,
-            source: 'P3.5.2.2.4',
-            target: 'P3.5.2.2.5',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 88,
-            source: 'P3.5.2.2.5',
-            target: 'P3.5.2.2.6',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 89,
-            source: 'SS3.5.3.1',
-            target: 'SS3.5.3.2',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 90,
-            source: 'P3.5.3.2.1',
-            target: 'P3.5.3.2.2',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 91,
-            source: 'P3.5.3.2.2',
-            target: 'P3.5.3.2.3',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 92,
-            source: 'P3.5.3.2.3',
-            target: 'P3.5.3.2.4',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 93,
-            source: 'P3.5.3.2.4',
-            target: 'P3.5.3.2.5',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 94,
-            source: 'CH6',
-            target: 'root',
-            relation: 'Next_SB',
-            value: 1
-        },
-        {
-            id: 95,
-            source: 'T6.1',
-            target: 'T6.2',
-            relation: 'Next_TP',
-            value: 1
-        },
-        {
-            id: 96,
-            source: 'S6.1.1',
-            target: 'S6.1.2',
-            relation: 'Next_ST',
-            value: 1
-        },
-        {
-            id: 97,
-            source: 'SS6.1.1.1',
-            target: 'SS6.1.1.2',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 98,
-            source: 'P6.1.1.2.1',
-            target: 'P6.1.1.2.2',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 99,
-            source: 'P6.1.1.2.2',
-            target: 'P6.1.1.2.3',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 100,
-            source: 'P6.1.1.2.3',
-            target: 'P6.1.1.2.4',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 101,
-            source: 'P6.1.1.2.4',
-            target: 'P6.1.1.2.5',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 102,
-            source: 'P6.1.1.2.5',
-            target: 'P6.1.1.2.6',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 103,
-            source: 'P6.1.1.2.6',
-            target: 'P6.1.1.2.7',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 104,
-            source: 'P6.1.1.2.7',
-            target: 'P6.1.1.2.8',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 105,
-            source: 'SS6.1.2.1',
-            target: 'SS6.1.2.2',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 106,
-            source: 'P6.1.2.2.1',
-            target: 'P6.1.2.2.2',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 107,
-            source: 'P6.1.2.2.2',
-            target: 'P6.1.2.2.3',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 108,
-            source: 'P6.1.2.2.3',
-            target: 'P6.1.2.2.4',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 109,
-            source: 'P6.1.2.2.4',
-            target: 'P6.1.2.2.5',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 110,
-            source: 'P6.1.2.2.5',
-            target: 'P6.1.2.2.6',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 111,
-            source: 'P6.1.2.2.6',
-            target: 'P6.1.2.2.7',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 112,
-            source: 'P6.1.2.2.7',
-            target: 'P6.1.2.2.8',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 113,
-            source: 'T6.2',
-            target: 'T6.3',
-            relation: 'Next_TP',
-            value: 1
-        },
-        {
-            id: 114,
-            source: 'S6.2.1',
-            target: 'S6.2.2',
-            relation: 'Next_ST',
-            value: 1
-        },
-        {
-            id: 115,
-            source: 'SS6.2.1.1',
-            target: 'SS6.2.1.2',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 116,
-            source: 'P6.2.1.2.1',
-            target: 'P6.2.1.2.2',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 117,
-            source: 'P6.2.1.2.2',
-            target: 'P6.2.1.2.3',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 118,
-            source: 'P6.2.1.2.3',
-            target: 'P6.2.1.2.4',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 119,
-            source: 'P6.2.1.2.4',
-            target: 'P6.2.1.2.5',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 120,
-            source: 'P6.2.1.2.5',
-            target: 'P6.2.1.2.6',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 121,
-            source: 'P6.2.1.2.6',
-            target: 'P6.2.1.2.7',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 122,
-            source: 'P6.2.1.2.7',
-            target: 'P6.2.1.2.8',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 123,
-            source: 'P6.2.1.2.8',
-            target: 'P6.2.1.2.9',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 124,
-            source: 'P6.2.1.2.9',
-            target: 'P6.2.1.2.10',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 125,
-            source: 'S6.2.2',
-            target: 'S6.2.3',
-            relation: 'Next_ST',
-            value: 1
-        },
-        {
-            id: 126,
-            source: 'SS6.2.2.1',
-            target: 'SS6.2.2.2',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 127,
-            source: 'P6.2.2.2.1',
-            target: 'P6.2.2.2.2',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 128,
-            source: 'P6.2.2.2.2',
-            target: 'P6.2.2.2.3',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 129,
-            source: 'P6.2.2.2.3',
-            target: 'P6.2.2.2.4',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 130,
-            source: 'P6.2.2.2.4',
-            target: 'P6.2.2.2.5',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 131,
-            source: 'P6.2.2.2.5',
-            target: 'P6.2.2.2.6',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 132,
-            source: 'P6.2.2.2.6',
-            target: 'P6.2.2.2.7',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 133,
-            source: 'P6.2.2.2.7',
-            target: 'P6.2.2.2.8',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 134,
-            source: 'P6.2.2.2.8',
-            target: 'P6.2.2.2.9',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 135,
-            source: 'P6.2.2.2.9',
-            target: 'P6.2.2.2.10',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 136,
-            source: 'S6.2.3',
-            target: 'S6.2.4',
-            relation: 'Next_ST',
-            value: 1
-        },
-        {
-            id: 137,
-            source: 'SS6.2.3.1',
-            target: 'SS6.2.3.2',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 138,
-            source: 'P6.2.3.2.1',
-            target: 'P6.2.3.2.2',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 139,
-            source: 'P6.2.3.2.2',
-            target: 'P6.2.3.2.3',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 140,
-            source: 'P6.2.3.2.3',
-            target: 'P6.2.3.2.4',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 141,
-            source: 'P6.2.3.2.4',
-            target: 'P6.2.3.2.5',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 142,
-            source: 'P6.2.3.2.5',
-            target: 'P6.2.3.2.6',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 143,
-            source: 'P6.2.3.2.6',
-            target: 'P6.2.3.2.7',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 144,
-            source: 'P6.2.3.2.7',
-            target: 'P6.2.3.2.8',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 145,
-            source: 'P6.2.3.2.8',
-            target: 'P6.2.3.2.9',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 146,
-            source: 'P6.2.3.2.9',
-            target: 'P6.2.3.2.10',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 147,
-            source: 'S6.2.4',
-            target: 'S6.2.5',
-            relation: 'Next_ST',
-            value: 1
-        },
-        {
-            id: 148,
-            source: 'SS6.2.4.1',
-            target: 'SS6.2.4.2',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 149,
-            source: 'SS6.2.4.2',
-            target: 'SS6.2.4.3',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 150,
-            source: 'P6.2.4.2.1',
-            target: 'P6.2.4.2.2',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 151,
-            source: 'P6.2.4.2.2',
-            target: 'P6.2.4.2.3',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 152,
-            source: 'P6.2.4.3.1',
-            target: 'P6.2.4.3.2',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 153,
-            source: 'P6.2.4.3.2',
-            target: 'P6.2.4.3.3',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 154,
-            source: 'P6.2.4.3.3',
-            target: 'P6.2.4.3.4',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 155,
-            source: 'P6.2.4.3.4',
-            target: 'P6.2.4.3.5',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 156,
-            source: 'P6.2.4.3.5',
-            target: 'P6.2.4.3.6',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 157,
-            source: 'P6.2.4.3.6',
-            target: 'P6.2.4.3.7',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 158,
-            source: 'P6.2.4.3.7',
-            target: 'P6.2.4.3.8',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 159,
-            source: 'P6.2.4.3.8',
-            target: 'P6.2.4.3.9',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 160,
-            source: 'P6.2.4.3.9',
-            target: 'P6.2.4.3.10',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 161,
-            source: 'SS6.2.5.1',
-            target: 'SS6.2.5.2',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 162,
-            source: 'P6.2.5.2.1',
-            target: 'P6.2.5.2.2',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 163,
-            source: 'P6.2.5.2.2',
-            target: 'P6.2.5.2.3',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 164,
-            source: 'P6.2.5.2.3',
-            target: 'P6.2.5.2.4',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 165,
-            source: 'P6.2.5.2.4',
-            target: 'P6.2.5.2.5',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 166,
-            source: 'CH8',
-            target: 'root',
-            relation: 'Next_SB',
-            value: 1
-        },
-        {
-            id: 167,
-            source: 'T8.1',
-            target: 'T8.2',
-            relation: 'Next_TP',
-            value: 1
-        },
-        {
-            id: 168,
-            source: 'S8.1.1',
-            target: 'S8.1.2',
-            relation: 'Next_ST',
-            value: 1
-        },
-        {
-            id: 169,
-            source: 'SS8.1.1.1',
-            target: 'SS8.1.1.2',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 170,
-            source: 'S8.1.2',
-            target: 'S8.1.3',
-            relation: 'Next_ST',
-            value: 1
-        },
-        {
-            id: 171,
-            source: 'SS8.1.2.1',
-            target: 'SS8.1.2.2',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 172,
-            source: 'SS8.1.2.2',
-            target: 'SS8.1.2.3',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 173,
-            source: 'SS8.1.2.3',
-            target: 'SS8.1.2.4',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 174,
-            source: 'SS8.1.2.4',
-            target: 'SS8.1.2.5',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 175,
-            source: 'SS8.1.2.5',
-            target: 'SS8.1.2.6',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 176,
-            source: 'SS8.1.3.1',
-            target: 'SS8.1.3.2',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 177,
-            source: 'SS8.1.3.2',
-            target: 'SS8.1.3.3',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 178,
-            source: 'SS8.1.3.3',
-            target: 'SS8.1.3.4',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 179,
-            source: 'SS8.1.3.4',
-            target: 'SS8.1.3.5',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 180,
-            source: 'T8.2',
-            target: 'T8.3',
-            relation: 'Next_TP',
-            value: 1
-        },
-        {
-            id: 181,
-            source: 'S8.2.1',
-            target: 'S8.2.2',
-            relation: 'Next_ST',
-            value: 1
-        },
-        {
-            id: 182,
-            source: 'SS8.2.1.1',
-            target: 'SS8.2.1.2',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 183,
-            source: 'S8.2.2',
-            target: 'S8.2.3',
-            relation: 'Next_ST',
-            value: 1
-        },
-        {
-            id: 184,
-            source: 'SS8.2.2.1',
-            target: 'SS8.2.2.2',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 185,
-            source: 'P8.2.2.2.1',
-            target: 'P8.2.2.2.2',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 186,
-            source: 'P8.2.2.2.2',
-            target: 'P8.2.2.2.3',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 187,
-            source: 'P8.2.2.2.3',
-            target: 'P8.2.2.2.4',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 188,
-            source: 'SS8.2.3.1',
-            target: 'SS8.2.3.2',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 189,
-            source: 'SS8.2.3.2',
-            target: 'SS8.2.3.3',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 190,
-            source: 'T8.3',
-            target: 'T8.4',
-            relation: 'Next_TP',
-            value: 1
-        },
-        {
-            id: 191,
-            source: 'S8.3.1',
-            target: 'S8.3.2',
-            relation: 'Next_ST',
-            value: 1
-        },
-        {
-            id: 192,
-            source: 'SS8.3.1.1',
-            target: 'SS8.3.1.2',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 193,
-            source: 'S8.3.2',
-            target: 'S8.3.3',
-            relation: 'Next_ST',
-            value: 1
-        },
-        {
-            id: 194,
-            source: 'SS8.3.2.1',
-            target: 'SS8.3.2.2',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 195,
-            source: 'S8.3.3',
-            target: 'S8.3.4',
-            relation: 'Next_ST',
-            value: 1
-        },
-        {
-            id: 196,
-            source: 'SS8.3.4.1',
-            target: 'SS8.3.4.2',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 197,
-            source: 'SS8.3.4.2',
-            target: 'SS8.3.4.3',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 198,
-            source: 'SS8.3.4.3',
-            target: 'SS8.3.4.4',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 199,
-            source: 'P8.3.4.3.1',
-            target: 'P8.3.4.3.2',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 200,
-            source: 'P8.3.4.3.2',
-            target: 'P8.3.4.3.3',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 201,
-            source: 'P8.3.4.3.3',
-            target: 'P8.3.4.3.4',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 202,
-            source: 'P8.3.4.3.4',
-            target: 'P8.3.4.3.5',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 203,
-            source: 'SS8.3.4.4',
-            target: 'SS8.3.4.5',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 204,
-            source: 'T8.4',
-            target: 'T8.5',
-            relation: 'Next_TP',
-            value: 1
-        },
-        {
-            id: 205,
-            source: 'S8.4.1',
-            target: 'S8.4.2',
-            relation: 'Next_ST',
-            value: 1
-        },
-        {
-            id: 206,
-            source: 'S8.4.2',
-            target: 'S8.4.3',
-            relation: 'Next_ST',
-            value: 1
-        },
-        {
-            id: 207,
-            source: 'T8.5',
-            target: 'T8.6',
-            relation: 'Next_TP',
-            value: 1
-        },
-        {
-            id: 208,
-            source: 'S8.5.1',
-            target: 'S8.5.2',
-            relation: 'Next_ST',
-            value: 1
-        },
-        {
-            id: 209,
-            source: 'S8.5.2',
-            target: 'S8.5.3',
-            relation: 'Next_ST',
-            value: 1
-        },
-        {
-            id: 210,
-            source: 'S8.5.3',
-            target: 'S8.5.4',
-            relation: 'Next_ST',
-            value: 1
-        },
-        {
-            id: 211,
-            source: 'SS8.5.4.1',
-            target: 'SS8.5.4.2',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 212,
-            source: 'T15.1',
-            target: 'T15.2',
-            relation: 'Next_TP',
-            value: 1
-        },
-        {
-            id: 213,
-            source: 'S15.1.1',
-            target: 'S15.1.2',
-            relation: 'Next_ST',
-            value: 1
-        },
-        {
-            id: 214,
-            source: 'SS15.1.1.1',
-            target: 'SS15.1.1.2',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 215,
-            source: 'SS15.1.1.2',
-            target: 'SS15.1.1.3',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 216,
-            source: 'SS15.1.1.3',
-            target: 'SS15.1.1.4',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 217,
-            source: 'SS15.1.1.4',
-            target: 'SS15.1.1.5',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 218,
-            source: 'S15.1.2',
-            target: 'S15.1.3',
-            relation: 'Next_ST',
-            value: 1
-        },
-        {
-            id: 219,
-            source: 'SS15.1.2.1',
-            target: 'SS15.1.2.2',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 220,
-            source: 'T15.2',
-            target: 'T15.3',
-            relation: 'Next_TP',
-            value: 1
-        },
-        {
-            id: 221,
-            source: 'S15.2.1',
-            target: 'S15.2.2',
-            relation: 'Next_ST',
-            value: 1
-        },
-        {
-            id: 222,
-            source: 'SS15.2.1.1',
-            target: 'SS15.2.1.2',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 223,
-            source: 'SS15.2.1.2',
-            target: 'SS15.2.1.3',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 224,
-            source: 'S15.2.2',
-            target: 'S15.2.3',
-            relation: 'Next_ST',
-            value: 1
-        },
-        {
-            id: 225,
-            source: 'SS15.2.2.1',
-            target: 'SS15.2.2.2',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 226,
-            source: 'P15.2.2.1.1',
-            target: 'P15.2.2.1.2',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 227,
-            source: 'P15.2.2.1.2',
-            target: 'P15.2.2.1.3',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 228,
-            source: 'SS15.2.2.2',
-            target: 'SS15.2.2.3',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 229,
-            source: 'SS15.2.2.3',
-            target: 'SS15.2.2.4',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 230,
-            source: 'S15.2.3',
-            target: 'S15.2.4',
-            relation: 'Next_ST',
-            value: 1
-        },
-        {
-            id: 231,
-            source: 'T15.3',
-            target: 'T15.4',
-            relation: 'Next_TP',
-            value: 1
-        },
-        {
-            id: 232,
-            source: 'S15.3.1',
-            target: 'S15.3.2',
-            relation: 'Next_ST',
-            value: 1
-        },
-        {
-            id: 233,
-            source: 'S15.3.2',
-            target: 'S15.3.3',
-            relation: 'Next_ST',
-            value: 1
-        },
-        {
-            id: 234,
-            source: 'S15.3.3',
-            target: 'S15.3.4',
-            relation: 'Next_ST',
-            value: 1
-        },
-        {
-            id: 235,
-            source: 'SS15.3.3.1',
-            target: 'SS15.3.3.2',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 236,
-            source: 'P15.3.3.2.1',
-            target: 'P15.3.3.2.2',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 237,
-            source: 'P15.3.3.2.2',
-            target: 'P15.3.3.2.3',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 238,
-            source: 'S15.3.4',
-            target: 'S15.3.5',
-            relation: 'Next_ST',
-            value: 1
-        },
-        {
-            id: 239,
-            source: 'SS15.3.4.1',
-            target: 'SS15.3.4.2',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 240,
-            source: 'S15.3.5',
-            target: 'S15.3.6',
-            relation: 'Next_ST',
-            value: 1
-        },
-        {
-            id: 241,
-            source: 'S15.3.6',
-            target: 'S15.3.7',
-            relation: 'Next_ST',
-            value: 1
-        },
-        {
-            id: 242,
-            source: 'SS15.3.6.1',
-            target: 'SS15.3.6.2',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 243,
-            source: 'SS15.3.7.1',
-            target: 'SS15.3.7.2',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 244,
-            source: 'P15.3.7.2.1',
-            target: 'P15.3.7.2.2',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 245,
-            source: 'P15.3.7.2.2',
-            target: 'P15.3.7.2.3',
-            relation: 'Next_P',
-            value: 1
-        },
-        {
-            id: 246,
-            source: 'T15.4',
-            target: 'T15.5',
-            relation: 'Next_TP',
-            value: 1
-        },
-        {
-            id: 247,
-            source: 'S15.4.1',
-            target: 'S15.4.2',
-            relation: 'Next_ST',
-            value: 1
-        },
-        {
-            id: 248,
-            source: 'SS15.4.1.1',
-            target: 'SS15.4.1.2',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 249,
-            source: 'SS15.4.1.2',
-            target: 'SS15.4.1.3',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 250,
-            source: 'SS15.4.1.3',
-            target: 'SS15.4.1.4',
-            relation: 'Next_SS',
-            value: 1
-        },
-        {
-            id: 251,
-            source: 'T1.1',
-            target: 'CH1',
-            relation: 'Belong_SB',
-            value: 1
-        },
-        {
-            id: 252,
-            source: 'S1.1.1',
-            target: 'T1.1',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 253,
-            source: 'SS1.1.1.1',
-            target: 'S1.1.1',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 254,
-            source: 'SS1.1.1.2',
-            target: 'S1.1.1',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 255,
-            source: 'SS1.1.1.3',
-            target: 'S1.1.1',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 256,
-            source: 'P1.1.1.3.1',
-            target: 'SS1.1.1.3',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 257,
-            source: 'P1.1.1.3.2',
-            target: 'SS1.1.1.3',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 258,
-            source: 'P1.1.1.3.3',
-            target: 'SS1.1.1.3',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 259,
-            source: 'S1.1.2',
-            target: 'T1.1',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 260,
-            source: 'SS1.1.2.1',
-            target: 'S1.1.2',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 261,
-            source: 'P1.1.2.1.1',
-            target: 'SS1.1.2.1',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 262,
-            source: 'P1.1.2.1.2',
-            target: 'SS1.1.2.1',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 263,
-            source: 'P1.1.2.1.3',
-            target: 'SS1.1.2.1',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 264,
-            source: 'P1.1.2.1.4',
-            target: 'SS1.1.2.1',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 265,
-            source: 'P1.1.2.1.5',
-            target: 'SS1.1.2.1',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 266,
-            source: 'P1.1.2.1.6',
-            target: 'SS1.1.2.1',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 267,
-            source: 'P1.1.2.1.7',
-            target: 'SS1.1.2.1',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 268,
-            source: 'S1.1.3',
-            target: 'T1.1',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 269,
-            source: 'SS1.1.3.1',
-            target: 'S1.1.3',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 270,
-            source: 'SS1.1.3.2',
-            target: 'S1.1.3',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 271,
-            source: 'SS1.1.3.3',
-            target: 'S1.1.3',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 272,
-            source: 'T1.2',
-            target: 'CH1',
-            relation: 'Belong_SB',
-            value: 1
-        },
-        {
-            id: 273,
-            source: 'S1.2.1',
-            target: 'T1.2',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 274,
-            source: 'S1.2.2',
-            target: 'T1.2',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 275,
-            source: 'SS1.2.2.1',
-            target: 'S1.2.2',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 276,
-            source: 'P1.2.2.1.1',
-            target: 'SS1.2.2.1',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 277,
-            source: 'P1.2.2.1.2',
-            target: 'SS1.2.2.1',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 278,
-            source: 'P1.2.2.1.3',
-            target: 'SS1.2.2.1',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 279,
-            source: 'T1.3',
-            target: 'CH1',
-            relation: 'Belong_SB',
-            value: 1
-        },
-        {
-            id: 280,
-            source: 'S1.3.1',
-            target: 'T1.3',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 281,
-            source: 'SS1.3.1.1',
-            target: 'S1.3.1',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 282,
-            source: 'P1.3.1.1.1',
-            target: 'SS1.3.1.1',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 283,
-            source: 'P1.3.1.1.2',
-            target: 'SS1.3.1.1',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 284,
-            source: 'P1.3.1.1.3',
-            target: 'SS1.3.1.1',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 285,
-            source: 'P1.3.1.1.4',
-            target: 'SS1.3.1.1',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 286,
-            source: 'P1.3.1.1.5',
-            target: 'SS1.3.1.1',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 287,
-            source: 'S1.3.2',
-            target: 'T1.3',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 288,
-            source: 'SS1.3.2.1',
-            target: 'S1.3.2',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 289,
-            source: 'P1.3.2.1.1',
-            target: 'SS1.3.2.1',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 290,
-            source: 'P1.3.2.1.2',
-            target: 'SS1.3.2.1',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 291,
-            source: 'P1.3.2.1.3',
-            target: 'SS1.3.2.1',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 292,
-            source: 'P1.3.2.1.4',
-            target: 'SS1.3.2.1',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 293,
-            source: 'P1.3.2.1.5',
-            target: 'SS1.3.2.1',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 294,
-            source: 'P1.3.2.1.6',
-            target: 'SS1.3.2.1',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 295,
-            source: 'P1.3.2.1.7',
-            target: 'SS1.3.2.1',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 296,
-            source: 'P1.3.2.1.8',
-            target: 'SS1.3.2.1',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 297,
-            source: 'S1.3.3',
-            target: 'T1.3',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 298,
-            source: 'T1.4',
-            target: 'CH1',
-            relation: 'Belong_SB',
-            value: 1
-        },
-        {
-            id: 299,
-            source: 'S1.4.1',
-            target: 'T1.4',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 300,
-            source: 'SS1.4.1.1',
-            target: 'S1.4.1',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 301,
-            source: 'SS1.4.1.2',
-            target: 'S1.4.1',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 302,
-            source: 'SS1.4.1.3',
-            target: 'S1.4.1',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 303,
-            source: 'SS1.4.1.4',
-            target: 'S1.4.1',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 304,
-            source: 'S1.4.2',
-            target: 'T1.4',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 305,
-            source: 'SS1.4.2.1',
-            target: 'S1.4.2',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 306,
-            source: 'P1.4.2.1.1',
-            target: 'SS1.4.2.1',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 307,
-            source: 'P1.4.2.1.2',
-            target: 'SS1.4.2.1',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 308,
-            source: 'P1.4.2.1.3',
-            target: 'SS1.4.2.1',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 309,
-            source: 'P1.4.2.1.4',
-            target: 'SS1.4.2.1',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 310,
-            source: 'P1.4.2.1.5',
-            target: 'SS1.4.2.1',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 311,
-            source: 'P1.4.2.1.6',
-            target: 'SS1.4.2.1',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 312,
-            source: 'P1.4.2.1.7',
-            target: 'SS1.4.2.1',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 313,
-            source: 'T1.5',
-            target: 'CH1',
-            relation: 'Belong_SB',
-            value: 1
-        },
-        {
-            id: 314,
-            source: 'S1.5.1',
-            target: 'T1.5',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 315,
-            source: 'T1.6',
-            target: 'CH1',
-            relation: 'Belong_SB',
-            value: 1
-        },
-        {
-            id: 316,
-            source: 'T3.1',
-            target: 'CH3',
-            relation: 'Belong_SB',
-            value: 1
-        },
-        {
-            id: 317,
-            source: 'S3.1.1',
-            target: 'T3.1',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 318,
-            source: 'S3.1.2',
-            target: 'T3.1',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 319,
-            source: 'S3.1.2.1',
-            target: 'S3.1.2',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 320,
-            source: 'S3.1.2.2',
-            target: 'S3.1.2',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 321,
-            source: 'S3.1.2.3',
-            target: 'S3.1.2',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 322,
-            source: 'S3.1.2.4',
-            target: 'S3.1.2',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 323,
-            source: 'S3.1.2.5',
-            target: 'S3.1.2',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 324,
-            source: 'S3.1.3',
-            target: 'T3.1',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 325,
-            source: 'S3.1.4',
-            target: 'T3.1',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 326,
-            source: 'SS3.1.4.1',
-            target: 'S3.1.4',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 327,
-            source: 'SS3.1.4.2',
-            target: 'S3.1.4',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 328,
-            source: 'T3.2',
-            target: 'CH3',
-            relation: 'Belong_SB',
-            value: 1
-        },
-        {
-            id: 329,
-            source: 'S3.2.1',
-            target: 'T3.2',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 330,
-            source: 'S3.2.2',
-            target: 'T3.2',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 331,
-            source: 'T3.3',
-            target: 'CH3',
-            relation: 'Belong_SB',
-            value: 1
-        },
-        {
-            id: 332,
-            source: 'S3.3.1',
-            target: 'T3.3',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 333,
-            source: 'S3.3.2',
-            target: 'T3.3',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 334,
-            source: 'SS3.3.2.1',
-            target: 'S3.3.2',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 335,
-            source: 'SS3.3.2.2',
-            target: 'S3.3.2',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 336,
-            source: 'S3.3.3',
-            target: 'T3.2',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 337,
-            source: 'SS3.3.3.1',
-            target: 'S3.3.3',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 338,
-            source: 'SS3.3.3.2',
-            target: 'S3.3.3',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 339,
-            source: 'P3.3.3.2.1',
-            target: 'SS3.3.3.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 340,
-            source: 'P3.3.3.2.2',
-            target: 'SS3.3.3.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 341,
-            source: 'P3.3.3.2.3',
-            target: 'SS3.3.3.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 342,
-            source: 'P3.3.3.2.4',
-            target: 'SS3.3.3.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 343,
-            source: 'P3.3.3.2.5',
-            target: 'SS3.3.3.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 344,
-            source: 'P3.3.3.2.6',
-            target: 'SS3.3.3.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 345,
-            source: 'P3.3.3.2.7',
-            target: 'SS3.3.3.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 346,
-            source: 'T3.4',
-            target: 'CH3',
-            relation: 'Belong_SB',
-            value: 1
-        },
-        {
-            id: 347,
-            source: 'S3.4.1',
-            target: 'T3.4',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 348,
-            source: 'S3.4.2',
-            target: 'T3.4',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 349,
-            source: 'S3.4.3',
-            target: 'T3.4',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 350,
-            source: 'S3.4.4',
-            target: 'T3.4',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 351,
-            source: 'S3.4.5',
-            target: 'T3.4',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 352,
-            source: 'T3.5',
-            target: 'CH3',
-            relation: 'Belong_SB',
-            value: 1
-        },
-        {
-            id: 353,
-            source: 'S3.5.1',
-            target: 'T3.5',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 354,
-            source: 'SS3.5.1.1',
-            target: 'S3.5.1',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 355,
-            source: 'SS3.5.1.2',
-            target: 'S3.5.1',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 356,
-            source: 'P3.5.1.2.1',
-            target: 'SS3.5.1.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 357,
-            source: 'P3.5.1.2.2',
-            target: 'SS3.5.1.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 358,
-            source: 'P3.5.1.2.3',
-            target: 'SS3.5.1.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 359,
-            source: 'P3.5.1.2.4',
-            target: 'SS3.5.1.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 360,
-            source: 'S3.5.2',
-            target: 'T3.5',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 361,
-            source: 'SS3.5.2.1',
-            target: 'SS3.5.2.1',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 362,
-            source: 'SS3.5.2.2',
-            target: 'SS3.5.2.1',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 363,
-            source: 'P3.5.2.2.1',
-            target: 'SS3.5.2.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 364,
-            source: 'P3.5.2.2.2',
-            target: 'SS3.5.2.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 365,
-            source: 'P3.5.2.2.3',
-            target: 'SS3.5.2.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 366,
-            source: 'P3.5.2.2.4',
-            target: 'SS3.5.2.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 367,
-            source: 'P3.5.2.2.5',
-            target: 'SS3.5.2.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 368,
-            source: 'P3.5.2.2.6',
-            target: 'SS3.5.2.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 369,
-            source: 'SS3.5.2.3',
-            target: 'SS3.5.2.2',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 370,
-            source: 'S3.5.3',
-            target: 'T3.5',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 371,
-            source: 'SS3.5.3.1',
-            target: 'S3.5.3',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 372,
-            source: 'SS3.5.3.2',
-            target: 'S3.5.3',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 373,
-            source: 'P3.5.3.2.1',
-            target: 'SS3.5.3.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 374,
-            source: 'P3.5.3.2.2',
-            target: 'SS3.5.3.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 375,
-            source: 'P3.5.3.2.3',
-            target: 'SS3.5.3.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 376,
-            source: 'P3.5.3.2.4',
-            target: 'SS3.5.3.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 377,
-            source: 'P3.5.3.2.5',
-            target: 'SS3.5.3.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 378,
-            source: 'T3.6',
-            target: 'CH3',
-            relation: 'Belong_SB',
-            value: 1
-        },
-        {
-            id: 379,
-            source: 'T6.1',
-            target: 'CH6',
-            relation: 'Belong_SB',
-            value: 1
-        },
-        {
-            id: 380,
-            source: 'S6.1.1',
-            target: 'T6.1',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 381,
-            source: 'SS6.1.1.1',
-            target: 'S6.1.1',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 382,
-            source: 'SS6.1.1.2',
-            target: 'S6.1.1',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 383,
-            source: 'P6.1.1.2.1',
-            target: 'SS6.1.1.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 384,
-            source: 'P6.1.1.2.2',
-            target: 'SS6.1.1.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 385,
-            source: 'P6.1.1.2.3',
-            target: 'SS6.1.1.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 386,
-            source: 'P6.1.1.2.4',
-            target: 'SS6.1.1.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 387,
-            source: 'P6.1.1.2.5',
-            target: 'SS6.1.1.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 388,
-            source: 'P6.1.1.2.6',
-            target: 'SS6.1.1.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 389,
-            source: 'P6.1.1.2.7',
-            target: 'SS6.1.1.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 390,
-            source: 'P6.1.1.2.8',
-            target: 'SS6.1.1.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 391,
-            source: 'S6.1.2',
-            target: 'T6.1',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 392,
-            source: 'SS6.1.2.1',
-            target: 'S6.1.2',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 393,
-            source: 'SS6.1.2.2',
-            target: 'S6.1.2',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 394,
-            source: 'P6.1.2.2.1',
-            target: 'SS6.1.2.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 395,
-            source: 'P6.1.2.2.2',
-            target: 'SS6.1.2.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 396,
-            source: 'P6.1.2.2.3',
-            target: 'SS6.1.2.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 397,
-            source: 'P6.1.2.2.4',
-            target: 'SS6.1.2.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 398,
-            source: 'P6.1.2.2.5',
-            target: 'SS6.1.2.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 399,
-            source: 'P6.1.2.2.6',
-            target: 'SS6.1.2.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 400,
-            source: 'P6.1.2.2.7',
-            target: 'SS6.1.2.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 401,
-            source: 'P6.1.2.2.8',
-            target: 'SS6.1.2.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 402,
-            source: 'T6.2',
-            target: 'CH6',
-            relation: 'Belong_SB',
-            value: 1
-        },
-        {
-            id: 403,
-            source: 'S6.2.1',
-            target: 'T6.2',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 404,
-            source: 'SS6.2.1.1',
-            target: 'S6.2.1',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 405,
-            source: 'SS6.2.1.2',
-            target: 'S6.2.1',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 406,
-            source: 'P6.2.1.2.1',
-            target: 'SS6.2.1.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 407,
-            source: 'P6.2.1.2.2',
-            target: 'SS6.2.1.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 408,
-            source: 'P6.2.1.2.3',
-            target: 'SS6.2.1.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 409,
-            source: 'P6.2.1.2.4',
-            target: 'SS6.2.1.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 410,
-            source: 'P6.2.1.2.5',
-            target: 'SS6.2.1.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 411,
-            source: 'P6.2.1.2.6',
-            target: 'SS6.2.1.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 412,
-            source: 'P6.2.1.2.7',
-            target: 'SS6.2.1.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 413,
-            source: 'P6.2.1.2.8',
-            target: 'SS6.2.1.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 414,
-            source: 'P6.2.1.2.9',
-            target: 'SS6.2.1.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 415,
-            source: 'P6.2.1.2.10',
-            target: 'SS6.2.1.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 416,
-            source: 'S6.2.2',
-            target: 'T6.2',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 417,
-            source: 'SS6.2.2.1',
-            target: 'S6.2.2',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 418,
-            source: 'SS6.2.2.2',
-            target: 'S6.2.2',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 419,
-            source: 'P6.2.2.2.1',
-            target: 'SS6.2.2.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 420,
-            source: 'P6.2.2.2.2',
-            target: 'SS6.2.2.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 421,
-            source: 'P6.2.2.2.3',
-            target: 'SS6.2.2.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 422,
-            source: 'P6.2.2.2.4',
-            target: 'SS6.2.2.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 423,
-            source: 'P6.2.2.2.5',
-            target: 'SS6.2.2.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 424,
-            source: 'P6.2.2.2.6',
-            target: 'SS6.2.2.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 425,
-            source: 'P6.2.2.2.7',
-            target: 'SS6.2.2.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 426,
-            source: 'P6.2.2.2.8',
-            target: 'SS6.2.2.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 427,
-            source: 'P6.2.2.2.9',
-            target: 'SS6.2.2.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 428,
-            source: 'P6.2.2.2.10',
-            target: 'SS6.2.2.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 429,
-            source: 'S6.2.3',
-            target: 'T6.2',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 430,
-            source: 'SS6.2.3.1',
-            target: 'S6.2.3',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 431,
-            source: 'SS6.2.3.2',
-            target: 'S6.2.3',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 432,
-            source: 'P6.2.3.2.1',
-            target: 'SS6.2.3.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 433,
-            source: 'P6.2.3.2.2',
-            target: 'SS6.2.3.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 434,
-            source: 'P6.2.3.2.3',
-            target: 'SS6.2.3.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 435,
-            source: 'P6.2.3.2.4',
-            target: 'SS6.2.3.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 436,
-            source: 'P6.2.3.2.5',
-            target: 'SS6.2.3.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 437,
-            source: 'P6.2.3.2.6',
-            target: 'SS6.2.3.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 438,
-            source: 'P6.2.3.2.7',
-            target: 'SS6.2.3.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 439,
-            source: 'P6.2.3.2.8',
-            target: 'SS6.2.3.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 440,
-            source: 'P6.2.3.2.9',
-            target: 'SS6.2.3.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 441,
-            source: 'P6.2.3.2.10',
-            target: 'SS6.2.3.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 442,
-            source: 'S6.2.4',
-            target: 'T6.2',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 443,
-            source: 'SS6.2.4.1',
-            target: 'S6.2.4',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 444,
-            source: 'SS6.2.4.2',
-            target: 'S6.2.4',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 445,
-            source: 'P6.2.4.2.1',
-            target: 'SS6.2.4.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 446,
-            source: 'P6.2.4.2.2',
-            target: 'SS6.2.4.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 447,
-            source: 'P6.2.4.2.3',
-            target: 'SS6.2.4.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 448,
-            source: 'SS6.2.4.3',
-            target: 'S6.2.4',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 449,
-            source: 'P6.2.4.3.1',
-            target: 'SS6.2.4.3',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 450,
-            source: 'P6.2.4.3.2',
-            target: 'SS6.2.4.3',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 451,
-            source: 'P6.2.4.3.3',
-            target: 'SS6.2.4.3',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 452,
-            source: 'P6.2.4.3.4',
-            target: 'SS6.2.4.3',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 453,
-            source: 'P6.2.4.3.5',
-            target: 'SS6.2.4.3',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 454,
-            source: 'P6.2.4.3.6',
-            target: 'SS6.2.4.3',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 455,
-            source: 'P6.2.4.3.7',
-            target: 'SS6.2.4.3',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 456,
-            source: 'P6.2.4.3.8',
-            target: 'SS6.2.4.3',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 457,
-            source: 'P6.2.4.3.9',
-            target: 'SS6.2.4.3',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 458,
-            source: 'P6.2.4.3.10',
-            target: 'SS6.2.4.3',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 459,
-            source: 'S6.2.5',
-            target: 'T6.2',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 460,
-            source: 'SS6.2.5.1',
-            target: 'S6.2.5',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 461,
-            source: 'SS6.2.5.2',
-            target: 'S6.2.5',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 462,
-            source: 'P6.2.5.2.1',
-            target: 'SS6.2.5.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 463,
-            source: 'P6.2.5.2.2',
-            target: 'SS6.2.5.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 464,
-            source: 'P6.2.5.2.3',
-            target: 'SS6.2.5.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 465,
-            source: 'P6.2.5.2.4',
-            target: 'SS6.2.5.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 466,
-            source: 'P6.2.5.2.5',
-            target: 'SS6.2.5.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 467,
-            source: 'T6.3',
-            target: 'CH6',
-            relation: 'Belong_SB',
-            value: 1
-        },
-        {
-            id: 468,
-            source: 'T8.1',
-            target: 'CH8',
-            relation: 'Belong_SB',
-            value: 1
-        },
-        {
-            id: 469,
-            source: 'S8.1.1',
-            target: 'T8.1',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 470,
-            source: 'SS8.1.1.1',
-            target: 'S8.1.1',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 471,
-            source: 'SS8.1.1.2',
-            target: 'S8.1.1',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 472,
-            source: 'S8.1.2',
-            target: 'T8.1',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 473,
-            source: 'SS8.1.2.1',
-            target: 'S8.1.2',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 474,
-            source: 'SS8.1.2.2',
-            target: 'S8.1.2',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 475,
-            source: 'SS8.1.2.3',
-            target: 'S8.1.2',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 476,
-            source: 'SS8.1.2.4',
-            target: 'S8.1.2',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 477,
-            source: 'SS8.1.2.5',
-            target: 'S8.1.2',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 478,
-            source: 'SS8.1.2.6',
-            target: 'S8.1.2',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 479,
-            source: 'S8.1.3',
-            target: 'T8.1',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 480,
-            source: 'SS8.1.3.1',
-            target: 'S8.1.3',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 481,
-            source: 'SS8.1.3.2',
-            target: 'S8.1.3',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 482,
-            source: 'SS8.1.3.3',
-            target: 'S8.1.3',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 483,
-            source: 'SS8.1.3.4',
-            target: 'S8.1.3',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 484,
-            source: 'SS8.1.3.5',
-            target: 'S8.1.3',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 485,
-            source: 'T8.2',
-            target: 'CH8',
-            relation: 'Belong_SB',
-            value: 1
-        },
-        {
-            id: 486,
-            source: 'S8.2.1',
-            target: 'T8.2',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 487,
-            source: 'SS8.2.1.1',
-            target: 'S8.2.1',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 488,
-            source: 'SS8.2.1.2',
-            target: 'S8.2.1',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 489,
-            source: 'S8.2.2',
-            target: 'T8.2',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 490,
-            source: 'SS8.2.2.1',
-            target: 'S8.2.2',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 491,
-            source: 'SS8.2.2.2',
-            target: 'S8.2.2',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 492,
-            source: 'P8.2.2.2.1',
-            target: 'SS8.2.2.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 493,
-            source: 'P8.2.2.2.2',
-            target: 'SS8.2.2.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 494,
-            source: 'P8.2.2.2.3',
-            target: 'SS8.2.2.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 495,
-            source: 'P8.2.2.2.4',
-            target: 'SS8.2.2.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 496,
-            source: 'S8.2.3',
-            target: 'T8.2',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 497,
-            source: 'SS8.2.3.1',
-            target: 'S8.2.3',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 498,
-            source: 'SS8.2.3.2',
-            target: 'S8.2.3',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 499,
-            source: 'SS8.2.3.3',
-            target: 'S8.2.3',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 500,
-            source: 'T8.3',
-            target: 'CH8',
-            relation: 'Belong_SB',
-            value: 1
-        },
-        {
-            id: 501,
-            source: 'S8.3.1',
-            target: 'T8.3',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 502,
-            source: 'SS8.3.1.1',
-            target: 'S8.3.1',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 503,
-            source: 'SS8.3.1.2',
-            target: 'S8.3.1',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 504,
-            source: 'S8.3.2',
-            target: 'T8.3',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 505,
-            source: 'SS8.3.2.1',
-            target: 'S8.3.2',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 506,
-            source: 'SS8.3.2.2',
-            target: 'S8.3.2',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 507,
-            source: 'S8.3.3',
-            target: 'T8.3',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 508,
-            source: 'S8.3.4',
-            target: 'T8.3',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 509,
-            source: 'SS8.3.4.1',
-            target: 'S8.3.4',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 510,
-            source: 'SS8.3.4.2',
-            target: 'S8.3.4',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 511,
-            source: 'SS8.3.4.3',
-            target: 'S8.3.4',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 512,
-            source: 'P8.3.4.3.1',
-            target: 'SS8.3.4.3',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 513,
-            source: 'P8.3.4.3.2',
-            target: 'SS8.3.4.3',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 514,
-            source: 'P8.3.4.3.3',
-            target: 'SS8.3.4.3',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 515,
-            source: 'P8.3.4.3.4',
-            target: 'SS8.3.4.3',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 516,
-            source: 'P8.3.4.3.5',
-            target: 'SS8.3.4.3',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 517,
-            source: 'SS8.3.4.4',
-            target: 'S8.3.4',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 518,
-            source: 'SS8.3.4.5',
-            target: 'S8.3.4',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 519,
-            source: 'T8.4',
-            target: 'CH8',
-            relation: 'Belong_SB',
-            value: 1
-        },
-        {
-            id: 520,
-            source: 'S8.4.1',
-            target: 'T8.4',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 521,
-            source: 'S8.4.2',
-            target: 'T8.4',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 522,
-            source: 'S8.4.3',
-            target: 'T8.4',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 523,
-            source: 'T8.5',
-            target: 'CH8',
-            relation: 'Belong_SB',
-            value: 1
-        },
-        {
-            id: 524,
-            source: 'S8.5.1',
-            target: 'T8.5',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 525,
-            source: 'S8.5.2',
-            target: 'T8.5',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 526,
-            source: 'S8.5.3',
-            target: 'T8.5',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 527,
-            source: 'S8.5.4',
-            target: 'T8.5',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 528,
-            source: 'SS8.5.4.1',
-            target: 'S8.5.4',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 529,
-            source: 'SS8.5.4.2',
-            target: 'S8.5.4',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 530,
-            source: 'T8.6',
-            target: 'CH8',
-            relation: 'Belong_SB',
-            value: 1
-        },
-        {
-            id: 531,
-            source: 'T15.1',
-            target: 'CH15',
-            relation: 'Belong_SB',
-            value: 1
-        },
-        {
-            id: 532,
-            source: 'S15.1.1',
-            target: 'T15.1',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 533,
-            source: 'SS15.1.1.1',
-            target: 'S15.1.1',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 534,
-            source: 'SS15.1.1.2',
-            target: 'S15.1.1',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 535,
-            source: 'SS15.1.1.3',
-            target: 'S15.1.1',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 536,
-            source: 'SS15.1.1.4',
-            target: 'S15.1.1',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 537,
-            source: 'SS15.1.1.5',
-            target: 'S15.1.1',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 538,
-            source: 'S15.1.2',
-            target: 'T15.1',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 539,
-            source: 'SS15.1.2.1',
-            target: 'S15.1.2',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 540,
-            source: 'SS15.1.2.2',
-            target: 'S15.1.2',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 541,
-            source: 'S15.1.3',
-            target: 'T15.1',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 542,
-            source: 'T15.2',
-            target: 'CH15',
-            relation: 'Belong_SB',
-            value: 1
-        },
-        {
-            id: 543,
-            source: 'S15.2.1',
-            target: 'T15.2',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 544,
-            source: 'SS15.2.1.1',
-            target: 'S15.2.1',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 545,
-            source: 'SS15.2.1.2',
-            target: 'S15.2.1',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 546,
-            source: 'SS15.2.1.3',
-            target: 'S15.2.1',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 547,
-            source: 'S15.2.2',
-            target: 'T15.2',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 548,
-            source: 'SS15.2.2.1',
-            target: 'S15.2.2',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 549,
-            source: 'P15.2.2.1.1',
-            target: 'SS15.2.2.1',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 550,
-            source: 'P15.2.2.1.2',
-            target: 'SS15.2.2.1',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 551,
-            source: 'P15.2.2.1.3',
-            target: 'SS15.2.2.1',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 552,
-            source: 'SS15.2.2.2',
-            target: 'S15.2.2',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 553,
-            source: 'SS15.2.2.3',
-            target: 'S15.2.2',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 554,
-            source: 'SS15.2.2.4',
-            target: 'S15.2.2',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 555,
-            source: 'S15.2.3',
-            target: 'T15.2',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 556,
-            source: 'S15.2.4',
-            target: 'T15.2',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 557,
-            source: 'T15.3',
-            target: 'CH15',
-            relation: 'Belong_SB',
-            value: 1
-        },
-        {
-            id: 558,
-            source: 'S15.3.1',
-            target: 'T15.3',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 559,
-            source: 'S15.3.2',
-            target: 'T15.3',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 560,
-            source: 'S15.3.3',
-            target: 'T15.3',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 561,
-            source: 'SS15.3.3.1',
-            target: 'S15.3.3',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 562,
-            source: 'SS15.3.3.2',
-            target: 'S15.3.3',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 563,
-            source: 'P15.3.3.2.1',
-            target: 'SS15.3.3.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 564,
-            source: 'P15.3.3.2.2',
-            target: 'SS15.3.3.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 565,
-            source: 'P15.3.3.2.3',
-            target: 'SS15.3.3.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 566,
-            source: 'S15.3.4',
-            target: 'T15.3',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 567,
-            source: 'SS15.3.4.1',
-            target: 'S15.3.4',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 568,
-            source: 'SS15.3.4.2',
-            target: 'S15.3.4',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 569,
-            source: 'S15.3.5',
-            target: 'T15.3',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 570,
-            source: 'S15.3.6',
-            target: 'T15.3',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 571,
-            source: 'SS15.3.6.1',
-            target: 'S15.3.6',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 572,
-            source: 'SS15.3.6.2',
-            target: 'S15.3.6',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 573,
-            source: 'S15.3.7',
-            target: 'T15.3',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 574,
-            source: 'SS15.3.7.1',
-            target: 'S15.3.7',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 575,
-            source: 'SS15.3.7.2',
-            target: 'S15.3.7',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 576,
-            source: 'P15.3.7.2.1',
-            target: 'SS15.3.7.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 577,
-            source: 'P15.3.7.2.2',
-            target: 'SS15.3.7.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 578,
-            source: 'P15.3.7.2.3',
-            target: 'SS15.3.7.2',
-            relation: 'Belong_SS',
-            value: 1
-        },
-        {
-            id: 579,
-            source: 'T15.4',
-            target: 'CH15',
-            relation: 'Belong_SB',
-            value: 1
-        },
-        {
-            id: 580,
-            source: 'S15.4.1',
-            target: 'T15.4',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 581,
-            source: 'SS15.4.1.1',
-            target: 'S15.4.1',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 582,
-            source: 'SS15.4.1.2',
-            target: 'S15.4.1',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 583,
-            source: 'SS15.4.1.3',
-            target: 'S15.4.1',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 584,
-            source: 'SS15.4.1.4',
-            target: 'S15.4.1',
-            relation: 'Belong_ST',
-            value: 1
-        },
-        {
-            id: 585,
-            source: 'S15.4.2',
-            target: 'T15.4',
-            relation: 'Belong_TP',
-            value: 1
-        },
-        {
-            id: 586,
-            source: 'T15.5',
-            target: 'CH15',
-            relation: 'Belong_SB',
-            value: 1
-        },
-        {
-            id: 587,
-            source: 'CH15',
-            target: 'root',
-            relation: 'Belong_TP',
-            value: 1
-        },
-    ];
+     this.tempEdges = [{
+          "id": 1,
+          "source": "CH1",
+          "target": "CH3",
+          "relation": "Next_SB",
+          "value": 1
+      },
+      {
+          "id": 2,
+          "source": "T1.1",
+          "target": "T1.2",
+          "relation": "Next_TP",
+          "value": 1
+      },
+      {
+          "id": 3,
+          "source": "S1.1.1",
+          "target": "S1.1.2",
+          "relation": "Next_ST",
+          "value": 1
+      },
+      {
+          "id": 4,
+          "source": "SS1.1.1.1",
+          "target": "SS1.1.1.2",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 5,
+          "source": "SS1.1.1.2",
+          "target": "SS1.1.1.3",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 6,
+          "source": "P1.1.1.3.1",
+          "target": "P1.1.1.3.2",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 7,
+          "source": "P1.1.1.3.2",
+          "target": "P1.1.1.3.3",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 8,
+          "source": "S1.1.2",
+          "target": "S1.1.3",
+          "relation": "Next_ST",
+          "value": 1
+      },
+      {
+          "id": 9,
+          "source": "P1.1.2.1.1",
+          "target": "P1.1.2.1.2",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 10,
+          "source": "P1.1.2.1.2",
+          "target": "P1.1.2.1.3",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 11,
+          "source": "P1.1.2.1.3",
+          "target": "P1.1.2.1.4",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 12,
+          "source": "P1.1.2.1.4",
+          "target": "P1.1.2.1.5",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 13,
+          "source": "P1.1.2.1.5",
+          "target": "P1.1.2.1.6",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 14,
+          "source": "P1.1.2.1.6",
+          "target": "P1.1.2.1.7",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 15,
+          "source": "SS1.1.3.1",
+          "target": "SS1.1.3.2",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 16,
+          "source": "SS1.1.3.2",
+          "target": "SS1.1.3.3",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 17,
+          "source": "T1.2",
+          "target": "T1.3",
+          "relation": "Next_TP",
+          "value": 1
+      },
+      {
+          "id": 18,
+          "source": "S1.2.1",
+          "target": "S1.2.2",
+          "relation": "Next_ST",
+          "value": 1
+      },
+      {
+          "id": 19,
+          "source": "P1.2.2.1.1",
+          "target": "P1.2.2.1.2",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 20,
+          "source": "P1.2.2.1.2",
+          "target": "P1.2.2.1.3",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 21,
+          "source": "T1.3",
+          "target": "T1.4",
+          "relation": "Next_TP",
+          "value": 1
+      },
+      {
+          "id": 22,
+          "source": "S1.3.1",
+          "target": "S1.3.2",
+          "relation": "Next_ST",
+          "value": 1
+      },
+      {
+          "id": 23,
+          "source": "P1.3.1.1.1",
+          "target": "P1.3.1.1.2",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 24,
+          "source": "P1.3.1.1.2",
+          "target": "P1.3.1.1.3",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 25,
+          "source": "P1.3.1.1.3",
+          "target": "P1.3.1.1.4",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 26,
+          "source": "P1.3.1.1.4",
+          "target": "P1.3.1.1.5",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 27,
+          "source": "S1.3.2",
+          "target": "S1.3.3",
+          "relation": "Next_ST",
+          "value": 1
+      },
+      {
+          "id": 28,
+          "source": "P1.3.2.1.1",
+          "target": "P1.3.2.1.2",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 29,
+          "source": "P1.3.2.1.2",
+          "target": "P1.3.2.1.3",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 30,
+          "source": "P1.3.2.1.3",
+          "target": "P1.3.2.1.4",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 31,
+          "source": "P1.3.2.1.4",
+          "target": "P1.3.2.1.5",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 32,
+          "source": "P1.3.2.1.5",
+          "target": "P1.3.2.1.6",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 33,
+          "source": "P1.3.2.1.6",
+          "target": "P1.3.2.1.7",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 34,
+          "source": "P1.3.2.1.7",
+          "target": "P1.3.2.1.8",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 35,
+          "source": "T1.4",
+          "target": "T1.5",
+          "relation": "Next_TP",
+          "value": 1
+      },
+      {
+          "id": 36,
+          "source": "S1.4.1",
+          "target": "S1.4.2",
+          "relation": "Next_ST",
+          "value": 1
+      },
+      {
+          "id": 37,
+          "source": "SS1.4.1.1",
+          "target": "SS1.4.1.2",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 38,
+          "source": "SS1.4.1.2",
+          "target": "SS1.4.1.3",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 39,
+          "source": "SS1.4.1.3",
+          "target": "SS1.4.1.4",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 40,
+          "source": "P1.4.2.1.1",
+          "target": "P1.4.2.1.2",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 41,
+          "source": "P1.4.2.1.2",
+          "target": "P1.4.2.1.3",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 42,
+          "source": "P1.4.2.1.3",
+          "target": "P1.4.2.1.4",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 43,
+          "source": "P1.4.2.1.4",
+          "target": "P1.4.2.1.5",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 44,
+          "source": "P1.4.2.1.5",
+          "target": "P1.4.2.1.6",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 45,
+          "source": "P1.4.2.1.6",
+          "target": "P1.4.2.1.7",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 46,
+          "source": "T1.5",
+          "target": "T1.6",
+          "relation": "Next_TP",
+          "value": 1
+      },
+      {
+          "id": 47,
+          "source": "CH3",
+          "target": "CH6",
+          "relation": "Next_SB",
+          "value": 1
+      },
+      {
+          "id": 48,
+          "source": "T3.1",
+          "target": "T3.2",
+          "relation": "Next_TP",
+          "value": 1
+      },
+      {
+          "id": 49,
+          "source": "S3.1.1",
+          "target": "S3.1.2",
+          "relation": "Next_ST",
+          "value": 1
+      },
+      {
+          "id": 50,
+          "source": "S3.1.2",
+          "target": "S3.1.3",
+          "relation": "Next_ST",
+          "value": 1
+      },
+      {
+          "id": 51,
+          "source": "S3.1.2.1",
+          "target": "S3.1.2.2",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 52,
+          "source": "S3.1.2.2",
+          "target": "S3.1.2.3",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 53,
+          "source": "S3.1.2.3",
+          "target": "S3.1.2.4",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 54,
+          "source": "S3.1.2.4",
+          "target": "S3.1.2.5",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 55,
+          "source": "S3.1.3",
+          "target": "S3.1.4",
+          "relation": "Next_ST",
+          "value": 1
+      },
+      {
+          "id": 56,
+          "source": "SS3.1.4.1",
+          "target": "SS3.1.4.2",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 57,
+          "source": "T3.2",
+          "target": "T3.3",
+          "relation": "Next_TP",
+          "value": 1
+      },
+      {
+          "id": 58,
+          "source": "S3.2.1",
+          "target": "S3.2.2",
+          "relation": "Next_ST",
+          "value": 1
+      },
+      {
+          "id": 59,
+          "source": "T3.3",
+          "target": "T3.4",
+          "relation": "Next_TP",
+          "value": 1
+      },
+      {
+          "id": 60,
+          "source": "S3.3.1",
+          "target": "S3.3.2",
+          "relation": "Next_ST",
+          "value": 1
+      },
+      {
+          "id": 61,
+          "source": "S3.3.2",
+          "target": "S3.3.3",
+          "relation": "Next_ST",
+          "value": 1
+      },
+      {
+          "id": 62,
+          "source": "SS3.3.2.1",
+          "target": "SS3.3.2.2",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 63,
+          "source": "SS3.3.3.1",
+          "target": "SS3.3.3.2",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 64,
+          "source": "P3.3.3.2.1",
+          "target": "P3.3.3.2.2",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 65,
+          "source": "P3.3.3.2.2",
+          "target": "P3.3.3.2.3",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 66,
+          "source": "P3.3.3.2.3",
+          "target": "P3.3.3.2.4",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 67,
+          "source": "P3.3.3.2.4",
+          "target": "P3.3.3.2.5",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 68,
+          "source": "P3.3.3.2.5",
+          "target": "P3.3.3.2.6",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 69,
+          "source": "P3.3.3.2.6",
+          "target": "P3.3.3.2.7",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 70,
+          "source": "T3.4",
+          "target": "T3.5",
+          "relation": "Next_TP",
+          "value": 1
+      },
+      {
+          "id": 71,
+          "source": "S3.4.1",
+          "target": "S3.4.2",
+          "relation": "Next_ST",
+          "value": 1
+      },
+      {
+          "id": 72,
+          "source": "S3.4.2",
+          "target": "S3.4.3",
+          "relation": "Next_ST",
+          "value": 1
+      },
+      {
+          "id": 73,
+          "source": "S3.4.3",
+          "target": "S3.4.4",
+          "relation": "Next_ST",
+          "value": 1
+      },
+      {
+          "id": 74,
+          "source": "S3.4.4",
+          "target": "S3.4.5",
+          "relation": "Next_ST",
+          "value": 1
+      },
+      {
+          "id": 75,
+          "source": "T3.5",
+          "target": "T3.6",
+          "relation": "Next_TP",
+          "value": 1
+      },
+      {
+          "id": 76,
+          "source": "S3.5.1",
+          "target": "S3.5.2",
+          "relation": "Next_ST",
+          "value": 1
+      },
+      {
+          "id": 77,
+          "source": "SS3.5.1.1",
+          "target": "SS3.5.1.2",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 78,
+          "source": "P3.5.1.2.1",
+          "target": "P3.5.1.2.2",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 79,
+          "source": "P3.5.1.2.2",
+          "target": "P3.5.1.2.3",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 80,
+          "source": "P3.5.1.2.3",
+          "target": "P3.5.1.2.4",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 81,
+          "source": "S3.5.2",
+          "target": "S3.5.3",
+          "relation": "Next_ST",
+          "value": 1
+      },
+      {
+          "id": 82,
+          "source": "SS3.5.2.1",
+          "target": "SS3.5.2.2",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 83,
+          "source": "SS3.5.2.2",
+          "target": "SS3.5.2.3",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 84,
+          "source": "P3.5.2.2.1",
+          "target": "P3.5.2.2.2",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 85,
+          "source": "P3.5.2.2.2",
+          "target": "P3.5.2.2.3",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 86,
+          "source": "P3.5.2.2.3",
+          "target": "P3.5.2.2.4",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 87,
+          "source": "P3.5.2.2.4",
+          "target": "P3.5.2.2.5",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 88,
+          "source": "P3.5.2.2.5",
+          "target": "P3.5.2.2.6",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 89,
+          "source": "SS3.5.3.1",
+          "target": "SS3.5.3.2",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 90,
+          "source": "P3.5.3.2.1",
+          "target": "P3.5.3.2.2",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 91,
+          "source": "P3.5.3.2.2",
+          "target": "P3.5.3.2.3",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 92,
+          "source": "P3.5.3.2.3",
+          "target": "P3.5.3.2.4",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 93,
+          "source": "P3.5.3.2.4",
+          "target": "P3.5.3.2.5",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 94,
+          "source": "CH6",
+          "target": "CH8",
+          "relation": "Next_SB",
+          "value": 1
+      },
+      {
+          "id": 95,
+          "source": "T6.1",
+          "target": "T6.2",
+          "relation": "Next_TP",
+          "value": 1
+      },
+      {
+          "id": 96,
+          "source": "S6.1.1",
+          "target": "S6.1.2",
+          "relation": "Next_ST",
+          "value": 1
+      },
+      {
+          "id": 97,
+          "source": "SS6.1.1.1",
+          "target": "SS6.1.1.2",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 98,
+          "source": "P6.1.1.2.1",
+          "target": "P6.1.1.2.2",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 99,
+          "source": "P6.1.1.2.2",
+          "target": "P6.1.1.2.3",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 100,
+          "source": "P6.1.1.2.3",
+          "target": "P6.1.1.2.4",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 101,
+          "source": "P6.1.1.2.4",
+          "target": "P6.1.1.2.5",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 102,
+          "source": "P6.1.1.2.5",
+          "target": "P6.1.1.2.6",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 103,
+          "source": "P6.1.1.2.6",
+          "target": "P6.1.1.2.7",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 104,
+          "source": "P6.1.1.2.7",
+          "target": "P6.1.1.2.8",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 105,
+          "source": "SS6.1.2.1",
+          "target": "SS6.1.2.2",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 106,
+          "source": "P6.1.2.2.1",
+          "target": "P6.1.2.2.2",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 107,
+          "source": "P6.1.2.2.2",
+          "target": "P6.1.2.2.3",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 108,
+          "source": "P6.1.2.2.3",
+          "target": "P6.1.2.2.4",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 109,
+          "source": "P6.1.2.2.4",
+          "target": "P6.1.2.2.5",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 110,
+          "source": "P6.1.2.2.5",
+          "target": "P6.1.2.2.6",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 111,
+          "source": "P6.1.2.2.6",
+          "target": "P6.1.2.2.7",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 112,
+          "source": "P6.1.2.2.7",
+          "target": "P6.1.2.2.8",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 113,
+          "source": "T6.2",
+          "target": "T6.3",
+          "relation": "Next_TP",
+          "value": 1
+      },
+      {
+          "id": 114,
+          "source": "S6.2.1",
+          "target": "S6.2.2",
+          "relation": "Next_ST",
+          "value": 1
+      },
+      {
+          "id": 115,
+          "source": "SS6.2.1.1",
+          "target": "SS6.2.1.2",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 116,
+          "source": "P6.2.1.2.1",
+          "target": "P6.2.1.2.2",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 117,
+          "source": "P6.2.1.2.2",
+          "target": "P6.2.1.2.3",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 118,
+          "source": "P6.2.1.2.3",
+          "target": "P6.2.1.2.4",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 119,
+          "source": "P6.2.1.2.4",
+          "target": "P6.2.1.2.5",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 120,
+          "source": "P6.2.1.2.5",
+          "target": "P6.2.1.2.6",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 121,
+          "source": "P6.2.1.2.6",
+          "target": "P6.2.1.2.7",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 122,
+          "source": "P6.2.1.2.7",
+          "target": "P6.2.1.2.8",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 123,
+          "source": "P6.2.1.2.8",
+          "target": "P6.2.1.2.9",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 124,
+          "source": "P6.2.1.2.9",
+          "target": "P6.2.1.2.10",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 125,
+          "source": "S6.2.2",
+          "target": "S6.2.3",
+          "relation": "Next_ST",
+          "value": 1
+      },
+      {
+          "id": 126,
+          "source": "SS6.2.2.1",
+          "target": "SS6.2.2.2",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 127,
+          "source": "P6.2.2.2.1",
+          "target": "P6.2.2.2.2",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 128,
+          "source": "P6.2.2.2.2",
+          "target": "P6.2.2.2.3",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 129,
+          "source": "P6.2.2.2.3",
+          "target": "P6.2.2.2.4",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 130,
+          "source": "P6.2.2.2.4",
+          "target": "P6.2.2.2.5",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 131,
+          "source": "P6.2.2.2.5",
+          "target": "P6.2.2.2.6",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 132,
+          "source": "P6.2.2.2.6",
+          "target": "P6.2.2.2.7",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 133,
+          "source": "P6.2.2.2.7",
+          "target": "P6.2.2.2.8",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 134,
+          "source": "P6.2.2.2.8",
+          "target": "P6.2.2.2.9",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 135,
+          "source": "P6.2.2.2.9",
+          "target": "P6.2.2.2.10",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 136,
+          "source": "S6.2.3",
+          "target": "S6.2.4",
+          "relation": "Next_ST",
+          "value": 1
+      },
+      {
+          "id": 137,
+          "source": "SS6.2.3.1",
+          "target": "SS6.2.3.2",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 138,
+          "source": "P6.2.3.2.1",
+          "target": "P6.2.3.2.2",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 139,
+          "source": "P6.2.3.2.2",
+          "target": "P6.2.3.2.3",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 140,
+          "source": "P6.2.3.2.3",
+          "target": "P6.2.3.2.4",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 141,
+          "source": "P6.2.3.2.4",
+          "target": "P6.2.3.2.5",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 142,
+          "source": "P6.2.3.2.5",
+          "target": "P6.2.3.2.6",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 143,
+          "source": "P6.2.3.2.6",
+          "target": "P6.2.3.2.7",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 144,
+          "source": "P6.2.3.2.7",
+          "target": "P6.2.3.2.8",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 145,
+          "source": "P6.2.3.2.8",
+          "target": "P6.2.3.2.9",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 146,
+          "source": "P6.2.3.2.9",
+          "target": "P6.2.3.2.10",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 147,
+          "source": "S6.2.4",
+          "target": "S6.2.5",
+          "relation": "Next_ST",
+          "value": 1
+      },
+      {
+          "id": 148,
+          "source": "SS6.2.4.1",
+          "target": "SS6.2.4.2",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 149,
+          "source": "SS6.2.4.2",
+          "target": "SS6.2.4.3",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 150,
+          "source": "P6.2.4.2.1",
+          "target": "P6.2.4.2.2",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 151,
+          "source": "P6.2.4.2.2",
+          "target": "P6.2.4.2.3",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 152,
+          "source": "P6.2.4.3.1",
+          "target": "P6.2.4.3.2",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 153,
+          "source": "P6.2.4.3.2",
+          "target": "P6.2.4.3.3",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 154,
+          "source": "P6.2.4.3.3",
+          "target": "P6.2.4.3.4",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 155,
+          "source": "P6.2.4.3.4",
+          "target": "P6.2.4.3.5",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 156,
+          "source": "P6.2.4.3.5",
+          "target": "P6.2.4.3.6",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 157,
+          "source": "P6.2.4.3.6",
+          "target": "P6.2.4.3.7",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 158,
+          "source": "P6.2.4.3.7",
+          "target": "P6.2.4.3.8",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 159,
+          "source": "P6.2.4.3.8",
+          "target": "P6.2.4.3.9",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 160,
+          "source": "P6.2.4.3.9",
+          "target": "P6.2.4.3.10",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 161,
+          "source": "SS6.2.5.1",
+          "target": "SS6.2.5.2",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 162,
+          "source": "P6.2.5.2.1",
+          "target": "P6.2.5.2.2",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 163,
+          "source": "P6.2.5.2.2",
+          "target": "P6.2.5.2.3",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 164,
+          "source": "P6.2.5.2.3",
+          "target": "P6.2.5.2.4",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 165,
+          "source": "P6.2.5.2.4",
+          "target": "P6.2.5.2.5",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 166,
+          "source": "CH8",
+          "target": "CH15",
+          "relation": "Next_SB",
+          "value": 1
+      },
+      {
+          "id": 167,
+          "source": "T8.1",
+          "target": "T8.2",
+          "relation": "Next_TP",
+          "value": 1
+      },
+      {
+          "id": 168,
+          "source": "S8.1.1",
+          "target": "S8.1.2",
+          "relation": "Next_ST",
+          "value": 1
+      },
+      {
+          "id": 169,
+          "source": "SS8.1.1.1",
+          "target": "SS8.1.1.2",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 170,
+          "source": "S8.1.2",
+          "target": "S8.1.3",
+          "relation": "Next_ST",
+          "value": 1
+      },
+      {
+          "id": 171,
+          "source": "SS8.1.2.1",
+          "target": "SS8.1.2.2",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 172,
+          "source": "SS8.1.2.2",
+          "target": "SS8.1.2.3",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 173,
+          "source": "SS8.1.2.3",
+          "target": "SS8.1.2.4",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 174,
+          "source": "SS8.1.2.4",
+          "target": "SS8.1.2.5",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 175,
+          "source": "SS8.1.2.5",
+          "target": "SS8.1.2.6",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 176,
+          "source": "SS8.1.3.1",
+          "target": "SS8.1.3.2",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 177,
+          "source": "SS8.1.3.2",
+          "target": "SS8.1.3.3",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 178,
+          "source": "SS8.1.3.3",
+          "target": "SS8.1.3.4",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 179,
+          "source": "SS8.1.3.4",
+          "target": "SS8.1.3.5",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 180,
+          "source": "T8.2",
+          "target": "T8.3",
+          "relation": "Next_TP",
+          "value": 1
+      },
+      {
+          "id": 181,
+          "source": "S8.2.1",
+          "target": "S8.2.2",
+          "relation": "Next_ST",
+          "value": 1
+      },
+      {
+          "id": 182,
+          "source": "SS8.2.1.1",
+          "target": "SS8.2.1.2",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 183,
+          "source": "S8.2.2",
+          "target": "S8.2.3",
+          "relation": "Next_ST",
+          "value": 1
+      },
+      {
+          "id": 184,
+          "source": "SS8.2.2.1",
+          "target": "SS8.2.2.2",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 185,
+          "source": "P8.2.2.2.1",
+          "target": "P8.2.2.2.2",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 186,
+          "source": "P8.2.2.2.2",
+          "target": "P8.2.2.2.3",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 187,
+          "source": "P8.2.2.2.3",
+          "target": "P8.2.2.2.4",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 188,
+          "source": "SS8.2.3.1",
+          "target": "SS8.2.3.2",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 189,
+          "source": "SS8.2.3.2",
+          "target": "SS8.2.3.3",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 190,
+          "source": "T8.3",
+          "target": "T8.4",
+          "relation": "Next_TP",
+          "value": 1
+      },
+      {
+          "id": 191,
+          "source": "S8.3.1",
+          "target": "S8.3.2",
+          "relation": "Next_ST",
+          "value": 1
+      },
+      {
+          "id": 192,
+          "source": "SS8.3.1.1",
+          "target": "SS8.3.1.2",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 193,
+          "source": "S8.3.2",
+          "target": "S8.3.3",
+          "relation": "Next_ST",
+          "value": 1
+      },
+      {
+          "id": 194,
+          "source": "SS8.3.2.1",
+          "target": "SS8.3.2.2",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 195,
+          "source": "S8.3.3",
+          "target": "S8.3.4",
+          "relation": "Next_ST",
+          "value": 1
+      },
+      {
+          "id": 196,
+          "source": "SS8.3.4.1",
+          "target": "SS8.3.4.2",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 197,
+          "source": "SS8.3.4.2",
+          "target": "SS8.3.4.3",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 198,
+          "source": "SS8.3.4.3",
+          "target": "SS8.3.4.4",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 199,
+          "source": "P8.3.4.3.1",
+          "target": "P8.3.4.3.2",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 200,
+          "source": "P8.3.4.3.2",
+          "target": "P8.3.4.3.3",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 201,
+          "source": "P8.3.4.3.3",
+          "target": "P8.3.4.3.4",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 202,
+          "source": "P8.3.4.3.4",
+          "target": "P8.3.4.3.5",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 203,
+          "source": "SS8.3.4.4",
+          "target": "SS8.3.4.5",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 204,
+          "source": "T8.4",
+          "target": "T8.5",
+          "relation": "Next_TP",
+          "value": 1
+      },
+      {
+          "id": 205,
+          "source": "S8.4.1",
+          "target": "S8.4.2",
+          "relation": "Next_ST",
+          "value": 1
+      },
+      {
+          "id": 206,
+          "source": "S8.4.2",
+          "target": "S8.4.3",
+          "relation": "Next_ST",
+          "value": 1
+      },
+      {
+          "id": 207,
+          "source": "T8.5",
+          "target": "T8.6",
+          "relation": "Next_TP",
+          "value": 1
+      },
+      {
+          "id": 208,
+          "source": "S8.5.1",
+          "target": "S8.5.2",
+          "relation": "Next_ST",
+          "value": 1
+      },
+      {
+          "id": 209,
+          "source": "S8.5.2",
+          "target": "S8.5.3",
+          "relation": "Next_ST",
+          "value": 1
+      },
+      {
+          "id": 210,
+          "source": "S8.5.3",
+          "target": "S8.5.4",
+          "relation": "Next_ST",
+          "value": 1
+      },
+      {
+          "id": 211,
+          "source": "SS8.5.4.1",
+          "target": "SS8.5.4.2",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 212,
+          "source": "T15.1",
+          "target": "T15.2",
+          "relation": "Next_TP",
+          "value": 1
+      },
+      {
+          "id": 213,
+          "source": "S15.1.1",
+          "target": "S15.1.2",
+          "relation": "Next_ST",
+          "value": 1
+      },
+      {
+          "id": 214,
+          "source": "SS15.1.1.1",
+          "target": "SS15.1.1.2",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 215,
+          "source": "SS15.1.1.2",
+          "target": "SS15.1.1.3",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 216,
+          "source": "SS15.1.1.3",
+          "target": "SS15.1.1.4",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 217,
+          "source": "SS15.1.1.4",
+          "target": "SS15.1.1.5",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 218,
+          "source": "S15.1.2",
+          "target": "S15.1.3",
+          "relation": "Next_ST",
+          "value": 1
+      },
+      {
+          "id": 219,
+          "source": "SS15.1.2.1",
+          "target": "SS15.1.2.2",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 220,
+          "source": "T15.2",
+          "target": "T15.3",
+          "relation": "Next_TP",
+          "value": 1
+      },
+      {
+          "id": 221,
+          "source": "S15.2.1",
+          "target": "S15.2.2",
+          "relation": "Next_ST",
+          "value": 1
+      },
+      {
+          "id": 222,
+          "source": "SS15.2.1.1",
+          "target": "SS15.2.1.2",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 223,
+          "source": "SS15.2.1.2",
+          "target": "SS15.2.1.3",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 224,
+          "source": "S15.2.2",
+          "target": "S15.2.3",
+          "relation": "Next_ST",
+          "value": 1
+      },
+      {
+          "id": 225,
+          "source": "SS15.2.2.1",
+          "target": "SS15.2.2.2",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 226,
+          "source": "P15.2.2.1.1",
+          "target": "P15.2.2.1.2",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 227,
+          "source": "P15.2.2.1.2",
+          "target": "P15.2.2.1.3",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 228,
+          "source": "SS15.2.2.2",
+          "target": "SS15.2.2.3",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 229,
+          "source": "SS15.2.2.3",
+          "target": "SS15.2.2.4",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 230,
+          "source": "S15.2.3",
+          "target": "S15.2.4",
+          "relation": "Next_ST",
+          "value": 1
+      },
+      {
+          "id": 231,
+          "source": "T15.3",
+          "target": "T15.4",
+          "relation": "Next_TP",
+          "value": 1
+      },
+      {
+          "id": 232,
+          "source": "S15.3.1",
+          "target": "S15.3.2",
+          "relation": "Next_ST",
+          "value": 1
+      },
+      {
+          "id": 233,
+          "source": "S15.3.2",
+          "target": "S15.3.3",
+          "relation": "Next_ST",
+          "value": 1
+      },
+      {
+          "id": 234,
+          "source": "S15.3.3",
+          "target": "S15.3.4",
+          "relation": "Next_ST",
+          "value": 1
+      },
+      {
+          "id": 235,
+          "source": "SS15.3.3.1",
+          "target": "SS15.3.3.2",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 236,
+          "source": "P15.3.3.2.1",
+          "target": "P15.3.3.2.2",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 237,
+          "source": "P15.3.3.2.2",
+          "target": "P15.3.3.2.3",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 238,
+          "source": "S15.3.4",
+          "target": "S15.3.5",
+          "relation": "Next_ST",
+          "value": 1
+      },
+      {
+          "id": 239,
+          "source": "SS15.3.4.1",
+          "target": "SS15.3.4.2",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 240,
+          "source": "S15.3.5",
+          "target": "S15.3.6",
+          "relation": "Next_ST",
+          "value": 1
+      },
+      {
+          "id": 241,
+          "source": "S15.3.6",
+          "target": "S15.3.7",
+          "relation": "Next_ST",
+          "value": 1
+      },
+      {
+          "id": 242,
+          "source": "SS15.3.6.1",
+          "target": "SS15.3.6.2",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 243,
+          "source": "SS15.3.7.1",
+          "target": "SS15.3.7.2",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 244,
+          "source": "P15.3.7.2.1",
+          "target": "P15.3.7.2.2",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 245,
+          "source": "P15.3.7.2.2",
+          "target": "P15.3.7.2.3",
+          "relation": "Next_P",
+          "value": 1
+      },
+      {
+          "id": 246,
+          "source": "T15.4",
+          "target": "T15.5",
+          "relation": "Next_TP",
+          "value": 1
+      },
+      {
+          "id": 247,
+          "source": "S15.4.1",
+          "target": "S15.4.2",
+          "relation": "Next_ST",
+          "value": 1
+      },
+      {
+          "id": 248,
+          "source": "SS15.4.1.1",
+          "target": "SS15.4.1.2",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 249,
+          "source": "SS15.4.1.2",
+          "target": "SS15.4.1.3",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 250,
+          "source": "SS15.4.1.3",
+          "target": "SS15.4.1.4",
+          "relation": "Next_SS",
+          "value": 1
+      },
+      {
+          "id": 251,
+          "source": "T1.1",
+          "target": "CH1",
+          "relation": "Belong_SB",
+          "value": 1
+      },
+      {
+          "id": 252,
+          "source": "S1.1.1",
+          "target": "T1.1",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 253,
+          "source": "SS1.1.1.1",
+          "target": "S1.1.1",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 254,
+          "source": "SS1.1.1.2",
+          "target": "S1.1.1",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 255,
+          "source": "SS1.1.1.3",
+          "target": "S1.1.1",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 256,
+          "source": "P1.1.1.3.1",
+          "target": "SS1.1.1.3",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 257,
+          "source": "P1.1.1.3.2",
+          "target": "SS1.1.1.3",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 258,
+          "source": "P1.1.1.3.3",
+          "target": "SS1.1.1.3",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 259,
+          "source": "S1.1.2",
+          "target": "T1.1",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 260,
+          "source": "SS1.1.2.1",
+          "target": "S1.1.2",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 261,
+          "source": "P1.1.2.1.1",
+          "target": "SS1.1.2.1",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 262,
+          "source": "P1.1.2.1.2",
+          "target": "SS1.1.2.1",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 263,
+          "source": "P1.1.2.1.3",
+          "target": "SS1.1.2.1",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 264,
+          "source": "P1.1.2.1.4",
+          "target": "SS1.1.2.1",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 265,
+          "source": "P1.1.2.1.5",
+          "target": "SS1.1.2.1",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 266,
+          "source": "P1.1.2.1.6",
+          "target": "SS1.1.2.1",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 267,
+          "source": "P1.1.2.1.7",
+          "target": "SS1.1.2.1",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 268,
+          "source": "S1.1.3",
+          "target": "T1.1",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 269,
+          "source": "SS1.1.3.1",
+          "target": "S1.1.3",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 270,
+          "source": "SS1.1.3.2",
+          "target": "S1.1.3",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 271,
+          "source": "SS1.1.3.3",
+          "target": "S1.1.3",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 272,
+          "source": "T1.2",
+          "target": "CH1",
+          "relation": "Belong_SB",
+          "value": 1
+      },
+      {
+          "id": 273,
+          "source": "S1.2.1",
+          "target": "T1.2",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 274,
+          "source": "S1.2.2",
+          "target": "T1.2",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 275,
+          "source": "SS1.2.2.1",
+          "target": "S1.2.2",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 276,
+          "source": "P1.2.2.1.1",
+          "target": "SS1.2.2.1",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 277,
+          "source": "P1.2.2.1.2",
+          "target": "SS1.2.2.1",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 278,
+          "source": "P1.2.2.1.3",
+          "target": "SS1.2.2.1",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 279,
+          "source": "T1.3",
+          "target": "CH1",
+          "relation": "Belong_SB",
+          "value": 1
+      },
+      {
+          "id": 280,
+          "source": "S1.3.1",
+          "target": "T1.3",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 281,
+          "source": "SS1.3.1.1",
+          "target": "S1.3.1",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 282,
+          "source": "P1.3.1.1.1",
+          "target": "SS1.3.1.1",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 283,
+          "source": "P1.3.1.1.2",
+          "target": "SS1.3.1.1",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 284,
+          "source": "P1.3.1.1.3",
+          "target": "SS1.3.1.1",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 285,
+          "source": "P1.3.1.1.4",
+          "target": "SS1.3.1.1",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 286,
+          "source": "P1.3.1.1.5",
+          "target": "SS1.3.1.1",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 287,
+          "source": "S1.3.2",
+          "target": "T1.3",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 288,
+          "source": "SS1.3.2.1",
+          "target": "S1.3.2",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 289,
+          "source": "P1.3.2.1.1",
+          "target": "SS1.3.2.1",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 290,
+          "source": "P1.3.2.1.2",
+          "target": "SS1.3.2.1",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 291,
+          "source": "P1.3.2.1.3",
+          "target": "SS1.3.2.1",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 292,
+          "source": "P1.3.2.1.4",
+          "target": "SS1.3.2.1",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 293,
+          "source": "P1.3.2.1.5",
+          "target": "SS1.3.2.1",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 294,
+          "source": "P1.3.2.1.6",
+          "target": "SS1.3.2.1",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 295,
+          "source": "P1.3.2.1.7",
+          "target": "SS1.3.2.1",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 296,
+          "source": "P1.3.2.1.8",
+          "target": "SS1.3.2.1",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 297,
+          "source": "S1.3.3",
+          "target": "T1.3",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 298,
+          "source": "T1.4",
+          "target": "CH1",
+          "relation": "Belong_SB",
+          "value": 1
+      },
+      {
+          "id": 299,
+          "source": "S1.4.1",
+          "target": "T1.4",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 300,
+          "source": "SS1.4.1.1",
+          "target": "S1.4.1",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 301,
+          "source": "SS1.4.1.2",
+          "target": "S1.4.1",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 302,
+          "source": "SS1.4.1.3",
+          "target": "S1.4.1",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 303,
+          "source": "SS1.4.1.4",
+          "target": "S1.4.1",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 304,
+          "source": "S1.4.2",
+          "target": "T1.4",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 305,
+          "source": "SS1.4.2.1",
+          "target": "S1.4.2",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 306,
+          "source": "P1.4.2.1.1",
+          "target": "SS1.4.2.1",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 307,
+          "source": "P1.4.2.1.2",
+          "target": "SS1.4.2.1",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 308,
+          "source": "P1.4.2.1.3",
+          "target": "SS1.4.2.1",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 309,
+          "source": "P1.4.2.1.4",
+          "target": "SS1.4.2.1",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 310,
+          "source": "P1.4.2.1.5",
+          "target": "SS1.4.2.1",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 311,
+          "source": "P1.4.2.1.6",
+          "target": "SS1.4.2.1",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 312,
+          "source": "P1.4.2.1.7",
+          "target": "SS1.4.2.1",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 313,
+          "source": "T1.5",
+          "target": "CH1",
+          "relation": "Belong_SB",
+          "value": 1
+      },
+      {
+          "id": 314,
+          "source": "S1.5.1",
+          "target": "T1.5",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 315,
+          "source": "T1.6",
+          "target": "CH1",
+          "relation": "Belong_SB",
+          "value": 1
+      },
+      {
+          "id": 316,
+          "source": "T3.1",
+          "target": "CH3",
+          "relation": "Belong_SB",
+          "value": 1
+      },
+      {
+          "id": 317,
+          "source": "S3.1.1",
+          "target": "T3.1",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 318,
+          "source": "S3.1.2",
+          "target": "T3.1",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 319,
+          "source": "S3.1.2.1",
+          "target": "S3.1.2",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 320,
+          "source": "S3.1.2.2",
+          "target": "S3.1.2",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 321,
+          "source": "S3.1.2.3",
+          "target": "S3.1.2",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 322,
+          "source": "S3.1.2.4",
+          "target": "S3.1.2",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 323,
+          "source": "S3.1.2.5",
+          "target": "S3.1.2",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 324,
+          "source": "S3.1.3",
+          "target": "T3.1",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 325,
+          "source": "S3.1.4",
+          "target": "T3.1",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 326,
+          "source": "SS3.1.4.1",
+          "target": "S3.1.4",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 327,
+          "source": "SS3.1.4.2",
+          "target": "S3.1.4",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 328,
+          "source": "T3.2",
+          "target": "CH3",
+          "relation": "Belong_SB",
+          "value": 1
+      },
+      {
+          "id": 329,
+          "source": "S3.2.1",
+          "target": "T3.2",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 330,
+          "source": "S3.2.2",
+          "target": "T3.2",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 331,
+          "source": "T3.3",
+          "target": "CH3",
+          "relation": "Belong_SB",
+          "value": 1
+      },
+      {
+          "id": 332,
+          "source": "S3.3.1",
+          "target": "T3.3",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 333,
+          "source": "S3.3.2",
+          "target": "T3.3",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 334,
+          "source": "SS3.3.2.1",
+          "target": "S3.3.2",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 335,
+          "source": "SS3.3.2.2",
+          "target": "S3.3.2",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 336,
+          "source": "S3.3.3",
+          "target": "T3.2",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 337,
+          "source": "SS3.3.3.1",
+          "target": "S3.3.3",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 338,
+          "source": "SS3.3.3.2",
+          "target": "S3.3.3",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 339,
+          "source": "P3.3.3.2.1",
+          "target": "SS3.3.3.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 340,
+          "source": "P3.3.3.2.2",
+          "target": "SS3.3.3.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 341,
+          "source": "P3.3.3.2.3",
+          "target": "SS3.3.3.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 342,
+          "source": "P3.3.3.2.4",
+          "target": "SS3.3.3.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 343,
+          "source": "P3.3.3.2.5",
+          "target": "SS3.3.3.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 344,
+          "source": "P3.3.3.2.6",
+          "target": "SS3.3.3.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 345,
+          "source": "P3.3.3.2.7",
+          "target": "SS3.3.3.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 346,
+          "source": "T3.4",
+          "target": "CH3",
+          "relation": "Belong_SB",
+          "value": 1
+      },
+      {
+          "id": 347,
+          "source": "S3.4.1",
+          "target": "T3.4",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 348,
+          "source": "S3.4.2",
+          "target": "T3.4",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 349,
+          "source": "S3.4.3",
+          "target": "T3.4",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 350,
+          "source": "S3.4.4",
+          "target": "T3.4",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 351,
+          "source": "S3.4.5",
+          "target": "T3.4",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 352,
+          "source": "T3.5",
+          "target": "CH3",
+          "relation": "Belong_SB",
+          "value": 1
+      },
+      {
+          "id": 353,
+          "source": "S3.5.1",
+          "target": "T3.5",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 354,
+          "source": "SS3.5.1.1",
+          "target": "S3.5.1",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 355,
+          "source": "SS3.5.1.2",
+          "target": "S3.5.1",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 356,
+          "source": "P3.5.1.2.1",
+          "target": "SS3.5.1.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 357,
+          "source": "P3.5.1.2.2",
+          "target": "SS3.5.1.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 358,
+          "source": "P3.5.1.2.3",
+          "target": "SS3.5.1.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 359,
+          "source": "P3.5.1.2.4",
+          "target": "SS3.5.1.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 360,
+          "source": "S3.5.2",
+          "target": "T3.5",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 361,
+          "source": "SS3.5.2.1",
+          "target": "S3.5.2",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 362,
+          "source": "SS3.5.2.2",
+          "target": "S3.5.2",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 363,
+          "source": "P3.5.2.2.1",
+          "target": "SS3.5.2.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 364,
+          "source": "P3.5.2.2.2",
+          "target": "SS3.5.2.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 365,
+          "source": "P3.5.2.2.3",
+          "target": "SS3.5.2.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 366,
+          "source": "P3.5.2.2.4",
+          "target": "SS3.5.2.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 367,
+          "source": "P3.5.2.2.5",
+          "target": "SS3.5.2.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 368,
+          "source": "P3.5.2.2.6",
+          "target": "SS3.5.2.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 369,
+          "source": "SS3.5.2.3",
+          "target": "S3.5.2",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 370,
+          "source": "S3.5.3",
+          "target": "T3.5",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 371,
+          "source": "SS3.5.3.1",
+          "target": "S3.5.3",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 372,
+          "source": "SS3.5.3.2",
+          "target": "S3.5.3",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 373,
+          "source": "P3.5.3.2.1",
+          "target": "SS3.5.3.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 374,
+          "source": "P3.5.3.2.2",
+          "target": "SS3.5.3.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 375,
+          "source": "P3.5.3.2.3",
+          "target": "SS3.5.3.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 376,
+          "source": "P3.5.3.2.4",
+          "target": "SS3.5.3.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 377,
+          "source": "P3.5.3.2.5",
+          "target": "SS3.5.3.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 378,
+          "source": "T3.6",
+          "target": "CH3",
+          "relation": "Belong_SB",
+          "value": 1
+      },
+      {
+          "id": 379,
+          "source": "T6.1",
+          "target": "CH6",
+          "relation": "Belong_SB",
+          "value": 1
+      },
+      {
+          "id": 380,
+          "source": "S6.1.1",
+          "target": "T6.1",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 381,
+          "source": "SS6.1.1.1",
+          "target": "S6.1.1",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 382,
+          "source": "SS6.1.1.2",
+          "target": "S6.1.1",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 383,
+          "source": "P6.1.1.2.1",
+          "target": "SS6.1.1.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 384,
+          "source": "P6.1.1.2.2",
+          "target": "SS6.1.1.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 385,
+          "source": "P6.1.1.2.3",
+          "target": "SS6.1.1.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 386,
+          "source": "P6.1.1.2.4",
+          "target": "SS6.1.1.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 387,
+          "source": "P6.1.1.2.5",
+          "target": "SS6.1.1.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 388,
+          "source": "P6.1.1.2.6",
+          "target": "SS6.1.1.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 389,
+          "source": "P6.1.1.2.7",
+          "target": "SS6.1.1.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 390,
+          "source": "P6.1.1.2.8",
+          "target": "SS6.1.1.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 391,
+          "source": "S6.1.2",
+          "target": "T6.1",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 392,
+          "source": "SS6.1.2.1",
+          "target": "S6.1.2",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 393,
+          "source": "SS6.1.2.2",
+          "target": "S6.1.2",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 394,
+          "source": "P6.1.2.2.1",
+          "target": "SS6.1.2.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 395,
+          "source": "P6.1.2.2.2",
+          "target": "SS6.1.2.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 396,
+          "source": "P6.1.2.2.3",
+          "target": "SS6.1.2.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 397,
+          "source": "P6.1.2.2.4",
+          "target": "SS6.1.2.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 398,
+          "source": "P6.1.2.2.5",
+          "target": "SS6.1.2.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 399,
+          "source": "P6.1.2.2.6",
+          "target": "SS6.1.2.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 400,
+          "source": "P6.1.2.2.7",
+          "target": "SS6.1.2.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 401,
+          "source": "P6.1.2.2.8",
+          "target": "SS6.1.2.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 402,
+          "source": "T6.2",
+          "target": "CH6",
+          "relation": "Belong_SB",
+          "value": 1
+      },
+      {
+          "id": 403,
+          "source": "S6.2.1",
+          "target": "T6.2",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 404,
+          "source": "SS6.2.1.1",
+          "target": "S6.2.1",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 405,
+          "source": "SS6.2.1.2",
+          "target": "S6.2.1",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 406,
+          "source": "P6.2.1.2.1",
+          "target": "SS6.2.1.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 407,
+          "source": "P6.2.1.2.2",
+          "target": "SS6.2.1.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 408,
+          "source": "P6.2.1.2.3",
+          "target": "SS6.2.1.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 409,
+          "source": "P6.2.1.2.4",
+          "target": "SS6.2.1.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 410,
+          "source": "P6.2.1.2.5",
+          "target": "SS6.2.1.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 411,
+          "source": "P6.2.1.2.6",
+          "target": "SS6.2.1.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 412,
+          "source": "P6.2.1.2.7",
+          "target": "SS6.2.1.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 413,
+          "source": "P6.2.1.2.8",
+          "target": "SS6.2.1.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 414,
+          "source": "P6.2.1.2.9",
+          "target": "SS6.2.1.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 415,
+          "source": "P6.2.1.2.10",
+          "target": "SS6.2.1.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 416,
+          "source": "S6.2.2",
+          "target": "T6.2",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 417,
+          "source": "SS6.2.2.1",
+          "target": "S6.2.2",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 418,
+          "source": "SS6.2.2.2",
+          "target": "S6.2.2",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 419,
+          "source": "P6.2.2.2.1",
+          "target": "SS6.2.2.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 420,
+          "source": "P6.2.2.2.2",
+          "target": "SS6.2.2.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 421,
+          "source": "P6.2.2.2.3",
+          "target": "SS6.2.2.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 422,
+          "source": "P6.2.2.2.4",
+          "target": "SS6.2.2.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 423,
+          "source": "P6.2.2.2.5",
+          "target": "SS6.2.2.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 424,
+          "source": "P6.2.2.2.6",
+          "target": "SS6.2.2.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 425,
+          "source": "P6.2.2.2.7",
+          "target": "SS6.2.2.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 426,
+          "source": "P6.2.2.2.8",
+          "target": "SS6.2.2.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 427,
+          "source": "P6.2.2.2.9",
+          "target": "SS6.2.2.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 428,
+          "source": "P6.2.2.2.10",
+          "target": "SS6.2.2.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 429,
+          "source": "S6.2.3",
+          "target": "T6.2",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 430,
+          "source": "SS6.2.3.1",
+          "target": "S6.2.3",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 431,
+          "source": "SS6.2.3.2",
+          "target": "S6.2.3",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 432,
+          "source": "P6.2.3.2.1",
+          "target": "SS6.2.3.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 433,
+          "source": "P6.2.3.2.2",
+          "target": "SS6.2.3.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 434,
+          "source": "P6.2.3.2.3",
+          "target": "SS6.2.3.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 435,
+          "source": "P6.2.3.2.4",
+          "target": "SS6.2.3.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 436,
+          "source": "P6.2.3.2.5",
+          "target": "SS6.2.3.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 437,
+          "source": "P6.2.3.2.6",
+          "target": "SS6.2.3.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 438,
+          "source": "P6.2.3.2.7",
+          "target": "SS6.2.3.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 439,
+          "source": "P6.2.3.2.8",
+          "target": "SS6.2.3.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 440,
+          "source": "P6.2.3.2.9",
+          "target": "SS6.2.3.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 441,
+          "source": "P6.2.3.2.10",
+          "target": "SS6.2.3.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 442,
+          "source": "S6.2.4",
+          "target": "T6.2",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 443,
+          "source": "SS6.2.4.1",
+          "target": "S6.2.4",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 444,
+          "source": "SS6.2.4.2",
+          "target": "S6.2.4",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 445,
+          "source": "P6.2.4.2.1",
+          "target": "SS6.2.4.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 446,
+          "source": "P6.2.4.2.2",
+          "target": "SS6.2.4.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 447,
+          "source": "P6.2.4.2.3",
+          "target": "SS6.2.4.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 448,
+          "source": "SS6.2.4.3",
+          "target": "S6.2.4",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 449,
+          "source": "P6.2.4.3.1",
+          "target": "SS6.2.4.3",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 450,
+          "source": "P6.2.4.3.2",
+          "target": "SS6.2.4.3",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 451,
+          "source": "P6.2.4.3.3",
+          "target": "SS6.2.4.3",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 452,
+          "source": "P6.2.4.3.4",
+          "target": "SS6.2.4.3",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 453,
+          "source": "P6.2.4.3.5",
+          "target": "SS6.2.4.3",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 454,
+          "source": "P6.2.4.3.6",
+          "target": "SS6.2.4.3",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 455,
+          "source": "P6.2.4.3.7",
+          "target": "SS6.2.4.3",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 456,
+          "source": "P6.2.4.3.8",
+          "target": "SS6.2.4.3",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 457,
+          "source": "P6.2.4.3.9",
+          "target": "SS6.2.4.3",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 458,
+          "source": "P6.2.4.3.10",
+          "target": "SS6.2.4.3",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 459,
+          "source": "S6.2.5",
+          "target": "T6.2",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 460,
+          "source": "SS6.2.5.1",
+          "target": "S6.2.5",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 461,
+          "source": "SS6.2.5.2",
+          "target": "S6.2.5",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 462,
+          "source": "P6.2.5.2.1",
+          "target": "SS6.2.5.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 463,
+          "source": "P6.2.5.2.2",
+          "target": "SS6.2.5.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 464,
+          "source": "P6.2.5.2.3",
+          "target": "SS6.2.5.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 465,
+          "source": "P6.2.5.2.4",
+          "target": "SS6.2.5.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 466,
+          "source": "P6.2.5.2.5",
+          "target": "SS6.2.5.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 467,
+          "source": "T6.3",
+          "target": "CH6",
+          "relation": "Belong_SB",
+          "value": 1
+      },
+      {
+          "id": 468,
+          "source": "T8.1",
+          "target": "CH8",
+          "relation": "Belong_SB",
+          "value": 1
+      },
+      {
+          "id": 469,
+          "source": "S8.1.1",
+          "target": "T8.1",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 470,
+          "source": "SS8.1.1.1",
+          "target": "S8.1.1",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 471,
+          "source": "SS8.1.1.2",
+          "target": "S8.1.1",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 472,
+          "source": "S8.1.2",
+          "target": "T8.1",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 473,
+          "source": "SS8.1.2.1",
+          "target": "S8.1.2",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 474,
+          "source": "SS8.1.2.2",
+          "target": "S8.1.2",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 475,
+          "source": "SS8.1.2.3",
+          "target": "S8.1.2",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 476,
+          "source": "SS8.1.2.4",
+          "target": "S8.1.2",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 477,
+          "source": "SS8.1.2.5",
+          "target": "S8.1.2",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 478,
+          "source": "SS8.1.2.6",
+          "target": "S8.1.2",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 479,
+          "source": "S8.1.3",
+          "target": "T8.1",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 480,
+          "source": "SS8.1.3.1",
+          "target": "S8.1.3",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 481,
+          "source": "SS8.1.3.2",
+          "target": "S8.1.3",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 482,
+          "source": "SS8.1.3.3",
+          "target": "S8.1.3",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 483,
+          "source": "SS8.1.3.4",
+          "target": "S8.1.3",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 484,
+          "source": "SS8.1.3.5",
+          "target": "S8.1.3",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 485,
+          "source": "T8.2",
+          "target": "CH8",
+          "relation": "Belong_SB",
+          "value": 1
+      },
+      {
+          "id": 486,
+          "source": "S8.2.1",
+          "target": "T8.2",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 487,
+          "source": "SS8.2.1.1",
+          "target": "S8.2.1",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 488,
+          "source": "SS8.2.1.2",
+          "target": "S8.2.1",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 489,
+          "source": "S8.2.2",
+          "target": "T8.2",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 490,
+          "source": "SS8.2.2.1",
+          "target": "S8.2.2",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 491,
+          "source": "SS8.2.2.2",
+          "target": "S8.2.2",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 492,
+          "source": "P8.2.2.2.1",
+          "target": "SS8.2.2.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 493,
+          "source": "P8.2.2.2.2",
+          "target": "SS8.2.2.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 494,
+          "source": "P8.2.2.2.3",
+          "target": "SS8.2.2.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 495,
+          "source": "P8.2.2.2.4",
+          "target": "SS8.2.2.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 496,
+          "source": "S8.2.3",
+          "target": "T8.2",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 497,
+          "source": "SS8.2.3.1",
+          "target": "S8.2.3",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 498,
+          "source": "SS8.2.3.2",
+          "target": "S8.2.3",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 499,
+          "source": "SS8.2.3.3",
+          "target": "S8.2.3",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 500,
+          "source": "T8.3",
+          "target": "CH8",
+          "relation": "Belong_SB",
+          "value": 1
+      },
+      {
+          "id": 501,
+          "source": "S8.3.1",
+          "target": "T8.3",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 502,
+          "source": "SS8.3.1.1",
+          "target": "S8.3.1",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 503,
+          "source": "SS8.3.1.2",
+          "target": "S8.3.1",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 504,
+          "source": "S8.3.2",
+          "target": "T8.3",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 505,
+          "source": "SS8.3.2.1",
+          "target": "S8.3.2",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 506,
+          "source": "SS8.3.2.2",
+          "target": "S8.3.2",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 507,
+          "source": "S8.3.3",
+          "target": "T8.3",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 508,
+          "source": "S8.3.4",
+          "target": "T8.3",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 509,
+          "source": "SS8.3.4.1",
+          "target": "S8.3.4",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 510,
+          "source": "SS8.3.4.2",
+          "target": "S8.3.4",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 511,
+          "source": "SS8.3.4.3",
+          "target": "S8.3.4",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 512,
+          "source": "P8.3.4.3.1",
+          "target": "SS8.3.4.3",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 513,
+          "source": "P8.3.4.3.2",
+          "target": "SS8.3.4.3",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 514,
+          "source": "P8.3.4.3.3",
+          "target": "SS8.3.4.3",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 515,
+          "source": "P8.3.4.3.4",
+          "target": "SS8.3.4.3",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 516,
+          "source": "P8.3.4.3.5",
+          "target": "SS8.3.4.3",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 517,
+          "source": "SS8.3.4.4",
+          "target": "S8.3.4",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 518,
+          "source": "SS8.3.4.5",
+          "target": "S8.3.4",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 519,
+          "source": "T8.4",
+          "target": "CH8",
+          "relation": "Belong_SB",
+          "value": 1
+      },
+      {
+          "id": 520,
+          "source": "S8.4.1",
+          "target": "T8.4",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 521,
+          "source": "S8.4.2",
+          "target": "T8.4",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 522,
+          "source": "S8.4.3",
+          "target": "T8.4",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 523,
+          "source": "T8.5",
+          "target": "CH8",
+          "relation": "Belong_SB",
+          "value": 1
+      },
+      {
+          "id": 524,
+          "source": "S8.5.1",
+          "target": "T8.5",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 525,
+          "source": "S8.5.2",
+          "target": "T8.5",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 526,
+          "source": "S8.5.3",
+          "target": "T8.5",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 527,
+          "source": "S8.5.4",
+          "target": "T8.5",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 528,
+          "source": "SS8.5.4.1",
+          "target": "S8.5.4",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 529,
+          "source": "SS8.5.4.2",
+          "target": "S8.5.4",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 530,
+          "source": "T8.6",
+          "target": "CH8",
+          "relation": "Belong_SB",
+          "value": 1
+      },
+      {
+          "id": 531,
+          "source": "T15.1",
+          "target": "CH15",
+          "relation": "Belong_SB",
+          "value": 1
+      },
+      {
+          "id": 532,
+          "source": "S15.1.1",
+          "target": "T15.1",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 533,
+          "source": "SS15.1.1.1",
+          "target": "S15.1.1",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 534,
+          "source": "SS15.1.1.2",
+          "target": "S15.1.1",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 535,
+          "source": "SS15.1.1.3",
+          "target": "S15.1.1",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 536,
+          "source": "SS15.1.1.4",
+          "target": "S15.1.1",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 537,
+          "source": "SS15.1.1.5",
+          "target": "S15.1.1",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 538,
+          "source": "S15.1.2",
+          "target": "T15.1",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 539,
+          "source": "SS15.1.2.1",
+          "target": "S15.1.2",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 540,
+          "source": "SS15.1.2.2",
+          "target": "S15.1.2",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 541,
+          "source": "S15.1.3",
+          "target": "T15.1",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 542,
+          "source": "T15.2",
+          "target": "CH15",
+          "relation": "Belong_SB",
+          "value": 1
+      },
+      {
+          "id": 543,
+          "source": "S15.2.1",
+          "target": "T15.2",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 544,
+          "source": "SS15.2.1.1",
+          "target": "S15.2.1",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 545,
+          "source": "SS15.2.1.2",
+          "target": "S15.2.1",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 546,
+          "source": "SS15.2.1.3",
+          "target": "S15.2.1",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 547,
+          "source": "S15.2.2",
+          "target": "T15.2",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 548,
+          "source": "SS15.2.2.1",
+          "target": "S15.2.2",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 549,
+          "source": "P15.2.2.1.1",
+          "target": "SS15.2.2.1",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 550,
+          "source": "P15.2.2.1.2",
+          "target": "SS15.2.2.1",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 551,
+          "source": "P15.2.2.1.3",
+          "target": "SS15.2.2.1",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 552,
+          "source": "SS15.2.2.2",
+          "target": "S15.2.2",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 553,
+          "source": "SS15.2.2.3",
+          "target": "S15.2.2",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 554,
+          "source": "SS15.2.2.4",
+          "target": "S15.2.2",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 555,
+          "source": "S15.2.3",
+          "target": "T15.2",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 556,
+          "source": "S15.2.4",
+          "target": "T15.2",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 557,
+          "source": "T15.3",
+          "target": "CH15",
+          "relation": "Belong_SB",
+          "value": 1
+      },
+      {
+          "id": 558,
+          "source": "S15.3.1",
+          "target": "T15.3",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 559,
+          "source": "S15.3.2",
+          "target": "T15.3",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 560,
+          "source": "S15.3.3",
+          "target": "T15.3",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 561,
+          "source": "SS15.3.3.1",
+          "target": "S15.3.3",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 562,
+          "source": "SS15.3.3.2",
+          "target": "S15.3.3",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 563,
+          "source": "P15.3.3.2.1",
+          "target": "SS15.3.3.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 564,
+          "source": "P15.3.3.2.2",
+          "target": "SS15.3.3.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 565,
+          "source": "P15.3.3.2.3",
+          "target": "SS15.3.3.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 566,
+          "source": "S15.3.4",
+          "target": "T15.3",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 567,
+          "source": "SS15.3.4.1",
+          "target": "S15.3.4",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 568,
+          "source": "SS15.3.4.2",
+          "target": "S15.3.4",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 569,
+          "source": "S15.3.5",
+          "target": "T15.3",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 570,
+          "source": "S15.3.6",
+          "target": "T15.3",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 571,
+          "source": "SS15.3.6.1",
+          "target": "S15.3.6",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 572,
+          "source": "SS15.3.6.2",
+          "target": "S15.3.6",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 573,
+          "source": "S15.3.7",
+          "target": "T15.3",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 574,
+          "source": "SS15.3.7.1",
+          "target": "S15.3.7",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 575,
+          "source": "SS15.3.7.2",
+          "target": "S15.3.7",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 576,
+          "source": "P15.3.7.2.1",
+          "target": "SS15.3.7.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 577,
+          "source": "P15.3.7.2.2",
+          "target": "SS15.3.7.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 578,
+          "source": "P15.3.7.2.3",
+          "target": "SS15.3.7.2",
+          "relation": "Belong_SS",
+          "value": 1
+      },
+      {
+          "id": 579,
+          "source": "T15.4",
+          "target": "CH15",
+          "relation": "Belong_SB",
+          "value": 1
+      },
+      {
+          "id": 580,
+          "source": "S15.4.1",
+          "target": "T15.4",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 581,
+          "source": "SS15.4.1.1",
+          "target": "S15.4.1",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 582,
+          "source": "SS15.4.1.2",
+          "target": "S15.4.1",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 583,
+          "source": "SS15.4.1.3",
+          "target": "S15.4.1",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 584,
+          "source": "SS15.4.1.4",
+          "target": "S15.4.1",
+          "relation": "Belong_ST",
+          "value": 1
+      },
+      {
+          "id": 585,
+          "source": "S15.4.2",
+          "target": "T15.4",
+          "relation": "Belong_TP",
+          "value": 1
+      },
+      {
+          "id": 586,
+          "source": "T15.5",
+          "target": "CH15",
+          "relation": "Belong_SB",
+          "value": 1
+      },
+      {
+          "id": 587,
+          "source": "CH1",
+          "target": "root",
+          "relation": "Belong_root",
+          "value": 1
+      },
+      {
+          "id": 588,
+          "source": "CH3",
+          "target": "root",
+          "relation": "Belong_root",
+          "value": 1
+      },
+      {
+          "id": 589,
+          "source": "CH6",
+          "target": "root",
+          "relation": "Belong_root",
+          "value": 1
+      },
+      {
+          "id": 590,
+          "source": "CH8",
+          "target": "root",
+          "relation": "Belong_root",
+          "value": 1
+      },
+      {
+          "id": 591,
+          "source": "CH15",
+          "target": "root",
+          "relation": "Belong_root",
+          "value": 1
+      }
+
+  ];
 
   // 设置除根节点外的所有节点和边的 visible 属性为 false
   this.nodes.forEach(node => {
@@ -4652,7 +4683,7 @@ this.g.append('defs')
 
 
       this.gs.append('text')
-        .attr('dx', 12)
+        .attr('dx', 20)
         .attr('dy', '.35em')
         .text(d => d.name);
 
@@ -4717,7 +4748,7 @@ this.g.append('defs')
     .attr('class', 'buttons');
 
   this.buttons.forEach((button, index) => {
-    const buttonY = 20 + index * 30; // 每个按钮间隔 30px
+    const buttonY = 10 + index * 30; // 每个按钮间隔 30px
 
     // 添加按钮背景
     buttonGroup.append('rect')
@@ -4840,7 +4871,7 @@ handleButtonClick(action, node) { // 按钮点击事件处理函数
 
   collapseNode(node) {
   // 获取以当前节点为终点的所有边
-  const edgesToHide = this.edges.filter(edge => edge.target.id === node.id);
+  const edgesToHide = this.edges.filter(edge => edge.target.id === node.id && edge.relation !== 'Next_ST' && edge.relation !== 'Next_TP' && edge.relation !== 'Next_SB' && edge.relation !== 'Next_P' && edge.relation !== 'Next_SS');
 
   // 隐藏这些边
   edgesToHide.forEach(edge => {
@@ -4922,34 +4953,6 @@ showNode(node) {
     genLinkPath(link) {
       return `M${link.source.x},${link.source.y} L${link.target.x},${link.target.y}`;
     },
-    toggleLineText(currNode, isHover) {
-      if (isHover) {
-        this.linksText.style('fill-opacity', edge => edge.source === currNode ? 1 : 0);
-      } else {
-        this.linksText.style('fill-opacity', 0);
-      }
-    },
-    toggleLine(linkLine, currNode, isHover) {
-      if (isHover) {
-        this.links.style('opacity', 0.1)
-          .filter(link => link.source.id === currNode.id || link.target.id === currNode.id)
-          .style('opacity', 1);
-      } else {
-        this.links.style('opacity', 1);
-      }
-    },
-    toggleNode(nodeCircle, currNode, isHover) {
-      if (isHover) {
-        nodeCircle.style('opacity', 0.1)
-          .filter(node => node.id === currNode.id)
-          .style('opacity', 1);
-      } else {
-        nodeCircle.style('opacity', 1);
-      }
-    },
-    removeSingle() {
-      d3.select('.singleCircle').remove();
-    },
     started(d, event) {
       if (!event.active) {
         this.forceSimulation.alphaTarget(0.8).restart();
@@ -4984,7 +4987,29 @@ showNode(node) {
     this.gs
       .attr('transform', d => `translate(${d.x},${d.y})`)
       .attr('visibility', d => d.visible ? 'visible' : 'hidden');
-  }
+  },
+  handleAction(action) {
+      if (action === 'action1') {
+        this.Stayroot();
+      }
+    },
+    Stayroot() {
+      // 获取以当前节点为终点的所有边
+    const edgesToHide = this.edges.filter(edge => edge.target.id === 'root');
+
+    // 隐藏这些边
+    edgesToHide.forEach(edge => {
+    edge.visible = false; // 更新边的 visible 属性
+    this.hideEdge(edge);
+    });
+
+    // 隐藏这些边的起点节点，并递归隐藏以这些节点为终点的边和节点
+    edgesToHide.forEach(edge => {
+    const sourceNode = edge.source;
+    this.hideNodeRecursive(sourceNode);
+    });
+      console.log('Action 1 triggered!');
+    }
   },
 };
 </script>
