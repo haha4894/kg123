@@ -1,0 +1,942 @@
+[
+  {
+    "start_id": "CH3",
+    "start_labels": [
+        "Subject"
+    ],
+    "start_properties": {
+        "id": "CH3",
+        "name": "第3章 敏捷和敏捷过程"
+    },
+    "relation": "Next_SB",
+    "relation_properties": {},
+    "end_id": "CH6",
+    "end_labels": [
+        "Subject"
+    ],
+    "end_properties": {
+        "id": "CH6",
+        "name": "第6章 指导实践的原则"
+    }
+},
+{
+    "start_id": "T3.1",
+    "start_labels": [
+        "Topic"
+    ],
+    "start_properties": {
+        "id": "T3.1",
+        "name": "3.1 什么是敏捷"
+    },
+    "relation": "Next_TP",
+    "relation_properties": {},
+    "end_id": "T3.2",
+    "end_labels": [
+        "Topic"
+    ],
+    "end_properties": {
+        "id": "T3.2",
+        "name": "3.2 敏捷及变更成本"
+    }
+},
+{
+    "start_id": "S3.1.1",
+    "start_labels": [
+        "Section"
+    ],
+    "start_properties": {
+        "id": "S3.1.1",
+        "name": "3.1.1 敏捷宣言"
+    },
+    "relation": "Next_ST",
+    "relation_properties": {},
+    "end_id": "S3.1.2",
+    "end_labels": [
+        "Section"
+    ],
+    "end_properties": {
+        "id": "S3.1.2",
+        "name": "3.1.2 敏捷价值观"
+    }
+},
+{
+    "start_id": "S3.1.2",
+    "start_labels": [
+        "Section"
+    ],
+    "start_properties": {
+        "id": "S3.1.2",
+        "name": "3.1.2 敏捷价值观"
+    },
+    "relation": "Next_ST",
+    "relation_properties": {},
+    "end_id": "S3.1.3",
+    "end_labels": [
+        "Section"
+    ],
+    "end_properties": {
+        "id": "S3.1.3",
+        "name": "3.1.3 敏捷开发"
+    }
+},
+{
+    "start_id": "S3.1.2.1",
+    "start_labels": [
+        "SubSection"
+    ],
+    "start_properties": {
+        "id": "S3.1.2.1",
+        "name": "3.1.2.1 沟通"
+    },
+    "relation": "Next_SS",
+    "relation_properties": {},
+    "end_id": "S3.1.2.2",
+    "end_labels": [
+        "SubSection"
+    ],
+    "end_properties": {
+        "id": "S3.1.2.2",
+        "name": "3.1.2.2 简单"
+    }
+},
+{
+    "start_id": "S3.1.2.2",
+    "start_labels": [
+        "SubSection"
+    ],
+    "start_properties": {
+        "id": "S3.1.2.2",
+        "name": "3.1.2.2 简单"
+    },
+    "relation": "Next_SS",
+    "relation_properties": {},
+    "end_id": "S3.1.2.3",
+    "end_labels": [
+        "SubSection"
+    ],
+    "end_properties": {
+        "id": "S3.1.2.3",
+        "name": "3.1.2.3 反馈"
+    }
+},
+{
+    "start_id": "S3.1.2.3",
+    "start_labels": [
+        "SubSection"
+    ],
+    "start_properties": {
+        "id": "S3.1.2.3",
+        "name": "3.1.2.3 反馈"
+    },
+    "relation": "Next_SS",
+    "relation_properties": {},
+    "end_id": "S3.1.2.4",
+    "end_labels": [
+        "SubSection"
+    ],
+    "end_properties": {
+        "id": "S3.1.2.4",
+        "name": "3.1.2.4 勇气"
+    }
+},
+{
+    "start_id": "S3.1.2.4",
+    "start_labels": [
+        "SubSection"
+    ],
+    "start_properties": {
+        "id": "S3.1.2.4",
+        "name": "3.1.2.4 勇气"
+    },
+    "relation": "Next_SS",
+    "relation_properties": {},
+    "end_id": "S3.1.2.5",
+    "end_labels": [
+        "SubSection"
+    ],
+    "end_properties": {
+        "id": "S3.1.2.5",
+        "name": "3.1.2.4 尊重（谦逊）"
+    }
+},
+{
+    "start_id": "S3.1.3",
+    "start_labels": [
+        "Section"
+    ],
+    "start_properties": {
+        "id": "S3.1.3",
+        "name": "3.1.3 敏捷开发"
+    },
+    "relation": "Next_ST",
+    "relation_properties": {},
+    "end_id": "S3.1.4",
+    "end_labels": [
+        "Section"
+    ],
+    "end_properties": {
+        "id": "S3.1.4",
+        "name": "3.1.4 敏捷"
+    }
+},
+{
+    "start_id": "SS3.1.4.1",
+    "start_labels": [
+        "SubSection"
+    ],
+    "start_properties": {
+        "id": "SS3.1.4.1",
+        "name": "3.1.4.1 变化以及敏捷团队"
+    },
+    "relation": "Next_SS",
+    "relation_properties": {},
+    "end_id": "SS3.1.4.2",
+    "end_labels": [
+        "SubSection"
+    ],
+    "end_properties": {
+        "id": "SS3.1.4.2",
+        "name": "3.1.4.2 敏捷不仅仅是有效地响应变化"
+    }
+},
+{
+    "start_id": "T3.2",
+    "start_labels": [
+        "Topic"
+    ],
+    "start_properties": {
+        "id": "T3.2",
+        "name": "3.2 敏捷及变更成本"
+    },
+    "relation": "Next_TP",
+    "relation_properties": {},
+    "end_id": "T3.3",
+    "end_labels": [
+        "Topic"
+    ],
+    "end_properties": {
+        "id": "T3.3",
+        "name": "3.3 什么是敏捷过程"
+    }
+},
+{
+    "start_id": "S3.2.1",
+    "start_labels": [
+        "Section"
+    ],
+    "start_properties": {
+        "id": "S3.2.1",
+        "name": "3.2.1 传统软件开发方法的变更"
+    },
+    "relation": "Next_ST",
+    "relation_properties": {},
+    "end_id": "S3.2.2",
+    "end_labels": [
+        "Section"
+    ],
+    "end_properties": {
+        "id": "S3.2.2",
+        "name": "3.2.2  敏捷的变更"
+    }
+},
+{
+    "start_id": "T3.3",
+    "start_labels": [
+        "Topic"
+    ],
+    "start_properties": {
+        "id": "T3.3",
+        "name": "3.3 什么是敏捷过程"
+    },
+    "relation": "Next_TP",
+    "relation_properties": {},
+    "end_id": "T3.4",
+    "end_labels": [
+        "Topic"
+    ],
+    "end_properties": {
+        "id": "T3.4",
+        "name": "3.4 Scrum"
+    }
+},
+{
+    "start_id": "S3.3.1",
+    "start_labels": [
+        "Section"
+    ],
+    "start_properties": {
+        "id": "S3.3.1",
+        "name": "3.3.1 敏捷原则"
+    },
+    "relation": "Next_ST",
+    "relation_properties": {},
+    "end_id": "S3.3.2",
+    "end_labels": [
+        "Section"
+    ],
+    "end_properties": {
+        "id": "S3.3.2",
+        "name": "3.3.2 敏捷过程的特征"
+    }
+},
+{
+    "start_id": "S3.3.2",
+    "start_labels": [
+        "Section"
+    ],
+    "start_properties": {
+        "id": "S3.3.2",
+        "name": "3.3.2 敏捷过程的特征"
+    },
+    "relation": "Next_ST",
+    "relation_properties": {},
+    "end_id": "S3.3.3",
+    "end_labels": [
+        "Section"
+    ],
+    "end_properties": {
+        "id": "S3.3.3",
+        "name": "3.3.3 人的因素"
+    }
+},
+{
+    "start_id": "SS3.3.2.1",
+    "start_labels": [
+        "SubSection"
+    ],
+    "start_properties": {
+        "id": "SS3.3.2.1",
+        "name": "3.3.2.1 敏捷过程的三大假设"
+    },
+    "relation": "Next_SS",
+    "relation_properties": {},
+    "end_id": "SS3.3.2.2",
+    "end_labels": [
+        "SubSection"
+    ],
+    "end_properties": {
+        "id": "SS3.3.2.2",
+        "name": "3.3.2.2 敏捷过程的一个重要问题"
+    }
+},
+{
+    "start_id": "SS3.3.3.1",
+    "start_labels": [
+        "SubSection"
+    ],
+    "start_properties": {
+        "id": "SS3.3.3.1",
+        "name": "3.3.3.1 构造而非选择"
+    },
+    "relation": "Next_SS",
+    "relation_properties": {},
+    "end_id": "SS3.3.3.2",
+    "end_labels": [
+        "SubSection"
+    ],
+    "end_properties": {
+        "id": "SS3.3.3.2",
+        "name": "3.3.3.2 对敏捷团队以及成员的要求"
+    }
+},
+{
+    "start_id": "P3.3.3.2.1",
+    "start_labels": [
+        "Problem"
+    ],
+    "start_properties": {
+        "id": "P3.3.3.2.1",
+        "name": "3.3.3.2.1 基本能力"
+    },
+    "relation": "Next_P",
+    "relation_properties": {},
+    "end_id": "P3.3.3.2.2",
+    "end_labels": [
+        "Problem"
+    ],
+    "end_properties": {
+        "id": "P3.3.3.2.2",
+        "name": "3.3.3.2.2 共同目标"
+    }
+},
+{
+    "start_id": "P3.3.3.2.2",
+    "start_labels": [
+        "Problem"
+    ],
+    "start_properties": {
+        "id": "P3.3.3.2.2",
+        "name": "3.3.3.2.2 共同目标"
+    },
+    "relation": "Next_P",
+    "relation_properties": {},
+    "end_id": "P3.3.3.2.3",
+    "end_labels": [
+        "Problem"
+    ],
+    "end_properties": {
+        "id": "P3.3.3.2.3",
+        "name": "3.3.3.2.3 精诚合作"
+    }
+},
+{
+    "start_id": "P3.3.3.2.3",
+    "start_labels": [
+        "Problem"
+    ],
+    "start_properties": {
+        "id": "P3.3.3.2.3",
+        "name": "3.3.3.2.3 精诚合作"
+    },
+    "relation": "Next_P",
+    "relation_properties": {},
+    "end_id": "P3.3.3.2.4",
+    "end_labels": [
+        "Problem"
+    ],
+    "end_properties": {
+        "id": "P3.3.3.2.4",
+        "name": "3.3.3.2.4 决策能力"
+    }
+},
+{
+    "start_id": "P3.3.3.2.4",
+    "start_labels": [
+        "Problem"
+    ],
+    "start_properties": {
+        "id": "P3.3.3.2.4",
+        "name": "3.3.3.2.4 决策能力"
+    },
+    "relation": "Next_P",
+    "relation_properties": {},
+    "end_id": "P3.3.3.2.5",
+    "end_labels": [
+        "Problem"
+    ],
+    "end_properties": {
+        "id": "P3.3.3.2.5",
+        "name": "3.3.3.2.5 模糊问题解决能力"
+    }
+},
+{
+    "start_id": "P3.3.3.2.5",
+    "start_labels": [
+        "Problem"
+    ],
+    "start_properties": {
+        "id": "P3.3.3.2.5",
+        "name": "3.3.3.2.5 模糊问题解决能力"
+    },
+    "relation": "Next_P",
+    "relation_properties": {},
+    "end_id": "P3.3.3.2.6",
+    "end_labels": [
+        "Problem"
+    ],
+    "end_properties": {
+        "id": "P3.3.3.2.6",
+        "name": "3.3.3.2.6 相互信任和尊重"
+    }
+},
+{
+    "start_id": "P3.3.3.2.6",
+    "start_labels": [
+        "Problem"
+    ],
+    "start_properties": {
+        "id": "P3.3.3.2.6",
+        "name": "3.3.3.2.6 相互信任和尊重"
+    },
+    "relation": "Next_P",
+    "relation_properties": {},
+    "end_id": "P3.3.3.2.7",
+    "end_labels": [
+        "Problem"
+    ],
+    "end_properties": {
+        "id": "P3.3.3.2.7",
+        "name": "3.3.3.2.7 自组织"
+    }
+},
+{
+    "start_id": "T3.4",
+    "start_labels": [
+        "Topic"
+    ],
+    "start_properties": {
+        "id": "T3.4",
+        "name": "3.4 Scrum"
+    },
+    "relation": "Next_TP",
+    "relation_properties": {},
+    "end_id": "T3.5",
+    "end_labels": [
+        "Topic"
+    ],
+    "end_properties": {
+        "id": "T3.5",
+        "name": "3.5 其他敏捷过程"
+    }
+},
+{
+    "start_id": "S3.4.1",
+    "start_labels": [
+        "Section"
+    ],
+    "start_properties": {
+        "id": "S3.4.1",
+        "name": "3.4.1 Scrum团队和制品"
+    },
+    "relation": "Next_ST",
+    "relation_properties": {},
+    "end_id": "S3.4.2",
+    "end_labels": [
+        "Section"
+    ],
+    "end_properties": {
+        "id": "S3.4.2",
+        "name": "3.4.2 冲刺规划会议"
+    }
+},
+{
+    "start_id": "S3.4.2",
+    "start_labels": [
+        "Section"
+    ],
+    "start_properties": {
+        "id": "S3.4.2",
+        "name": "3.4.2 冲刺规划会议"
+    },
+    "relation": "Next_ST",
+    "relation_properties": {},
+    "end_id": "S3.4.3",
+    "end_labels": [
+        "Section"
+    ],
+    "end_properties": {
+        "id": "S3.4.3",
+        "name": "3.4.3 每日Scrum会议"
+    }
+},
+{
+    "start_id": "S3.4.3",
+    "start_labels": [
+        "Section"
+    ],
+    "start_properties": {
+        "id": "S3.4.3",
+        "name": "3.4.3 每日Scrum会议"
+    },
+    "relation": "Next_ST",
+    "relation_properties": {},
+    "end_id": "S3.4.4",
+    "end_labels": [
+        "Section"
+    ],
+    "end_properties": {
+        "id": "S3.4.4",
+        "name": "3.4.4 冲刺评审会议"
+    }
+},
+{
+    "start_id": "S3.4.4",
+    "start_labels": [
+        "Section"
+    ],
+    "start_properties": {
+        "id": "S3.4.4",
+        "name": "3.4.4 冲刺评审会议"
+    },
+    "relation": "Next_ST",
+    "relation_properties": {},
+    "end_id": "S3.4.5",
+    "end_labels": [
+        "Section"
+    ],
+    "end_properties": {
+        "id": "S3.4.5",
+        "name": "3.4.5 冲刺回顾"
+    }
+},
+{
+    "start_id": "T3.5",
+    "start_labels": [
+        "Topic"
+    ],
+    "start_properties": {
+        "id": "T3.5",
+        "name": "3.5 其他敏捷过程"
+    },
+    "relation": "Next_TP",
+    "relation_properties": {},
+    "end_id": "T3.6",
+    "end_labels": [
+        "Topic"
+    ],
+    "end_properties": {
+        "id": "T3.6",
+        "name": "3.6 小结"
+    }
+},
+{
+    "start_id": "S3.5.1",
+    "start_labels": [
+        "Section"
+    ],
+    "start_properties": {
+        "id": "S3.5.1",
+        "name": "3.5.1 XP框架"
+    },
+    "relation": "Next_ST",
+    "relation_properties": {},
+    "end_id": "S3.5.2",
+    "end_labels": [
+        "Section"
+    ],
+    "end_properties": {
+        "id": "S3.5.2",
+        "name": "3.5.2 看板法"
+    }
+},
+{
+    "start_id": "SS3.5.1.1",
+    "start_labels": [
+        "SubSection"
+    ],
+    "start_properties": {
+        "id": "SS3.5.1.1",
+        "name": "3.5.1.1 极限编程介绍"
+    },
+    "relation": "Next_SS",
+    "relation_properties": {},
+    "end_id": "SS3.5.1.2",
+    "end_labels": [
+        "SubSection"
+    ],
+    "end_properties": {
+        "id": "SS3.5.1.2",
+        "name": "3.5.1.2 极限编程活动"
+    }
+},
+{
+    "start_id": "P3.5.1.2.1",
+    "start_labels": [
+        "Problem"
+    ],
+    "start_properties": {
+        "id": "P3.5.1.2.1",
+        "name": "3.5.1.2.1 策划"
+    },
+    "relation": "Next_P",
+    "relation_properties": {},
+    "end_id": "P3.5.1.2.2",
+    "end_labels": [
+        "Problem"
+    ],
+    "end_properties": {
+        "id": "P3.5.1.2.2",
+        "name": "3.5.1.2.2 设计"
+    }
+},
+{
+    "start_id": "P3.5.1.2.2",
+    "start_labels": [
+        "Problem"
+    ],
+    "start_properties": {
+        "id": "P3.5.1.2.2",
+        "name": "3.5.1.2.2 设计"
+    },
+    "relation": "Next_P",
+    "relation_properties": {},
+    "end_id": "P3.5.1.2.3",
+    "end_labels": [
+        "Problem"
+    ],
+    "end_properties": {
+        "id": "P3.5.1.2.3",
+        "name": "3.5.1.2.3 编码"
+    }
+},
+{
+    "start_id": "P3.5.1.2.3",
+    "start_labels": [
+        "Problem"
+    ],
+    "start_properties": {
+        "id": "P3.5.1.2.3",
+        "name": "3.5.1.2.3 编码"
+    },
+    "relation": "Next_P",
+    "relation_properties": {},
+    "end_id": "P3.5.1.2.4",
+    "end_labels": [
+        "Problem"
+    ],
+    "end_properties": {
+        "id": "P3.5.1.2.4",
+        "name": "3.5.1.2.4 测试"
+    }
+},
+{
+    "start_id": "S3.5.2",
+    "start_labels": [
+        "Section"
+    ],
+    "start_properties": {
+        "id": "S3.5.2",
+        "name": "3.5.2 看板法"
+    },
+    "relation": "Next_ST",
+    "relation_properties": {},
+    "end_id": "S3.5.3",
+    "end_labels": [
+        "Section"
+    ],
+    "end_properties": {
+        "id": "S3.5.3",
+        "name": "3.5.3 DevOps"
+    }
+},
+{
+    "start_id": "SS3.5.2.1",
+    "start_labels": [
+        "SubSection"
+    ],
+    "start_properties": {
+        "id": "SS3.5.2.1",
+        "name": "3.5.2.1 看板法介绍"
+    },
+    "relation": "Next_SS",
+    "relation_properties": {},
+    "end_id": "SS3.5.2.2",
+    "end_labels": [
+        "SubSection"
+    ],
+    "end_properties": {
+        "id": "SS3.5.2.2",
+        "name": "3.5.2.2 看板法的6个核心实践"
+    }
+},
+{
+    "start_id": "SS3.5.2.2",
+    "start_labels": [
+        "SubSection"
+    ],
+    "start_properties": {
+        "id": "SS3.5.2.2",
+        "name": "3.5.2.2 看板法的6个核心实践"
+    },
+    "relation": "Next_SS",
+    "relation_properties": {},
+    "end_id": "SS3.5.2.3",
+    "end_labels": [
+        "SubSection"
+    ],
+    "end_properties": {
+        "id": "SS3.5.2.3",
+        "name": "3.5.2.3 团队会议"
+    }
+},
+{
+    "start_id": "P3.5.2.2.1",
+    "start_labels": [
+        "Problem"
+    ],
+    "start_properties": {
+        "id": "P3.5.2.2.1",
+        "name": "3.5.2.2.1 可视化工作流"
+    },
+    "relation": "Next_P",
+    "relation_properties": {},
+    "end_id": "P3.5.2.2.2",
+    "end_labels": [
+        "Problem"
+    ],
+    "end_properties": {
+        "id": "P3.5.2.2.2",
+        "name": "3.5.2.2.2 限制工作负荷"
+    }
+},
+{
+    "start_id": "P3.5.2.2.2",
+    "start_labels": [
+        "Problem"
+    ],
+    "start_properties": {
+        "id": "P3.5.2.2.2",
+        "name": "3.5.2.2.2 限制工作负荷"
+    },
+    "relation": "Next_P",
+    "relation_properties": {},
+    "end_id": "P3.5.2.2.3",
+    "end_labels": [
+        "Problem"
+    ],
+    "end_properties": {
+        "id": "P3.5.2.2.3",
+        "name": "3.5.2.2.3 减少浪费"
+    }
+},
+{
+    "start_id": "P3.5.2.2.3",
+    "start_labels": [
+        "Problem"
+    ],
+    "start_properties": {
+        "id": "P3.5.2.2.3",
+        "name": "3.5.2.2.3 减少浪费"
+    },
+    "relation": "Next_P",
+    "relation_properties": {},
+    "end_id": "P3.5.2.2.4",
+    "end_labels": [
+        "Problem"
+    ],
+    "end_properties": {
+        "id": "P3.5.2.2.4",
+        "name": "3.5.2.2.4 明确过程策略"
+    }
+},
+{
+    "start_id": "P3.5.2.2.4",
+    "start_labels": [
+        "Problem"
+    ],
+    "start_properties": {
+        "id": "P3.5.2.2.4",
+        "name": "3.5.2.2.4 明确过程策略"
+    },
+    "relation": "Next_P",
+    "relation_properties": {},
+    "end_id": "P3.5.2.2.5",
+    "end_labels": [
+        "Problem"
+    ],
+    "end_properties": {
+        "id": "P3.5.2.2.5",
+        "name": "3.5.2.2.5 创建反馈循环"
+    }
+},
+{
+    "start_id": "P3.5.2.2.5",
+    "start_labels": [
+        "Problem"
+    ],
+    "start_properties": {
+        "id": "P3.5.2.2.5",
+        "name": "3.5.2.2.5 创建反馈循环"
+    },
+    "relation": "Next_P",
+    "relation_properties": {},
+    "end_id": "P3.5.2.2.6",
+    "end_labels": [
+        "Problem"
+    ],
+    "end_properties": {
+        "id": "P3.5.2.2.6",
+        "name": "3.5.2.2.6 变更中的相互合作"
+    }
+},
+{
+    "start_id": "SS3.5.3.1",
+    "start_labels": [
+        "SubSection"
+    ],
+    "start_properties": {
+        "id": "SS3.5.3.1",
+        "name": "3.5.3.1 DevOps介绍"
+    },
+    "relation": "Next_SS",
+    "relation_properties": {},
+    "end_id": "SS3.5.3.2",
+    "end_labels": [
+        "SubSection"
+    ],
+    "end_properties": {
+        "id": "SS3.5.3.2",
+        "name": "3.5.3.2 DevOps的5个持续循环阶段"
+    }
+},
+{
+    "start_id": "P3.5.3.2.1",
+    "start_labels": [
+        "Problem"
+    ],
+    "start_properties": {
+        "id": "P3.5.3.2.1",
+        "name": "3.5.3.2.1 持续开发"
+    },
+    "relation": "Next_P",
+    "relation_properties": {},
+    "end_id": "P3.5.3.2.2",
+    "end_labels": [
+        "Problem"
+    ],
+    "end_properties": {
+        "id": "P3.5.3.2.2",
+        "name": "3.5.3.2.2 持续测试"
+    }
+},
+{
+    "start_id": "P3.5.3.2.2",
+    "start_labels": [
+        "Problem"
+    ],
+    "start_properties": {
+        "id": "P3.5.3.2.2",
+        "name": "3.5.3.2.2 持续测试"
+    },
+    "relation": "Next_P",
+    "relation_properties": {},
+    "end_id": "P3.5.3.2.3",
+    "end_labels": [
+        "Problem"
+    ],
+    "end_properties": {
+        "id": "P3.5.3.2.3",
+        "name": "3.5.3.2.3 持续集成"
+    }
+},
+{
+    "start_id": "P3.5.3.2.3",
+    "start_labels": [
+        "Problem"
+    ],
+    "start_properties": {
+        "id": "P3.5.3.2.3",
+        "name": "3.5.3.2.3 持续集成"
+    },
+    "relation": "Next_P",
+    "relation_properties": {},
+    "end_id": "P3.5.3.2.4",
+    "end_labels": [
+        "Problem"
+    ],
+    "end_properties": {
+        "id": "P3.5.3.2.4",
+        "name": "3.5.3.2.4 持续部署"
+    }
+},
+{
+    "start_id": "P3.5.3.2.4",
+    "start_labels": [
+        "Problem"
+    ],
+    "start_properties": {
+        "id": "P3.5.3.2.4",
+        "name": "3.5.3.2.4 持续部署"
+    },
+    "relation": "Next_P",
+    "relation_properties": {},
+    "end_id": "P3.5.3.2.5",
+    "end_labels": [
+        "Problem"
+    ],
+    "end_properties": {
+        "id": "P3.5.3.2.5",
+        "name": "3.5.3.2.5 持续监控"
+    }
+}
+]
