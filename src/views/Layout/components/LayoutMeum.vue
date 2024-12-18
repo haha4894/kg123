@@ -37,9 +37,9 @@ export default {
             <span>Navigator One</span>
           </template>
             <el-menu-item index="1-1" @click="onActionClick('action1')">根节点</el-menu-item>
-            <el-menu-item index="1-2">一级结点</el-menu-item>
-            <el-menu-item index="1-3">二级结点</el-menu-item>
-            <el-menu-item index="1-4">三级结点</el-menu-item>
+            <el-menu-item index="1-2" @click="onActionClick('action2')">一级节点</el-menu-item>
+            <el-menu-item index="1-3" @click="onActionClick('action3')">二级节点</el-menu-item>
+            <el-menu-item index="1-4" @click="onActionClick('action4')">三级节点</el-menu-item>
         </el-sub-menu>
         <el-menu-item index="2">
           <el-icon><icon-menu /></el-icon>
