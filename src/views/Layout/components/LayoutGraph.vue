@@ -49,8 +49,7 @@ export default {
       menuY: 0,
       buttons: [
       { text: '收起', action: 'action1' },
-      { text: '展开', action: 'action2' },
-      { text: '查询', action: 'action3' }
+      { text: '展开', action: 'action2' }
     ],
       drawerVisible: false, // 控制 drawer 的显示与隐藏
       selectedNode: null, // 当前选中的节点
@@ -4618,7 +4617,7 @@ export default {
         .attr('class', 'linksText')
         .text(d => d.relation)
         .style('font-size', 14)
-        .attr('fill-opacity', 0)
+        .attr('fill-opacity', 1)
         .attr('visibility', d => d.visible ? 'visible' : 'hidden');
 
         this.gs = this.g.append('g')
@@ -4748,7 +4747,7 @@ this.g.append('defs')
     .attr('class', 'buttons');
 
   this.buttons.forEach((button, index) => {
-    const buttonY = 10 + index * 30; // 每个按钮间隔 30px
+    const buttonY = 10 + index * 50; // 每个按钮间隔 30px
 
     // 添加按钮背景
     buttonGroup.append('rect')
@@ -4794,9 +4793,6 @@ handleButtonClick(action, node) { // 按钮点击事件处理函数
         break;
       case 'action2':
       this.expandNode(node);
-        break;
-      case 'action3':
-        alert('按钮3被点击');
         break;
       default:
         console.warn('未知的按钮操作');
