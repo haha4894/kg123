@@ -4840,7 +4840,7 @@ this.g.append('defs')
   
     collapseNode(node) {
     // 获取以当前节点为终点的所有边
-    const edgesToHide = this.edges.filter(edge => edge.target.id === node.id);
+        const edgesToHide = this.edges.filter(edge => edge.target.id === node.id && edge.relation !== 'Next_ST' && edge.relation !== 'Next_TP' && edge.relation !== 'Next_SB' && edge.relation !== 'Next_TB' && edge.relation !== 'Next_SC');
   
     // 隐藏这些边
     edgesToHide.forEach(edge => {
