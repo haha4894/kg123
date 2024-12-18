@@ -4984,7 +4984,7 @@ showNode(node) {
       .attr('transform', d => `translate(${d.x},${d.y})`)
       .attr('visibility', d => d.visible ? 'visible' : 'hidden');
   },
-handleAction(action) {
+  handleAction(action) {
       if (action === 'action1') {
         this.Stayroot();
       }
